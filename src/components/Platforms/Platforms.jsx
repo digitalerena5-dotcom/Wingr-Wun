@@ -7,11 +7,21 @@ export default function Platforms({ onOpenRFQ }) {
   const [selectedId, setSelectedId] = useState('commercial');
   const [rotationMode, setRotationMode] = useState('spin'); // 'spin' (360 axial) | 'turntable' (3D gimbal)
   const [isPaused, setIsPaused] = useState(false);
-  const [speed, setSpeed] = useState('slow'); // 'slow' (24s) | 'ultra' (38s)
+  const [speed, setSpeed] = useState('slow'); // 'slow' | 'ultra'
   const [telemetryAngle, setTelemetryAngle] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const activeCategory = platformCategories.find((c) => c.id === selectedId) || platformCategories[0];
-  const duration = speed === 'ultra' ? 38 : 24;
+  const desktopDuration = speed === 'ultra' ? 38 : 24;
+  // Slower, smooth and controlled rotation on mobile (64s / 88s vs desktop 24s / 38s)
+  const duration = isMobile ? (speed === 'ultra' ? 88 : 64) : desktopDuration;
 
   // Real-time telemetry angle computation for the HUD display
   useEffect(() => {
@@ -37,7 +47,7 @@ export default function Platforms({ onOpenRFQ }) {
     <section id="platforms" aria-labelledby="platforms-title" className="relative bg-[#081B28] text-white overflow-hidden border-t border-[color:var(--line-dark)]">
       <div className="grid lg:min-h-[52rem] lg:grid-cols-12">
         {/* LEFT COLUMN: Technical Exploded Assembly Visual (Dark Aerospace Panel) */}
-        <div className="relative order-2 overflow-hidden bg-navy-950 p-6 sm:p-10 lg:order-1 lg:col-span-6 lg:p-12">
+        <div className="relative order-2 overflow-hidden bg-navy-950 p-4 sm:p-10 lg:order-1 lg:col-span-6 lg:p-12">
           <div className="grid-bg absolute inset-0 opacity-40" aria-hidden="true" />
           <span className="crosshair left-6 top-6 text-steel-grey/70" aria-hidden="true" />
           <span className="crosshair bottom-6 right-6 text-steel-grey/70" aria-hidden="true" />
@@ -94,20 +104,20 @@ export default function Platforms({ onOpenRFQ }) {
                 <button
                   type="button"
                   onClick={() => setSpeed(speed === 'slow' ? 'ultra' : 'slow')}
-                  title={`Rotation Speed: ${speed === 'slow' ? 'Slow (24s / rev)' : 'Ultra-Slow (38s / rev)'}`}
+                  title={`Rotation Speed: ${speed === 'slow' ? (isMobile ? 'Slow (64s / rev)' : 'Slow (24s / rev)') : (isMobile ? 'Ultra-Slow (88s / rev)' : 'Ultra-Slow (38s / rev)')}`}
                   className="px-1.5 py-0.5 rounded text-[0.58rem] mono text-steel-grey hover:text-white hover:bg-navy-800 border-l border-white/10"
                 >
-                  {speed === 'slow' ? '24s' : '38s'}
+                  {speed === 'slow' ? (isMobile ? '64s' : '24s') : (isMobile ? '88s' : '38s')}
                 </button>
               </div>
             </div>
 
             {/* High-Fidelity 3D Exploded Component Schematic with Slow-Motion Rotation */}
-            <div className="my-6 aspect-[16/10] w-full overflow-hidden rounded-xl border border-[color:var(--line-dark-strong)] bg-[#040C14] shadow-[0_20px_50px_rgba(7,25,37,0.9)] relative group [perspective:1200px]">
+            <div className="my-6 aspect-[16/10] w-full overflow-hidden rounded-xl border border-[color:var(--line-dark-strong)] bg-[#040C14] shadow-[0_20px_50px_rgba(7,25,37,0.9)] relative group [perspective:1200px] [isolation:isolate]">
               {/* Dynamic Live Telemetry Badge */}
-              <div className="absolute top-3 left-3 z-20 flex items-center gap-2 rounded border border-gold/30 bg-navy-950/90 px-2.5 py-1 backdrop-blur-md mono text-[0.62rem] text-gold shadow-md">
-                <span className={`h-1.5 w-1.5 rounded-full ${isPaused ? 'bg-amber-400' : 'bg-gold animate-pulse-amber'}`} />
-                <span>
+              <div className="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 z-20 max-w-[calc(100%-1.25rem)] flex items-center gap-1.5 sm:gap-2 rounded border border-gold/30 bg-navy-950/90 px-2 sm:px-2.5 py-1 backdrop-blur-md mono text-[0.58rem] sm:text-[0.62rem] text-gold shadow-md truncate">
+                <span className={`h-1.5 w-1.5 shrink-0 rounded-full ${isPaused ? 'bg-amber-400' : 'bg-gold animate-pulse-amber'}`} />
+                <span className="truncate">
                   {rotationMode === 'spin'
                     ? `AXIAL ROTATION // ${telemetryAngle.toFixed(1)}° (${isPaused ? 'PAUSED' : 'SLOW MOTION'})`
                     : `3D CAD YAW // ${telemetryAngle > 0 ? '+' : ''}${telemetryAngle.toFixed(1)}° (${isPaused ? 'PAUSED' : 'SLOW MOTION'})`}
@@ -118,7 +128,7 @@ export default function Platforms({ onOpenRFQ }) {
               <div className="absolute top-3 right-3 z-20 hidden sm:flex items-center gap-1.5 rounded border border-white/10 bg-navy-950/80 px-2 py-0.5 backdrop-blur-md mono text-[0.6rem] text-steel-grey">
                 <span className="text-cyan-400">TELEMETRY</span>
                 <span>•</span>
-                <span>{speed === 'slow' ? '0.75 RPM' : '0.45 RPM'}</span>
+                <span>{speed === 'slow' ? (isMobile ? '0.28 RPM' : '0.75 RPM') : (isMobile ? '0.19 RPM' : '0.45 RPM')}</span>
               </div>
 
               {/* The Rotating Schematic Layer (Hardware Accelerated Slow Motion) */}
@@ -135,7 +145,7 @@ export default function Platforms({ onOpenRFQ }) {
                   src="/images/exploded_component_schematic.jpg"
                   alt="High-precision technical exploded view schematic of aerospace component assembly and rotables"
                   className={`h-full w-full object-cover object-center filter brightness-105 contrast-[1.02] ${
-                    rotationMode === 'spin' ? 'scale-[1.32]' : 'scale-[1.03]'
+                    rotationMode === 'spin' ? 'scale-[1.12] sm:scale-[1.32]' : 'scale-[1.02] sm:scale-[1.03]'
                   } transition-transform duration-700 ease-out`}
                   loading="lazy"
                 />
@@ -150,7 +160,7 @@ export default function Platforms({ onOpenRFQ }) {
             </div>
 
             {/* Active Platform Callout Cards */}
-            <div className="rounded border border-[color:var(--line-dark)] bg-navy-900/80 p-5 backdrop-blur-sm">
+            <div className="rounded border border-[color:var(--line-dark)] bg-navy-900/80 p-4 sm:p-5 backdrop-blur-sm">
               <p className="mono text-[0.68rem] uppercase text-gold">SOURCING CAPABILITY SCOPE</p>
               <p className="font-display mt-1 text-base font-bold text-white">{activeCategory.label}</p>
               <p className="mt-1 text-xs text-[color:var(--text-muted-dark)]">{activeCategory.aircraft}</p>
@@ -159,7 +169,7 @@ export default function Platforms({ onOpenRFQ }) {
         </div>
 
         {/* RIGHT COLUMN: Editorial Content & Category Scope */}
-        <div className="order-1 flex items-center p-8 sm:p-12 lg:order-2 lg:col-span-6 lg:p-16 xl:p-20">
+        <div className="order-1 flex items-center p-5 sm:p-12 lg:order-2 lg:col-span-6 lg:p-16 xl:p-20">
           <div className="w-full max-w-xl">
             <Reveal>
               <span className="eyebrow">COMPONENT &amp; SUBSYSTEM SCOPE</span>

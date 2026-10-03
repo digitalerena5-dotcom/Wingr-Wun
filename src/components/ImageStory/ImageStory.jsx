@@ -45,7 +45,7 @@ export default function ImageStory() {
               </div>
 
               {/* Technical Metadata Footer */}
-              <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[color:var(--line-dark)] bg-navy-950/90 px-6 py-4 mono text-[0.7rem] text-steel-grey">
+              <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[color:var(--line-dark)] bg-navy-950/90 px-4 py-3 sm:px-6 sm:py-4 mono text-[0.68rem] sm:text-[0.7rem] text-steel-grey">
                 <div>
                   <span className="text-white font-medium block">TACTICAL AIRFRAME &amp; PROPULSION</span>
                   <span className="text-[0.65rem] text-gold">WESTERN OEM SOURCING &amp; AIRFRAME ROTABLES</span>
@@ -72,7 +72,7 @@ export default function ImageStory() {
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/15 to-transparent" />
                   <div className="grid-bg absolute inset-0 opacity-20" aria-hidden="true" />
                 </div>
-                <div className="flex items-center justify-between border-t border-[color:var(--line-dark)] bg-navy-950/90 px-5 py-3 mono text-[0.68rem] text-steel-grey">
+                <div className="flex flex-wrap items-center justify-between gap-2 border-t border-[color:var(--line-dark)] bg-navy-950/90 px-4 py-3 sm:px-5 mono text-[0.65rem] sm:text-[0.68rem] text-steel-grey">
                   <div>
                     <span className="text-white font-medium block">LANDING GEAR &amp; HYDRAULIC ROTABLES</span>
                     <span className="text-[0.62rem] text-gold">ACTUATORS, STRUTS &amp; COMPONENT AUDIT</span>

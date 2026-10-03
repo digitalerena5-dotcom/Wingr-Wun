@@ -5,7 +5,7 @@ export default function TopRightInsignia({ onOpenRFQ }) {
 
   return (
     <div
-      className="fixed right-3 top-1 z-50 sm:right-6 sm:top-1.5"
+      className="hidden lg:block fixed right-3 top-1 z-50 sm:right-6 sm:top-1.5"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >

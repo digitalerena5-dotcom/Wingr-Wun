@@ -280,7 +280,7 @@ export default function AviationRFQForm({ inModal = false, onClose }) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="btn btn-primary min-w-[200px]"
+          className="btn btn-primary min-w-[200px] w-full sm:w-auto"
         >
           {isSubmitting ? 'Transmitting RFQ...' : 'Submit Requirement'}
           <ArrowRight size={18} strokeWidth={1.5} />

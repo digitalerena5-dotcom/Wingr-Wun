@@ -29,7 +29,7 @@ export default function Capabilities() {
         {/* Process Box */}
         <div className="relative mt-14 border border-[color:var(--line-dark)] bg-navy-900/60 shadow-2xl backdrop-blur-sm sm:mt-18 lg:mt-20">
           {/* Header Bar */}
-          <div className="flex items-center justify-between gap-4 border-b border-[color:var(--line-dark)] px-6 py-4 sm:px-10 mono text-[0.72rem] text-steel-grey">
+          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[color:var(--line-dark)] px-4 py-3 sm:px-10 sm:py-4 mono text-[0.7rem] sm:text-[0.72rem] text-steel-grey">
             <p>
               <span className="text-gold font-bold">INPUT</span> — Flight Readiness Requirement
             </p>
@@ -38,7 +38,7 @@ export default function Capabilities() {
             </p>
           </div>
 
-          <div ref={ref} className="group px-6 py-10 sm:px-10 sm:py-14 lg:py-16">
+          <div ref={ref} className="group px-4 py-8 sm:px-10 sm:py-14 lg:py-16">
             <ol className="relative grid gap-8 lg:grid-cols-6 lg:gap-4">
               {/* Vertical line (Mobile/Tablet) */}
               <span
@@ -101,7 +101,7 @@ export default function Capabilities() {
             </ol>
           </div>
 
-          <div className="flex items-center justify-between border-t border-[color:var(--line-dark)] px-6 py-3 mono text-[0.68rem] text-steel-grey sm:px-10">
+          <div className="flex flex-wrap items-center justify-between gap-2 border-t border-[color:var(--line-dark)] px-4 py-3 mono text-[0.68rem] text-steel-grey sm:px-10">
             <span>AUDIT TRAIL PRESERVED ACROSS ALL 6 PHASES</span>
             <span className="text-gold">FAA / EASA COMPLIANCE VERIFIED</span>
           </div>

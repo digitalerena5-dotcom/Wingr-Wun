@@ -48,7 +48,7 @@ export default function ContactPage() {
       <div className="container-x pb-[var(--section-y)]">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-10">
           <div id="enquiry-form" className="intro brackets relative scroll-mt-[calc(var(--header-h)+1.5rem)] border border-[color:var(--line-dark-strong)] bg-navy-900/80 backdrop-blur-[2px] lg:col-span-8" style={{ '--d': '380ms' }}>
-            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[color:var(--line-dark)] px-6 py-4 sm:px-8">
+            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[color:var(--line-dark)] px-4 py-3 sm:px-8 sm:py-4">
               <div className="flex items-center gap-2.5">
                 <span className="block h-2 w-2 rounded-full bg-gold" aria-hidden="true" />
                 <h2 className="mono text-[0.75rem] font-medium uppercase tracking-wider text-gold">

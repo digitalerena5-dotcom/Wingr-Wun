@@ -57,7 +57,7 @@ export default function About() {
             return (
               <div
                 key={p.title}
-                className="group flex flex-col justify-between rounded-lg border border-[rgba(7,25,37,0.12)] bg-white p-7 shadow-sm transition-all duration-300 hover:border-[#C99B47] hover:shadow-lg"
+                className="group flex flex-col justify-between rounded-lg border border-[rgba(7,25,37,0.12)] bg-white p-5 sm:p-7 shadow-sm transition-all duration-300 hover:border-[#C99B47] hover:shadow-lg"
               >
                 <div>
                   <div className="flex items-center justify-between border-b border-[rgba(7,25,37,0.08)] pb-4">
@@ -88,10 +88,10 @@ export default function About() {
         </div>
 
         {/* Executive Heritage & Compliance Credential Bar */}
-        <div className="mt-8 rounded-lg border border-[rgba(7,25,37,0.12)] bg-white p-6 sm:p-8 shadow-sm">
+        <div className="mt-8 rounded-lg border border-[rgba(7,25,37,0.12)] bg-white p-5 sm:p-8 shadow-sm">
           <div className="grid gap-6 lg:grid-cols-12 lg:items-center">
             {/* Heritage Quote */}
-            <div className="lg:col-span-7 border-l-2 border-[#C99B47] pl-5">
+            <div className="lg:col-span-7 border-l-2 border-[#C99B47] pl-4 sm:pl-5">
               <span className="mono text-xs font-bold uppercase tracking-wider text-[#31566D] block mb-1">
                 DEFENSE AVIATION HERITAGE
               </span>
@@ -101,7 +101,7 @@ export default function About() {
             </div>
 
             {/* 4 Trust Badges */}
-            <div className="lg:col-span-5 grid grid-cols-2 gap-3 border-t border-[rgba(7,25,37,0.08)] pt-4 lg:border-t-0 lg:border-l lg:pl-6 lg:pt-0">
+            <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 border-t border-[rgba(7,25,37,0.08)] pt-4 lg:border-t-0 lg:border-l lg:pl-6 lg:pt-0">
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-[#C99B47] shrink-0" />
                 <span className="mono text-[0.72rem] text-[#31566D] font-semibold">ITAR / EAR Guidance</span>
@@ -123,7 +123,7 @@ export default function About() {
         </div>
 
         {/* Technical Bridge Schematic Illustration */}
-        <div className="brackets relative mt-12 overflow-hidden rounded-lg bg-navy-950 p-6 text-white shadow-2xl sm:p-10 lg:mt-16">
+        <div className="brackets relative mt-12 overflow-hidden rounded-lg bg-navy-950 p-4 sm:p-10 lg:mt-16 text-white shadow-2xl">
           <div className="grid-bg absolute inset-0 opacity-40" aria-hidden="true" />
           <div className="relative">
             <div className="mb-6 flex flex-wrap items-center justify-between gap-3 border-b border-[color:var(--line-dark)] pb-4">

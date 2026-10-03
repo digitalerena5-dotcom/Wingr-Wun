@@ -47,9 +47,9 @@ export default function Hero({ onOpenRFQ }) {
 
       {/* Main Hero Container */}
       <div className="container-x relative flex flex-1 flex-col justify-center py-8 sm:py-12 lg:py-16">
-        <div className="grid items-center gap-8 sm:gap-12 lg:grid-cols-12 lg:gap-8">
+        <div className="grid grid-cols-1 items-center gap-8 sm:gap-12 lg:grid-cols-12 lg:gap-8">
           {/* LEFT: Business Positioning & Strong Editorial Typography */}
-          <div className="lg:col-span-6 xl:col-span-6">
+          <div className="min-w-0 lg:col-span-6 xl:col-span-6">
             <div className="intro flex flex-wrap items-center gap-3" style={{ '--d': '100ms' }}>
               <span className="eyebrow">AVIATION SOURCING &amp; PROCUREMENT CONSULTANCY</span>
             </div>
@@ -102,7 +102,7 @@ export default function Hero({ onOpenRFQ }) {
           </div>
 
           {/* RIGHT: Professional 3/4 Perspective Aircraft Visual with Layered Motion */}
-          <div className="relative lg:col-span-6 xl:col-span-6">
+          <div className="relative min-w-0 lg:col-span-6 xl:col-span-6">
             <HeroAircraftVisual mousePos={mousePos} />
           </div>
         </div>

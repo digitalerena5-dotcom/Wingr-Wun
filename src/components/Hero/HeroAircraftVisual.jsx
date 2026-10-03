@@ -66,6 +66,12 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
     const GLOBE_CY = 320;
     const GLOBE_R = 195;
 
+    let isMobile = typeof window !== 'undefined' ? window.innerWidth < 768 : false;
+    const handleResize = () => {
+      isMobile = window.innerWidth < 768;
+    };
+    window.addEventListener('resize', handleResize, { passive: true });
+
     const tick = (timestamp) => {
       if (!startTime) startTime = timestamp;
       const elapsed = timestamp - startTime;
@@ -79,12 +85,12 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
 
       // 1. Rotate World Continents horizontally across the globe
       if (continentsRef.current) {
-        const globeOffset = (elapsed * 0.024) % 600;
+        const globeOffset = (elapsed * (isMobile ? 0.012 : 0.024)) % 600;
         continentsRef.current.setAttribute('transform', `translate(${(-globeOffset).toFixed(1)}, 0)`);
       }
 
       // 2. Rotate 3D Longitude Meridians in real-time spherical projection
-      const rotAngle = (elapsed * 0.00045) % (Math.PI * 2);
+      const rotAngle = (elapsed * (isMobile ? 0.00022 : 0.00045)) % (Math.PI * 2);
       for (let i = 0; i < 6; i++) {
         const phi = rotAngle + (i * Math.PI) / 6;
         const cosVal = Math.cos(phi);
@@ -98,9 +104,10 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
         }
       }
 
-      // 3. Rotate Tactical Radar Sweep Scanner
+      // 3. Rotate Tactical Radar Sweep Scanner (Smooth, slow professional radar sweep on mobile)
       if (radarBeamRef.current) {
-        const radarAngle = (elapsed * 0.055) % 360;
+        const radarSpeed = isMobile ? 0.016 : 0.055;
+        const radarAngle = (elapsed * radarSpeed) % 360;
         radarBeamRef.current.setAttribute('transform', `rotate(${radarAngle.toFixed(1)} ${GLOBE_CX} ${GLOBE_CY})`);
       }
 
@@ -186,14 +193,17 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
     };
 
     animId = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(animId);
+    return () => {
+      cancelAnimationFrame(animId);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   return (
     <div className="relative mx-auto w-full max-w-[720px] select-none">
       {/* Outer Tactical Radar Perimeter Box with Parallax */}
       <div
-        className="pointer-events-none absolute -inset-2 sm:-inset-6 rounded-2xl sm:rounded-3xl border border-steel-grey/15 bg-gradient-to-b from-navy-900/60 to-navy-950/80 backdrop-blur-sm shadow-2xl transition-transform duration-700 ease-out"
+        className="pointer-events-none absolute inset-0 sm:-inset-6 rounded-2xl sm:rounded-3xl border border-steel-grey/15 bg-gradient-to-b from-navy-900/60 to-navy-950/80 backdrop-blur-sm shadow-2xl transition-transform duration-700 ease-out"
         style={{
           transform: `translate(${mousePos.x * -8}px, ${mousePos.y * -6}px)`,
         }}

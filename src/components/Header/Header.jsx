@@ -72,7 +72,7 @@ export default function Header({ page = 'home', onOpenRFQ }) {
             : 'border-transparent bg-transparent'
         }`}
       >
-        <div className="container-x flex h-[var(--header-h)] items-center justify-between gap-4 sm:gap-6 pr-14 sm:pr-20">
+        <div className="container-x flex h-[var(--header-h)] items-center justify-between gap-3 sm:gap-6 lg:pr-20">
           {/* Brand Anchor (Logo) with guaranteed isolation from navigation */}
           <div className="flex items-center shrink-0">
             <a

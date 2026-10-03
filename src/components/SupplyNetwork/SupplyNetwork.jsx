@@ -43,12 +43,12 @@ export default function SupplyNetwork() {
         </div>
 
         {/* Technical Architecture Canvas */}
-        <div className="mt-14 rounded border border-[color:var(--line-dark)] bg-navy-900/60 p-6 shadow-2xl backdrop-blur-sm sm:p-10 lg:p-12">
+        <div className="mt-14 rounded border border-[color:var(--line-dark)] bg-navy-900/60 p-4 sm:p-10 lg:p-12 shadow-2xl backdrop-blur-sm">
           {/* Header Bar */}
-          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[color:var(--line-dark)] pb-5 mono text-[0.72rem] text-steel-grey">
+          <div className="flex flex-wrap items-center justify-between gap-2.5 sm:gap-4 border-b border-[color:var(--line-dark)] pb-4 sm:pb-5 mono text-[0.7rem] sm:text-[0.72rem] text-steel-grey">
             <div className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-gold animate-pulse-amber" />
-              <span className="text-white uppercase tracking-wider font-semibold">
+              <span className="h-2 w-2 shrink-0 rounded-full bg-gold animate-pulse-amber" />
+              <span className="text-white uppercase tracking-wider font-semibold break-words">
                 SYSTEM ARCHITECTURE // VENDOR VETTING &amp; SOURCING PIPELINE
               </span>
             </div>
@@ -97,21 +97,24 @@ export default function SupplyNetwork() {
             {/* CENTER HUB: Wingr Wun Vetting & Advisory Core */}
             <div className="relative flex flex-col items-center justify-center py-6 lg:col-span-4">
               <div className="relative flex flex-col items-center text-center">
-                {/* Rotating Outer Radar Wave */}
-                <div className="absolute -inset-10 rounded-full border border-dashed border-gold/20 animate-radar pointer-events-none" />
-                <div className="absolute -inset-4 rounded-full border border-gold/20 pointer-events-none" />
+                {/* Central Hub Insignia with Concentric Radar Orbit */}
+                <div className="relative">
+                  {/* Rotating Outer Radar Wave */}
+                  <div className="absolute -inset-3 sm:-inset-6 rounded-full border border-dashed border-gold/25 animate-radar pointer-events-none" />
+                  <div className="absolute -inset-1.5 sm:-inset-3 rounded-full border border-gold/20 pointer-events-none" />
 
-                {/* Central Hub Insignia */}
-                <div className="relative z-10 flex h-28 w-28 sm:h-32 sm:w-32 flex-col items-center justify-center rounded-full border-2 border-gold bg-navy-950 shadow-[0_0_35px_rgba(201,155,71,0.35)]">
-                  <img
-                    src="/images/wingr_wun_logo.png"
-                    alt="Wingr Wun Hub"
-                    className="h-14 w-14 object-contain"
-                  />
-                  <span className="mono mt-1 text-[0.62rem] font-bold uppercase tracking-wider text-gold">
-                    WINGR WUN
-                  </span>
-                  <span className="mono text-[0.55rem] text-steel-grey">ADVISORY CORE</span>
+                  {/* Central Hub Insignia */}
+                  <div className="relative z-10 flex h-28 w-28 sm:h-32 sm:w-32 flex-col items-center justify-center rounded-full border-2 border-gold bg-navy-950 shadow-[0_0_35px_rgba(201,155,71,0.35)]">
+                    <img
+                      src="/images/wingr_wun_logo.png"
+                      alt="Wingr Wun Hub"
+                      className="h-14 w-14 object-contain"
+                    />
+                    <span className="mono mt-1 text-[0.62rem] font-bold uppercase tracking-wider text-gold">
+                      WINGR WUN
+                    </span>
+                    <span className="mono text-[0.55rem] text-steel-grey">ADVISORY CORE</span>
+                  </div>
                 </div>
 
                 <div className="mt-6 max-w-[260px]">

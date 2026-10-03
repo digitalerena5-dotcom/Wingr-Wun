@@ -40,7 +40,7 @@ export default function Services({ onOpenRFQ }) {
                 as="article"
                 key={s.id}
                 delay={i * 90}
-                className="group relative border-b border-r border-[color:var(--line-dark)] p-8 transition-colors duration-500 hover:bg-[#081E2E] sm:p-12 lg:p-14"
+                className="group relative border-b border-r border-[color:var(--line-dark)] p-5 transition-colors duration-500 hover:bg-[#081E2E] sm:p-12 lg:p-14"
               >
                 <div>
                   <div className="flex h-11 w-11 items-center justify-center rounded border border-[color:var(--line-dark)] bg-navy-900 text-steel-grey transition-all duration-300 group-hover:border-gold group-hover:text-gold group-hover:scale-105">
@@ -48,7 +48,7 @@ export default function Services({ onOpenRFQ }) {
                   </div>
                 </div>
 
-                <h3 className="h3 mt-8 text-white sm:mt-12 transition-colors group-hover:text-white">
+                <h3 className="h3 mt-6 text-white sm:mt-12 transition-colors group-hover:text-white">
                   {s.title}
                 </h3>
 

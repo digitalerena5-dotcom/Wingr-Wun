@@ -22,9 +22,9 @@ export default function FinalCTA({ onOpenRFQ }) {
       />
 
       <div className="container-x section-y">
-        <div className="grid items-center gap-12 lg:grid-cols-12">
+        <div className="grid grid-cols-1 items-center gap-8 sm:gap-12 lg:grid-cols-12">
           {/* LEFT: Copy & CTAs */}
-          <Reveal className="max-w-[44rem] lg:col-span-7">
+          <Reveal className="max-w-[44rem] min-w-0 lg:col-span-7">
             <span className="eyebrow">ENGAGE THE SOURCING DESK</span>
             <h2 id="cta-title" className="h2 mt-4 text-white tracking-tight">
               Have a Critical<br />
@@ -50,8 +50,8 @@ export default function FinalCTA({ onOpenRFQ }) {
           </Reveal>
 
           {/* RIGHT: Animated Radar / Aircraft Tracking Graphic */}
-          <div className="flex justify-center lg:col-span-5">
-            <div className="brackets relative flex h-72 w-72 sm:h-84 sm:w-84 items-center justify-center rounded-full border border-gold/30 bg-navy-950/80 shadow-[0_0_40px_rgba(7,25,37,0.9)] backdrop-blur-md">
+          <div className="flex justify-center min-w-0 lg:col-span-5">
+            <div className="brackets relative flex h-[min(18rem,80vw)] w-[min(18rem,80vw)] sm:h-84 sm:w-84 aspect-square items-center justify-center rounded-full border border-gold/30 bg-navy-950/80 shadow-[0_0_40px_rgba(7,25,37,0.9)] backdrop-blur-md overflow-hidden">
               {/* Concentric Radar Rings */}
               <div className="absolute inset-4 rounded-full border border-gold/15" />
               <div className="absolute inset-12 rounded-full border border-dashed border-steel-grey/20" />

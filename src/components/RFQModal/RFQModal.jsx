@@ -38,7 +38,7 @@ export default function RFQModal({ isOpen, onClose }) {
       {/* Modal Dialog Card */}
       <div className="relative max-h-[92vh] w-full max-w-3xl overflow-y-auto rounded border border-[color:var(--line-gold)] bg-navy-900 text-white shadow-2xl">
         {/* Header Bar */}
-        <div className="flex items-center justify-between border-b border-[color:var(--line-dark)] px-6 py-4 sm:px-8">
+        <div className="flex items-center justify-between border-b border-[color:var(--line-dark)] px-4 py-3 sm:px-8 sm:py-4">
           <div className="flex items-center gap-3">
             <img
               src="/images/wingr_wun_logo.png"

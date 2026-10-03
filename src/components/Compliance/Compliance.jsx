@@ -56,7 +56,7 @@ export default function Compliance() {
                 return (
                   <div
                     key={area.title}
-                    className="group rounded border border-[color:var(--line-dark)] bg-navy-900/60 p-6 transition-all duration-300 hover:border-gold/60 hover:bg-navy-900"
+                    className="group rounded border border-[color:var(--line-dark)] bg-navy-900/60 p-4 sm:p-6 transition-all duration-300 hover:border-gold/60 hover:bg-navy-900"
                   >
                     <div>
                       <div className="flex h-9 w-9 items-center justify-center rounded border border-[color:var(--line-dark)] bg-navy-950 text-gold group-hover:border-gold transition-colors">
@@ -84,7 +84,7 @@ export default function Compliance() {
           <div className="lg:col-span-5 flex justify-center">
             <div
               ref={artRef}
-              className="brackets relative w-full max-w-[420px] rounded border border-[color:var(--line-dark-strong)] bg-navy-900/70 p-8 shadow-2xl backdrop-blur-sm"
+              className="brackets relative w-full max-w-[420px] rounded border border-[color:var(--line-dark-strong)] bg-navy-900/70 p-5 sm:p-8 shadow-2xl backdrop-blur-sm"
             >
               <div className="mb-4 flex items-center justify-between border-b border-[color:var(--line-dark)] pb-3 mono text-[0.68rem] text-steel-grey">
                 <span className="text-gold font-medium">COMPLIANCE SCHEMATIC</span>
@@ -94,7 +94,7 @@ export default function Compliance() {
                 <ShieldDrawing className="trace mx-auto h-auto w-full max-w-[320px] drop-shadow-[0_0_25px_rgba(201,155,71,0.25)]" />
               </div>
 
-              <div className="mt-4 border-t border-[color:var(--line-dark)] pt-3 flex items-center justify-between mono text-[0.65rem] text-steel-grey">
+              <div className="mt-4 border-t border-[color:var(--line-dark)] pt-3 flex flex-wrap items-center justify-between gap-2 mono text-[0.65rem] text-steel-grey">
                 <span>TRADE LAW &amp; ITAR GUIDANCE</span>
                 <span className="text-gold">STRUCTURED AUDIT</span>
               </div>

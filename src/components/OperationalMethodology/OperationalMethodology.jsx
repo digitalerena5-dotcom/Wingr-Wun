@@ -54,7 +54,7 @@ export default function OperationalMethodology() {
                 as="div"
                 key={p.title}
                 delay={i * 90}
-                className="group rounded border border-[rgba(7,25,37,0.12)] bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#C99B47] hover:shadow-md"
+                className="group rounded border border-[rgba(7,25,37,0.12)] bg-white p-5 sm:p-6 shadow-sm transition-all duration-300 hover:border-[#C99B47] hover:shadow-md"
               >
                 <div className="border-b border-[rgba(7,25,37,0.08)] pb-4">
                   <div className="flex h-10 w-10 items-center justify-center rounded border border-[rgba(7,25,37,0.1)] bg-[#F2F2EF] text-[#31566D] group-hover:border-[#C99B47] group-hover:text-[#C99B47] transition-colors">
@@ -78,7 +78,7 @@ export default function OperationalMethodology() {
         <div className="mt-14 overflow-hidden rounded border border-[rgba(7,25,37,0.14)] bg-navy-950 text-white shadow-xl">
           <div className="grid lg:grid-cols-12 items-stretch">
             {/* Left Content */}
-            <div className="p-8 sm:p-10 lg:col-span-7 flex flex-col justify-between">
+            <div className="p-5 sm:p-10 lg:col-span-7 flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse-amber" />
@@ -111,7 +111,7 @@ export default function OperationalMethodology() {
               <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-transparent to-navy-950/20 pointer-events-none" />
               <div className="grid-bg absolute inset-0 opacity-15 pointer-events-none" />
               
-              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between bg-navy-950/85 backdrop-blur-md px-3.5 py-2.5 rounded-lg border border-[color:var(--line-dark)] mono text-[0.68rem] text-steel-grey shadow-lg">
+              <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 flex flex-wrap items-center justify-between gap-2 bg-navy-950/85 backdrop-blur-md px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-lg border border-[color:var(--line-dark)] mono text-[0.65rem] sm:text-[0.68rem] text-steel-grey shadow-lg">
                 <div className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse-amber" />
                   <span className="text-white font-medium">COCKPIT CRM &amp; AVIONICS REGIME</span>
