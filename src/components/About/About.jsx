@@ -86,7 +86,7 @@ export default function About() {
             <div className="mb-6 flex flex-wrap items-center justify-between gap-3 border-b border-[color:var(--line-dark)] pb-4">
               <div className="flex items-center gap-2">
                 <span className="h-2 w-2 rounded-full bg-gold animate-pulse-amber" />
-                <span className="mono text-xs uppercase tracking-wider text-gold">FIG. 02 — PROCUREMENT PIPELINE ROUTE</span>
+                <span className="mono text-xs uppercase tracking-wider text-gold">PROCUREMENT PIPELINE ROUTE</span>
               </div>
               <span className="mono text-xs text-steel-grey">SCHEMATIC // NOT TO SCALE</span>
             </div>

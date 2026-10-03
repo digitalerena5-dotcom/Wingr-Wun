@@ -60,11 +60,11 @@ export default function SupplyNetwork() {
             {/* LEFT COLUMN: International Defence & Fleet Requirements */}
             <div className="space-y-3 lg:col-span-4">
               <div className="mb-2 flex items-center justify-between border-b border-[color:var(--line-dark)] pb-2">
-                <span className="mono text-xs uppercase text-gold font-bold">1. International Requirements</span>
+                <span className="mono text-xs uppercase text-gold font-bold">International Requirements</span>
                 <span className="mono text-[0.65rem] text-steel-grey">INPUT CHANNELS</span>
               </div>
 
-              {demandNodes.map((node, i) => {
+              {demandNodes.map((node) => {
                 const isSelected = activeRoute === node.id;
                 return (
                   <button
@@ -82,7 +82,6 @@ export default function SupplyNetwork() {
                       <span className="font-display text-sm font-semibold text-white group-hover:text-gold transition-colors">
                         {node.label}
                       </span>
-                      <span className="mono text-xs text-gold">0{i + 1}</span>
                     </div>
                     <p className="mt-1 text-xs text-[color:var(--text-muted-dark)]">{node.sub}</p>
                     {isSelected && (
@@ -129,11 +128,11 @@ export default function SupplyNetwork() {
             {/* RIGHT COLUMN: Western Aerospace Supply */}
             <div className="space-y-3 lg:col-span-4">
               <div className="mb-2 flex items-center justify-between border-b border-[color:var(--line-dark)] pb-2">
-                <span className="mono text-xs uppercase text-gold font-bold">2. Western Aerospace Supply</span>
+                <span className="mono text-xs uppercase text-gold font-bold">Western Aerospace Supply</span>
                 <span className="mono text-[0.65rem] text-steel-grey">VERIFIED SOURCES</span>
               </div>
 
-              {supplyNodes.map((node, i) => {
+              {supplyNodes.map((node) => {
                 const isSelected = activeRoute === node.id;
                 return (
                   <button
@@ -151,7 +150,6 @@ export default function SupplyNetwork() {
                       <span className="font-display text-sm font-semibold text-white group-hover:text-gold transition-colors">
                         {node.label}
                       </span>
-                      <span className="mono text-xs text-gold">0{i + 1}</span>
                     </div>
                     <p className="mt-1 text-xs text-[color:var(--text-muted-dark)]">{node.sub}</p>
                     {isSelected && (
@@ -167,7 +165,7 @@ export default function SupplyNetwork() {
 
           {/* Bottom Telemetry Bar */}
           <div className="mt-8 border-t border-[color:var(--line-dark)] pt-4 flex flex-wrap items-center justify-between gap-4 mono text-[0.68rem] text-steel-grey">
-            <span>FIGURE 03 // VENDOR VETTING &amp; CROSS-BORDER LOGISTICS PIPELINE</span>
+            <span>VENDOR VETTING &amp; CROSS-BORDER LOGISTICS PIPELINE</span>
             <span className="text-gold">COMPLIANCE CONSCIOUS PROCUREMENT</span>
           </div>
         </div>

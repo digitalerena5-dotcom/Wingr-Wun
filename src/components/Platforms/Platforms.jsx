@@ -46,7 +46,7 @@ export default function Platforms({ onOpenRFQ }) {
             {/* Header with Mode Selectors & Controls */}
             <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[color:var(--line-dark)] pb-3 mono text-[0.7rem] text-steel-grey">
               <div className="flex items-center gap-2">
-                <span className="text-gold font-medium uppercase">FIG. 04 — COMPONENT BREAKDOWN</span>
+                <span className="text-gold font-medium uppercase">COMPONENT BREAKDOWN</span>
                 <span className="hidden sm:inline text-steel-grey/40">|</span>
                 <span className="hidden sm:inline text-white/70">ROTATION TELEMETRY</span>
               </div>
