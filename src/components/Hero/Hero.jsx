@@ -63,7 +63,7 @@ export default function Hero({ onOpenRFQ }) {
               Critical Aviation<br />
               Requirements<br />
               With <span className="text-[color:var(--c-gold-soft)]">Trusted</span><br />
-              Global Supply.
+              Global Supply
             </h1>
 
             {/* Client Authorized Supporting Copy */}
