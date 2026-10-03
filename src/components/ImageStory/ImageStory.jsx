@@ -85,22 +85,13 @@ export default function ImageStory() {
             {/* Image 3: Bonded Aerospace Parts Warehousing */}
             <Reveal delay={250} className="group">
               <div className="brackets relative overflow-hidden rounded border border-[color:var(--line-dark-strong)] bg-navy-950 shadow-2xl">
-                <div className="relative aspect-[16/10] overflow-hidden">
+                <div className="relative overflow-hidden">
                   <img
                     src="/images/air_cargo_pallet.jpg"
-                    alt="High-bay bonded aerospace parts warehouse and certified distributor stock facility"
-                    className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    alt="Bonded parts logistics and pre-vetted western distributor corridors"
+                    className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/15 to-transparent" />
-                  <div className="grid-bg absolute inset-0 opacity-20" aria-hidden="true" />
-                </div>
-                <div className="flex items-center justify-between border-t border-[color:var(--line-dark)] bg-navy-950/90 px-5 py-3 mono text-[0.68rem] text-steel-grey">
-                  <div>
-                    <span className="text-white font-medium block">BONDED PARTS LOGISTICS</span>
-                    <span className="text-[0.62rem] text-gold">PRE-VETTED WESTERN DISTRIBUTOR CORRIDORS</span>
-                  </div>
-                  <span className="text-gold">TRACEABLE STOCK</span>
                 </div>
               </div>
             </Reveal>
