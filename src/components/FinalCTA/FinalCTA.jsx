@@ -105,11 +105,10 @@ export default function FinalCTA({ onOpenRFQ }) {
           </div>
 
           <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {enquiryPoints.map((item, i) => (
+            {enquiryPoints.map((item) => (
               <div key={item.title} className="border-t border-[color:var(--line-dark)] pt-4 lg:border-t-0 lg:border-l lg:pl-6 lg:first:border-l-0 lg:first:pl-0">
-                <span className="mono text-xs text-gold">0{i + 1} // PARAMETER</span>
-                <h4 className="font-display mt-2 text-base font-bold text-white">{item.title}</h4>
-                <p className="mt-1.5 text-xs leading-relaxed text-[color:var(--text-muted-dark)]">{item.body}</p>
+                <h4 className="font-display text-base font-bold text-white">{item.title}</h4>
+                <p className="mt-2 text-xs leading-relaxed text-[color:var(--text-muted-dark)]">{item.body}</p>
               </div>
             ))}
           </div>

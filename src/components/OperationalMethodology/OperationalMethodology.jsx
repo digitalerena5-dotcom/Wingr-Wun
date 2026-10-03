@@ -56,11 +56,10 @@ export default function OperationalMethodology() {
                 delay={i * 90}
                 className="group rounded border border-[rgba(7,25,37,0.12)] bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#C99B47] hover:shadow-md"
               >
-                <div className="flex items-center justify-between border-b border-[rgba(7,25,37,0.08)] pb-4">
+                <div className="border-b border-[rgba(7,25,37,0.08)] pb-4">
                   <div className="flex h-10 w-10 items-center justify-center rounded border border-[rgba(7,25,37,0.1)] bg-[#F2F2EF] text-[#31566D] group-hover:border-[#C99B47] group-hover:text-[#C99B47] transition-colors">
                     <Icon size={20} strokeWidth={1.5} />
                   </div>
-                  <span className="mono text-xs text-[#31566D]">METHOD 0{i + 1}</span>
                 </div>
 
                 <h3 className="font-display mt-5 text-base font-bold text-[#071925] group-hover:text-[#071925]">

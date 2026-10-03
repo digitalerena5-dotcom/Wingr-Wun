@@ -42,10 +42,7 @@ export default function Services({ onOpenRFQ }) {
                 delay={i * 90}
                 className="group relative border-b border-r border-[color:var(--line-dark)] p-8 transition-colors duration-500 hover:bg-[#081E2E] sm:p-12 lg:p-14"
               >
-                <div className="flex items-start justify-between">
-                  <span className="mono text-xs font-semibold text-gold tracking-widest">
-                    SERVICE {s.number}
-                  </span>
+                <div>
                   <div className="flex h-11 w-11 items-center justify-center rounded border border-[color:var(--line-dark)] bg-navy-900 text-steel-grey transition-all duration-300 group-hover:border-gold group-hover:text-gold group-hover:scale-105">
                     <IconComponent size={22} strokeWidth={1.5} />
                   </div>
