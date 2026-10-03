@@ -2,7 +2,7 @@ import { Mail, Phone } from 'lucide-react';
 import { Reveal } from '../../hooks/useScrollReveal.jsx';
 import { contact, hasDirectChannel } from '../../data/contact.js';
 import { homeHref } from '../../data/navigation.js';
-import EnquiryForm from './EnquiryForm.jsx';
+import AviationRFQForm from '../Shared/AviationRFQForm.jsx';
 
 const nextSteps = [
   { title: 'Review', body: 'Your requirement is reviewed against the sourcing, compliance and logistics considerations involved.' },
@@ -48,11 +48,18 @@ export default function ContactPage() {
       <div className="container-x pb-[var(--section-y)]">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-10">
           <div id="enquiry-form" className="intro brackets relative scroll-mt-[calc(var(--header-h)+1.5rem)] border border-[color:var(--line-dark-strong)] bg-navy-900/80 backdrop-blur-[2px] lg:col-span-8" style={{ '--d': '380ms' }}>
-            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[color:var(--line-dark)] px-6 py-4 sm:px-10">
-              <h2 className="mono text-[0.75rem] font-medium uppercase text-gold">Enquiry form</h2>
-              <p className="mono text-[0.75rem] uppercase text-steel-grey">Two short sections</p>
+            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[color:var(--line-dark)] px-6 py-4 sm:px-8">
+              <div className="flex items-center gap-2.5">
+                <span className="block h-2 w-2 rounded-full bg-gold" aria-hidden="true" />
+                <h2 className="mono text-[0.75rem] font-medium uppercase tracking-wider text-gold">
+                  Aviation RFQ &amp; Sourcing Desk
+                </h2>
+              </div>
+              <p className="mono text-[0.72rem] uppercase tracking-wider text-steel-grey">
+                Priority Dispatch Queue
+              </p>
             </div>
-            <EnquiryForm />
+            <AviationRFQForm />
           </div>
 
           <aside className="lg:col-span-4" aria-label="About your enquiry">
@@ -67,8 +74,7 @@ export default function ContactPage() {
                     )}
                     <span className="relative mt-[6px] block h-[11px] w-[11px] border border-gold bg-navy-950" aria-hidden="true" />
                     <div>
-                      <span className="mono text-xs text-gold">0{i + 1}</span>
-                      <h3 className="mt-1 font-display font-semibold text-white">{s.title}</h3>
+                      <h3 className="font-display font-semibold text-white">{s.title}</h3>
                       <p className="mt-1 text-[0.95rem] leading-relaxed text-[color:var(--text-muted-dark)]">{s.body}</p>
                     </div>
                   </li>
