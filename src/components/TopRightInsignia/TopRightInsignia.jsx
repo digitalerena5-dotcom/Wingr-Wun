@@ -34,11 +34,11 @@ export default function TopRightInsignia({ onOpenRFQ }) {
           }}
           title="Wingr Wun Official Crest — Click to discuss your requirement"
           aria-label="Wingr Wun Official Crest"
-          className="group relative flex h-11 w-11 items-center justify-center rounded-full border border-gold/30 bg-navy-950/80 shadow-[0_4px_20px_rgba(7,25,37,0.7)] backdrop-blur-md transition-all duration-500 hover:border-gold hover:shadow-[0_0_24px_rgba(201,155,71,0.35)] sm:h-12 sm:w-12"
+          className="group relative flex h-14 w-14 items-center justify-center rounded-full border border-gold/40 bg-navy-950/90 shadow-[0_4px_24px_rgba(7,25,37,0.85)] backdrop-blur-md transition-all duration-500 hover:border-gold hover:shadow-[0_0_28px_rgba(201,155,71,0.45)] sm:h-16 sm:w-16"
         >
           {/* Subtle rotating orbit border on hover */}
           <span
-            className="absolute -inset-[3px] rounded-full border border-dashed border-gold/25 opacity-0 transition-opacity duration-500 group-hover:animate-radar group-hover:opacity-100"
+            className="absolute -inset-[3px] rounded-full border border-dashed border-gold/30 opacity-0 transition-opacity duration-500 group-hover:animate-radar group-hover:opacity-100"
             aria-hidden="true"
           />
 
@@ -46,9 +46,9 @@ export default function TopRightInsignia({ onOpenRFQ }) {
           <img
             src="/images/wingr_wun_logo.png"
             alt="Wingr Wun Official Seal"
-            width="38"
-            height="38"
-            className="h-8 w-8 object-contain transition-transform duration-500 group-hover:scale-110 sm:h-9 sm:w-9"
+            width="56"
+            height="56"
+            className="h-11 w-11 object-contain transition-transform duration-500 group-hover:scale-108 sm:h-12 sm:w-12 drop-shadow-[0_2px_8px_rgba(201,155,71,0.35)]"
           />
         </button>
       </div>

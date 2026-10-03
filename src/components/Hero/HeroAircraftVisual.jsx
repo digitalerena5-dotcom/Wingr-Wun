@@ -1,81 +1,46 @@
 import { useState, useEffect, useRef } from 'react';
 
-// 6-Waypoint Global Procurement & Sourcing Flight Trajectory
-// Seamless continuous multi-leg circuit covering all 6 strategic corridors
+// 3-Waypoint Global Strategic Procurement Flight Trajectory
+// Seamless aerodynamic closed loop connecting Western OEM Sourcing, Export & Compliance, and Fleet Integration
 const PATH_D =
-  'M 100 420 ' +
-  'C 140 340, 180 270, 250 250 ' + // Leg 1: Path 01 -> Path 02
-  'C 320 230, 360 110, 440 100 ' + // Leg 2: Path 02 -> Path 03
-  'C 510 90, 520 260, 580 280 ' +  // Leg 3: Path 03 -> Path 04
-  'C 630 300, 680 150, 750 120 ' + // Leg 4: Path 04 -> Path 05
-  'C 810 100, 830 340, 850 420 ' + // Leg 5: Path 05 -> Path 06
-  'C 800 500, 450 510, 100 420';   // Leg 6: Path 06 -> Path 01 (Seamless Return Loop)
+  'M 130 390 ' +
+  'C 220 220, 340 120, 480 120 ' + // Leg 1: Western OEM Hub -> Export & Compliance Audit
+  'C 620 120, 740 220, 830 390 ' + // Leg 2: Export & Compliance Audit -> Fleet Integration
+  'C 875 475, 680 490, 480 490 ' + // Leg 3a: Fleet Integration -> Return arc apex
+  'C 280 490, 85 475, 130 390';    // Leg 3b: Return arc -> Western OEM Hub (Seamless C1 closed loop)
 
 const WAYPOINTS = [
   {
     id: '01',
     code: 'PATH 01',
     title: 'WESTERN OEM HUB',
-    subtitle: 'SOURCE PEDIGREE',
-    x: 100,
-    y: 420,
-    labelPos: { x: 100, y: 462, textAnchor: 'middle' },
+    subtitle: 'STRATEGIC SOURCING',
+    x: 130,
+    y: 390,
+    labelPos: { x: 130, y: 442, textAnchor: 'middle' },
     tStart: 0.0,
-    tEnd: 0.16,
+    tEnd: 0.333,
   },
   {
     id: '02',
     code: 'PATH 02',
-    title: 'STOCKIST DEPOT',
-    subtitle: 'ROTABLE CONSIGNMENT',
-    x: 250,
-    y: 250,
-    labelPos: { x: 250, y: 215, textAnchor: 'middle' },
-    tStart: 0.16,
-    tEnd: 0.33,
+    title: 'EXPORT & COMPLIANCE',
+    subtitle: 'ITAR & AIRWORTHINESS AUDIT',
+    x: 480,
+    y: 120,
+    labelPos: { x: 480, y: 78, textAnchor: 'middle' },
+    tStart: 0.333,
+    tEnd: 0.667,
   },
   {
     id: '03',
     code: 'PATH 03',
-    title: 'EXPORT PRE-CLEARANCE',
-    subtitle: 'ITAR & EAR ADVISORY',
-    x: 440,
-    y: 100,
-    labelPos: { x: 440, y: 65, textAnchor: 'middle' },
-    tStart: 0.33,
-    tEnd: 0.50,
-  },
-  {
-    id: '04',
-    code: 'PATH 04',
-    title: 'BONDED TRANSIT',
-    subtitle: 'AIR FREIGHT CORRIDOR',
-    x: 580,
-    y: 280,
-    labelPos: { x: 580, y: 325, textAnchor: 'middle' },
-    tStart: 0.50,
-    tEnd: 0.67,
-  },
-  {
-    id: '05',
-    code: 'PATH 05',
-    title: 'AIRWORTHINESS AUDIT',
-    subtitle: 'DUAL RELEASE 8130-3',
-    x: 750,
-    y: 120,
-    labelPos: { x: 750, y: 85, textAnchor: 'middle' },
-    tStart: 0.67,
-    tEnd: 0.83,
-  },
-  {
-    id: '06',
-    code: 'PATH 06',
     title: 'FLEET INTEGRATION',
     subtitle: 'DEFENCE FLIGHT LINE',
-    x: 850,
-    y: 420,
-    labelPos: { x: 850, y: 462, textAnchor: 'middle' },
-    tStart: 0.83,
+    x: 830,
+    y: 390,
+    labelPos: { x: 830, y: 442, textAnchor: 'middle' },
+    tStart: 0.667,
     tEnd: 1.0,
   },
 ];
@@ -98,7 +63,7 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
     let animId;
     let startTime = null;
     let lastT = 0;
-    const duration = 18000; // 18 seconds for the full 6-path global circuit
+    const duration = 14000; // 14 seconds for smooth 3-path global circuit
     const trailPoints = [];
     const maxTrail = 26;
 
@@ -266,12 +231,11 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
             <line x1="760" y1="40" x2="760" y2="500" />
           </g>
 
-          {/* Secondary Cross-Corridor Interconnected Airspace Grid Lines */}
-          <g stroke="rgba(56,189,248,0.15)" strokeWidth="1" strokeDasharray="2 6">
-            <line x1="100" y1="420" x2="440" y2="100" />
-            <line x1="250" y1="250" x2="580" y2="280" />
-            <line x1="440" y1="100" x2="750" y2="120" />
-            <line x1="580" y1="280" x2="850" y2="420" />
+          {/* Strategic Airspace Corridor Reference Lines */}
+          <g stroke="rgba(56,189,248,0.18)" strokeWidth="1" strokeDasharray="3 6">
+            <line x1="130" y1="390" x2="480" y2="120" />
+            <line x1="480" y1="120" x2="830" y2="390" />
+            <line x1="830" y1="390" x2="130" y2="390" strokeDasharray="4 8" opacity="0.35" />
           </g>
 
           {/* Hidden Master Path Reference for Mathematical Tracking */}
@@ -462,23 +426,31 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
           </g>
         </svg>
 
-        {/* 6-STAGE SOURCING PIPELINE STEPPER BAR */}
-        <div className="mt-3 grid grid-cols-3 sm:grid-cols-6 gap-1.5 mono text-[0.62rem] sm:text-[0.66rem]">
+        {/* 3-STAGE SOURCING PIPELINE STEPPER BAR */}
+        <div className="mt-3.5 grid grid-cols-3 gap-2 sm:gap-3 mono text-xs">
           {WAYPOINTS.map((wp, idx) => {
             const isActive = activeWpIndex === idx;
             return (
               <div
                 key={wp.id}
-                className={`rounded border px-2 py-1.5 text-center transition-all duration-300 ${
+                className={`rounded-lg border px-3 py-2.5 text-center transition-all duration-300 ${
                   isActive
-                    ? 'border-gold bg-navy-900 text-white shadow-[0_0_12px_rgba(201,155,71,0.25)] font-semibold'
-                    : 'border-[color:var(--line-dark)] bg-navy-950/70 text-steel-grey'
+                    ? 'border-gold bg-navy-900/95 text-white shadow-[0_0_18px_rgba(201,155,71,0.3)] font-semibold'
+                    : 'border-[color:var(--line-dark)] bg-navy-950/70 text-steel-grey hover:border-steel-grey/40'
                 }`}
               >
-                <span className={`block text-[0.58rem] ${isActive ? 'text-gold' : 'text-steel-grey'}`}>
-                  {wp.code}
+                <div className="flex items-center justify-center gap-1.5">
+                  <span className={`h-1.5 w-1.5 rounded-full ${isActive ? 'bg-gold animate-pulse' : 'bg-steel-grey/60'}`} />
+                  <span className={`text-[0.68rem] tracking-wider font-bold ${isActive ? 'text-gold' : 'text-steel-grey'}`}>
+                    {wp.code}
+                  </span>
+                </div>
+                <span className="truncate block mt-1 text-white text-[0.75rem] sm:text-[0.82rem] font-bold tracking-tight">
+                  {wp.title}
                 </span>
-                <span className="truncate block mt-0.5">{wp.title.split(' ')[0]}</span>
+                <span className="block mt-0.5 text-[0.62rem] sm:text-[0.68rem] text-[color:var(--text-muted-dark)] truncate">
+                  {wp.subtitle}
+                </span>
               </div>
             );
           })}
