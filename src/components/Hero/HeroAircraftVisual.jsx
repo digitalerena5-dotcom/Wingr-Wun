@@ -50,6 +50,11 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
   const aircraftRef = useRef(null);
   const trailLeftRef = useRef(null);
   const trailRightRef = useRef(null);
+  const shadowRef = useRef(null);
+  const continentsRef = useRef(null);
+  const radarBeamRef = useRef(null);
+  const meridianRefs = useRef([]);
+
   const [activeWpIndex, setActiveWpIndex] = useState(0);
   const [telemetry, setTelemetry] = useState({
     progress: 0,
@@ -66,6 +71,9 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
     const duration = 14000; // 14 seconds for smooth 3-path global circuit
     const trailPoints = [];
     const maxTrail = 26;
+    const GLOBE_CX = 480;
+    const GLOBE_CY = 320;
+    const GLOBE_R = 195;
 
     const tick = (timestamp) => {
       if (!startTime) startTime = timestamp;
@@ -78,6 +86,34 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
       }
       lastT = t;
 
+      // 1. Rotate World Continents horizontally across the sphere
+      if (continentsRef.current) {
+        const globeOffset = (elapsed * 0.024) % 600;
+        continentsRef.current.setAttribute('transform', `translate(${(-globeOffset).toFixed(1)}, 0)`);
+      }
+
+      // 2. Rotate 3D Longitude Meridians in real-time spherical projection
+      const rotAngle = (elapsed * 0.00045) % (Math.PI * 2);
+      for (let i = 0; i < 6; i++) {
+        const phi = rotAngle + (i * Math.PI) / 6;
+        const cosVal = Math.cos(phi);
+        const sinVal = Math.sin(phi);
+        const rx = Math.max(0.5, Math.abs(sinVal) * GLOBE_R);
+        const el = meridianRefs.current[i];
+        if (el) {
+          el.setAttribute('rx', rx.toFixed(1));
+          el.setAttribute('opacity', cosVal >= 0 ? '0.34' : '0.12');
+          el.setAttribute('stroke-dasharray', cosVal >= 0 ? 'none' : '3 4');
+        }
+      }
+
+      // 3. Rotate Tactical Radar Sweep Scanner
+      if (radarBeamRef.current) {
+        const radarAngle = (elapsed * 0.055) % 360;
+        radarBeamRef.current.setAttribute('transform', `rotate(${radarAngle.toFixed(1)} ${GLOBE_CX} ${GLOBE_CY})`);
+      }
+
+      // 4. Update Aircraft position, contrails, ground shadow, and telemetry
       if (pathRef.current && aircraftRef.current) {
         const totalLen = pathRef.current.getTotalLength();
         const curDist = t * totalLen;
@@ -90,6 +126,19 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
           'transform',
           `translate(${pt.x}, ${pt.y}) rotate(${angle}) scale(0.74)`
         );
+
+        // Altitude shadow projected on the globe sphere
+        if (shadowRef.current) {
+          const distFromCenter = Math.hypot(pt.x - GLOBE_CX, pt.y - GLOBE_CY);
+          if (distFromCenter < 210) {
+            const shadowX = GLOBE_CX + (pt.x - GLOBE_CX) * 0.92;
+            const shadowY = GLOBE_CY + (pt.y - GLOBE_CY) * 0.92 + 12;
+            shadowRef.current.setAttribute('transform', `translate(${shadowX.toFixed(1)}, ${shadowY.toFixed(1)}) rotate(${angle.toFixed(1)}) scale(0.62)`);
+            shadowRef.current.setAttribute('opacity', (0.42 * (1 - distFromCenter / 240)).toFixed(2));
+          } else {
+            shadowRef.current.setAttribute('opacity', '0');
+          }
+        }
 
         // Record contrail trail history from twin engine nozzles
         const rad = (angle * Math.PI) / 180;
@@ -167,7 +216,7 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           className="w-full h-auto drop-shadow-[0_15px_45px_rgba(7,25,37,0.95)]"
-          aria-label="Dynamic aerospace transport traversing continuous 6-path global sourcing network"
+          aria-label="Dynamic aerospace transport traversing continuous global flight corridor across 3D revolving globe"
           role="img"
         >
           <defs>
@@ -215,6 +264,37 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
               <stop offset="100%" stopColor="#C99B47" />
             </linearGradient>
 
+            {/* Tactical 3D Globe Gradients & Atmosphere */}
+            <radialGradient id="globeSphereGrad" cx="38%" cy="28%" r="72%">
+              <stop offset="0%" stopColor="#122a3d" />
+              <stop offset="50%" stopColor="#0a1d2c" />
+              <stop offset="85%" stopColor="#05121c" />
+              <stop offset="100%" stopColor="#030c14" />
+            </radialGradient>
+
+            <radialGradient id="globeAtmosphereAura" cx="50%" cy="50%" r="50%">
+              <stop offset="70%" stopColor="rgba(56, 189, 248, 0)" />
+              <stop offset="90%" stopColor="rgba(56, 189, 248, 0.12)" />
+              <stop offset="97%" stopColor="rgba(56, 189, 248, 0.35)" />
+              <stop offset="100%" stopColor="rgba(201, 155, 71, 0.5)" />
+            </radialGradient>
+
+            <radialGradient id="globeLimbShading" cx="36%" cy="30%" r="64%">
+              <stop offset="0%" stopColor="rgba(255, 255, 255, 0.08)" />
+              <stop offset="45%" stopColor="rgba(0, 0, 0, 0)" />
+              <stop offset="80%" stopColor="rgba(2, 6, 12, 0.6)" />
+              <stop offset="100%" stopColor="rgba(2, 6, 12, 0.9)" />
+            </radialGradient>
+
+            <linearGradient id="radarSectorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="rgba(56, 189, 248, 0.35)" />
+              <stop offset="100%" stopColor="rgba(56, 189, 248, 0)" />
+            </linearGradient>
+
+            <clipPath id="globeClip">
+              <circle cx="480" cy="320" r="195" />
+            </clipPath>
+
             <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
               <feGaussianBlur stdDeviation="3" result="blur" />
               <feComposite in="SourceGraphic" in2="blur" operator="over" />
@@ -227,11 +307,252 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
             <line x1="50" y1="270" x2="890" y2="270" />
             <line x1="50" y1="420" x2="890" y2="420" />
             <line x1="180" y1="40" x2="180" y2="500" />
-            <line x1="470" y1="40" x2="470" y2="500" />
-            <line x1="760" y1="40" x2="760" y2="500" />
+            <line x1="480" y1="40" x2="480" y2="500" />
+            <line x1="780" y1="40" x2="780" y2="500" />
           </g>
 
-          {/* Strategic Airspace Corridor Reference Lines */}
+          {/* ======================================================== */}
+          {/* TACTICAL 3D REVOLVING GLOBE (AEROSPACE DEFENSE RADAR)   */}
+          {/* ======================================================== */}
+
+          {/* 1. Outer Atmospheric Halo */}
+          <circle
+            cx="480"
+            cy="320"
+            r="205"
+            fill="url(#globeAtmosphereAura)"
+            className="pointer-events-none"
+          />
+
+          {/* 2. Outer Gimbal Coordinate Ring with Degree Tick Marks */}
+          <g className="pointer-events-none">
+            <circle
+              cx="480"
+              cy="320"
+              r="215"
+              fill="none"
+              stroke="rgba(56, 189, 248, 0.22)"
+              strokeWidth="1"
+              strokeDasharray="2 6"
+            />
+            {/* Cardinal Coordinates */}
+            <text x="480" y="96" textAnchor="middle" fill="#C99B47" fontSize="8.5" fontFamily="'IBM Plex Mono', monospace" letterSpacing="1">000° N</text>
+            <text x="708" y="323" textAnchor="start" fill="#94A3B8" fontSize="8.5" fontFamily="'IBM Plex Mono', monospace" letterSpacing="1">090° E</text>
+            <text x="480" y="546" textAnchor="middle" fill="#94A3B8" fontSize="8.5" fontFamily="'IBM Plex Mono', monospace" letterSpacing="1">180° S</text>
+            <text x="252" y="323" textAnchor="end" fill="#94A3B8" fontSize="8.5" fontFamily="'IBM Plex Mono', monospace" letterSpacing="1">270° W</text>
+          </g>
+
+          {/* 3. Clipped Planetary Sphere */}
+          <g clipPath="url(#globeClip)">
+            {/* Globe Base Ocean Sphere */}
+            <circle cx="480" cy="320" r="195" fill="url(#globeSphereGrad)" />
+
+            {/* Latitude Parallels */}
+            {/* Equator */}
+            <ellipse cx="480" cy="320" rx="195" ry="44" fill="none" stroke="rgba(201, 155, 71, 0.45)" strokeWidth="1.2" strokeDasharray="6 4" />
+            {/* Northern Tropic (23.5° N) */}
+            <ellipse cx="480" cy="245" rx="178" ry="36" fill="none" stroke="rgba(56, 189, 248, 0.25)" strokeWidth="0.8" strokeDasharray="4 6" />
+            {/* Arctic Circle (66.5° N) */}
+            <ellipse cx="480" cy="170" rx="118" ry="22" fill="none" stroke="rgba(56, 189, 248, 0.2)" strokeWidth="0.8" strokeDasharray="3 5" />
+            {/* Southern Tropic (23.5° S) */}
+            <ellipse cx="480" cy="395" rx="178" ry="36" fill="none" stroke="rgba(56, 189, 248, 0.25)" strokeWidth="0.8" strokeDasharray="4 6" />
+            {/* Antarctic Circle (66.5° S) */}
+            <ellipse cx="480" cy="470" rx="118" ry="22" fill="none" stroke="rgba(56, 189, 248, 0.2)" strokeWidth="0.8" strokeDasharray="3 5" />
+
+            {/* Seamless Revolving Tactical World Continents Group */}
+            <g ref={continentsRef} opacity="0.85">
+              {[0, 600].map((shiftX) => (
+                <g key={shiftX} transform={`translate(${shiftX}, 0)`}>
+                  {/* NORTH AMERICA */}
+                  <path
+                    d="M 220 230 L 260 215 L 295 230 L 320 250 L 310 280 L 280 295 L 255 270 L 235 255 Z"
+                    fill="rgba(49, 86, 109, 0.45)"
+                    stroke="rgba(56, 189, 248, 0.6)"
+                    strokeWidth="1"
+                  />
+                  <path
+                    d="M 255 270 L 305 270 L 330 295 L 315 330 L 295 340 L 280 365 L 265 335 L 250 295 Z"
+                    fill="rgba(49, 86, 109, 0.45)"
+                    stroke="rgba(56, 189, 248, 0.6)"
+                    strokeWidth="1"
+                  />
+                  {/* Seattle / Western OEM Hub Node */}
+                  <circle cx="265" cy="275" r="3" fill="#C99B47" />
+
+                  {/* SOUTH AMERICA */}
+                  <path
+                    d="M 295 365 L 330 375 L 350 405 L 325 440 L 305 405 Z"
+                    fill="rgba(49, 86, 109, 0.4)"
+                    stroke="rgba(56, 189, 248, 0.5)"
+                    strokeWidth="1"
+                  />
+                  <path
+                    d="M 315 435 L 330 440 L 320 480 L 305 475 Z"
+                    fill="rgba(49, 86, 109, 0.4)"
+                    stroke="rgba(56, 189, 248, 0.5)"
+                    strokeWidth="1"
+                  />
+
+                  {/* EUROPE & BRITISH ISLES */}
+                  <path
+                    d="M 405 230 L 415 220 L 420 238 L 410 242 Z"
+                    fill="rgba(49, 86, 109, 0.45)"
+                    stroke="rgba(56, 189, 248, 0.6)"
+                    strokeWidth="1"
+                  />
+                  <path
+                    d="M 420 240 L 455 230 L 470 250 L 440 270 L 420 260 Z"
+                    fill="rgba(49, 86, 109, 0.45)"
+                    stroke="rgba(56, 189, 248, 0.6)"
+                    strokeWidth="1"
+                  />
+                  <path
+                    d="M 435 195 L 455 185 L 465 210 L 445 220 Z"
+                    fill="rgba(49, 86, 109, 0.4)"
+                    stroke="rgba(56, 189, 248, 0.5)"
+                    strokeWidth="1"
+                  />
+                  {/* London / Toulouse European Hub Node */}
+                  <circle cx="430" cy="245" r="3" fill="#38BDF8" />
+
+                  {/* AFRICA */}
+                  <path
+                    d="M 415 280 L 475 280 L 495 315 L 460 345 L 410 315 Z"
+                    fill="rgba(49, 86, 109, 0.45)"
+                    stroke="rgba(56, 189, 248, 0.55)"
+                    strokeWidth="1"
+                  />
+                  <path
+                    d="M 430 335 L 470 345 L 500 350 L 485 390 L 445 390 Z"
+                    fill="rgba(49, 86, 109, 0.4)"
+                    stroke="rgba(56, 189, 248, 0.5)"
+                    strokeWidth="1"
+                  />
+                  <path
+                    d="M 445 390 L 480 395 L 470 440 L 450 440 Z"
+                    fill="rgba(49, 86, 109, 0.4)"
+                    stroke="rgba(56, 189, 248, 0.5)"
+                    strokeWidth="1"
+                  />
+
+                  {/* ASIA & MIDDLE EAST */}
+                  <path
+                    d="M 470 280 L 495 285 L 505 315 L 485 325 Z"
+                    fill="rgba(49, 86, 109, 0.45)"
+                    stroke="rgba(56, 189, 248, 0.6)"
+                    strokeWidth="1"
+                  />
+                  {/* Dubai Transit Hub Node */}
+                  <circle cx="495" cy="300" r="3" fill="#C99B47" />
+
+                  <path
+                    d="M 465 195 L 580 190 L 605 235 L 540 245 L 475 235 Z"
+                    fill="rgba(49, 86, 109, 0.45)"
+                    stroke="rgba(56, 189, 248, 0.55)"
+                    strokeWidth="1"
+                  />
+                  <path
+                    d="M 515 295 L 545 300 L 535 345 L 520 330 Z"
+                    fill="rgba(49, 86, 109, 0.4)"
+                    stroke="rgba(56, 189, 248, 0.5)"
+                    strokeWidth="1"
+                  />
+                  <path
+                    d="M 540 245 L 590 250 L 595 295 L 555 315 L 535 280 Z"
+                    fill="rgba(49, 86, 109, 0.45)"
+                    stroke="rgba(56, 189, 248, 0.55)"
+                    strokeWidth="1"
+                  />
+                  {/* Tokyo / East Asia Hub */}
+                  <circle cx="605" cy="260" r="3" fill="#38BDF8" />
+
+                  {/* AUSTRALIA */}
+                  <path
+                    d="M 585 385 L 630 390 L 635 435 L 590 435 L 575 410 Z"
+                    fill="rgba(49, 86, 109, 0.4)"
+                    stroke="rgba(56, 189, 248, 0.5)"
+                    strokeWidth="1"
+                  />
+
+                  {/* Trans-Continental Air Route Corridors */}
+                  <path
+                    d="M 265 275 Q 350 220 430 245"
+                    fill="none"
+                    stroke="rgba(56, 189, 248, 0.35)"
+                    strokeWidth="0.9"
+                    strokeDasharray="3 4"
+                  />
+                  <path
+                    d="M 430 245 Q 465 260 495 300"
+                    fill="none"
+                    stroke="rgba(201, 155, 71, 0.4)"
+                    strokeWidth="0.9"
+                    strokeDasharray="3 4"
+                  />
+                  <path
+                    d="M 495 300 Q 550 280 605 260"
+                    fill="none"
+                    stroke="rgba(56, 189, 248, 0.35)"
+                    strokeWidth="0.9"
+                    strokeDasharray="3 4"
+                  />
+                </g>
+              ))}
+            </g>
+
+            {/* 3D Revolving Longitude Meridians */}
+            {[0, 1, 2, 3, 4, 5].map((i) => (
+              <ellipse
+                key={i}
+                ref={(el) => (meridianRefs.current[i] = el)}
+                cx="480"
+                cy="320"
+                rx={195}
+                ry="195"
+                fill="none"
+                stroke="#38BDF8"
+                strokeWidth="0.9"
+                opacity="0.3"
+              />
+            ))}
+
+            {/* Central Polar Axis Rod */}
+            <line x1="480" y1="125" x2="480" y2="515" stroke="rgba(201, 155, 71, 0.35)" strokeWidth="1" strokeDasharray="4 4" />
+
+            {/* Dynamic Altitude Shadow of Jet on Globe */}
+            <ellipse
+              ref={shadowRef}
+              cx="0"
+              cy="0"
+              rx="28"
+              ry="10"
+              fill="rgba(2, 6, 12, 0.7)"
+              filter="url(#glowEffect)"
+              opacity="0"
+            />
+
+            {/* Rotating Tactical Radar Sweep Beam */}
+            <g ref={radarBeamRef} className="pointer-events-none">
+              <line x1="480" y1="320" x2="480" y2="125" stroke="rgba(56, 189, 248, 0.75)" strokeWidth="1.2" />
+              <polygon points="480,320 480,125 540,135" fill="url(#radarSectorGrad)" opacity="0.35" />
+            </g>
+
+            {/* 3D Spherical Limb Shading & Edge Occlusion (Gives Realistic Depth) */}
+            <circle cx="480" cy="320" r="195" fill="url(#globeLimbShading)" className="pointer-events-none" />
+          </g>
+
+          {/* 4. Globe Glowing Rim Contour */}
+          <circle
+            cx="480"
+            cy="320"
+            r="195"
+            fill="none"
+            stroke="rgba(56, 189, 248, 0.45)"
+            strokeWidth="1.5"
+            className="pointer-events-none"
+          />
+
+          {/* Strategic Airspace Corridor Reference Guide Lines */}
           <g stroke="rgba(56,189,248,0.18)" strokeWidth="1" strokeDasharray="3 6">
             <line x1="130" y1="390" x2="480" y2="120" />
             <line x1="480" y1="120" x2="830" y2="390" />
@@ -280,7 +601,7 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
             opacity="0.8"
           />
 
-          {/* 6 STRATEGIC WAYPOINTS (PATH 01 TO PATH 06) */}
+          {/* 3 STRATEGIC WAYPOINTS (PATH 01 TO PATH 03) */}
           {WAYPOINTS.map((wp, idx) => {
             const isActive = activeWpIndex === idx;
             return (
@@ -315,7 +636,7 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
                   className={isActive ? 'animate-pulse' : ''}
                 />
 
-                {/* Waypoint Text Badges - Clean Neutral Typography (Unhighlighted) */}
+                {/* Waypoint Text Badges - Clean Neutral Typography */}
                 <text
                   x={wp.labelPos.x}
                   y={wp.labelPos.y}
@@ -345,7 +666,7 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
           })}
 
           {/* ======================================================== */}
-          {/* DYNAMIC AIRCRAFT (Navigates continuously through all 6 paths) */}
+          {/* DYNAMIC AIRCRAFT (Navigates continuously around globe)   */}
           {/* ======================================================== */}
           <g ref={aircraftRef} className="cursor-pointer transition-transform ease-out">
             {/* Glowing Engine Thrust Exhaust Flames */}
