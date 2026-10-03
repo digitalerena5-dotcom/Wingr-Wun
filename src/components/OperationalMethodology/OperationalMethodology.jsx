@@ -102,19 +102,22 @@ export default function OperationalMethodology() {
             </div>
 
             {/* Right Cockpit Imagery with Precision HUD / Telemetry */}
-            <div className="relative lg:col-span-5 min-h-[280px] lg:min-h-full overflow-hidden border-t lg:border-t-0 lg:border-l border-[color:var(--line-dark)]">
+            <div className="relative lg:col-span-5 min-h-[340px] lg:min-h-full overflow-hidden border-t lg:border-t-0 lg:border-l border-[color:var(--line-dark)] group">
               <img
                 src="/images/cockpit_annunciator.jpg"
-                alt="Aviation flight deck instrument panel, master annunciators and checklist controls in operational cockpit"
-                className="h-full w-full object-cover object-center filter brightness-90 hover:scale-105 transition-transform duration-700"
+                alt="High-precision glass cockpit avionics flight deck and flight management systems"
+                className="h-full w-full object-cover object-center filter brightness-105 contrast-[1.02] group-hover:scale-105 transition-transform duration-700 ease-out"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-transparent to-navy-950/40 pointer-events-none" />
-              <div className="grid-bg absolute inset-0 opacity-20 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-transparent to-navy-950/20 pointer-events-none" />
+              <div className="grid-bg absolute inset-0 opacity-15 pointer-events-none" />
               
-              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between bg-navy-950/80 backdrop-blur-md px-3.5 py-2 rounded border border-[color:var(--line-dark)] mono text-[0.65rem] text-steel-grey">
-                <span className="text-white">COCKPIT CRM &amp; CHECKLIST REGIME</span>
-                <span className="text-gold">ZERO ERROR TOLERANCE</span>
+              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between bg-navy-950/85 backdrop-blur-md px-3.5 py-2.5 rounded-lg border border-[color:var(--line-dark)] mono text-[0.68rem] text-steel-grey shadow-lg">
+                <div className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse-amber" />
+                  <span className="text-white font-medium">COCKPIT CRM &amp; AVIONICS REGIME</span>
+                </div>
+                <span className="text-gold font-bold">ZERO ERROR TOLERANCE</span>
               </div>
             </div>
           </div>

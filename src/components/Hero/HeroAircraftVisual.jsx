@@ -315,24 +315,24 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
                   className={isActive ? 'animate-pulse' : ''}
                 />
 
-                {/* Waypoint Text Badges */}
+                {/* Waypoint Text Badges - Clean Neutral Typography (Unhighlighted) */}
                 <text
                   x={wp.labelPos.x}
                   y={wp.labelPos.y}
                   textAnchor={wp.labelPos.textAnchor}
-                  fill={isActive ? '#FFE082' : '#C99B47'}
-                  fontSize="11.5"
+                  fill={isActive ? '#94A3B8' : '#64748B'}
+                  fontSize="10"
                   fontFamily="'IBM Plex Mono', monospace"
-                  fontWeight="600"
+                  fontWeight="500"
                   letterSpacing="1"
                 >
-                  [ {wp.code} ]
+                  {wp.code}
                 </text>
                 <text
                   x={wp.labelPos.x}
                   y={wp.labelPos.y + 14}
                   textAnchor={wp.labelPos.textAnchor}
-                  fill={isActive ? '#FFFFFF' : '#9FB1BD'}
+                  fill={isActive ? '#FFFFFF' : '#94A3B8'}
                   fontSize="9.5"
                   fontFamily="'Inter', sans-serif"
                   fontWeight={isActive ? '600' : '400'}
@@ -441,7 +441,7 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
               >
                 <div className="flex items-center justify-center gap-1.5">
                   <span className={`h-1.5 w-1.5 rounded-full ${isActive ? 'bg-gold animate-pulse' : 'bg-steel-grey/60'}`} />
-                  <span className={`text-[0.68rem] tracking-wider font-bold ${isActive ? 'text-gold' : 'text-steel-grey'}`}>
+                  <span className={`text-[0.68rem] tracking-wider font-semibold ${isActive ? 'text-slate-200' : 'text-steel-grey'}`}>
                     {wp.code}
                   </span>
                 </div>
