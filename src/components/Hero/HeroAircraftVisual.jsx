@@ -1,45 +1,36 @@
 import { useState, useEffect, useRef } from 'react';
 
-// 3-Waypoint Global Strategic Procurement Flight Trajectory
-// Seamless aerodynamic closed loop connecting Western OEM Sourcing, Export & Compliance, and Fleet Integration
+// Global Strategic Flight Trajectory
+// Aerodynamic closed loop traversing across and around the 3D revolving globe
 const PATH_D =
-  'M 130 390 ' +
-  'C 220 220, 340 120, 480 120 ' + // Leg 1: Western OEM Hub -> Export & Compliance Audit
-  'C 620 120, 740 220, 830 390 ' + // Leg 2: Export & Compliance Audit -> Fleet Integration
-  'C 875 475, 680 490, 480 490 ' + // Leg 3a: Fleet Integration -> Return arc apex
-  'C 280 490, 85 475, 130 390';    // Leg 3b: Return arc -> Western OEM Hub (Seamless C1 closed loop)
+  'M 190 350 ' +
+  'C 270 230, 370 190, 480 190 ' + // Ascending across western hemisphere & northern flight corridors
+  'C 590 190, 690 230, 770 350 ' + // Descending across eastern hemisphere & allied operational corridors
+  'C 730 450, 590 460, 480 460 ' + // Returning across southern hemisphere
+  'C 370 460, 230 450, 190 350';    // Reconnecting to western global corridor
 
 const WAYPOINTS = [
   {
-    id: '01',
-    code: 'PATH 01',
+    id: 'sourcing',
     title: 'WESTERN OEM HUB',
     subtitle: 'STRATEGIC SOURCING',
-    x: 130,
-    y: 390,
-    labelPos: { x: 130, y: 442, textAnchor: 'middle' },
+    stageLabel: 'GLOBAL SOURCING',
     tStart: 0.0,
     tEnd: 0.333,
   },
   {
-    id: '02',
-    code: 'PATH 02',
+    id: 'compliance',
     title: 'EXPORT & COMPLIANCE',
     subtitle: 'ITAR & AIRWORTHINESS AUDIT',
-    x: 480,
-    y: 120,
-    labelPos: { x: 480, y: 78, textAnchor: 'middle' },
+    stageLabel: 'COMPLIANCE AUDIT',
     tStart: 0.333,
     tEnd: 0.667,
   },
   {
-    id: '03',
-    code: 'PATH 03',
+    id: 'integration',
     title: 'FLEET INTEGRATION',
     subtitle: 'DEFENCE FLIGHT LINE',
-    x: 830,
-    y: 390,
-    labelPos: { x: 830, y: 442, textAnchor: 'middle' },
+    stageLabel: 'FLEET INTEGRATION',
     tStart: 0.667,
     tEnd: 1.0,
   },
@@ -61,14 +52,14 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
     speed: 'MACH 0.84',
     altitude: 'FL380',
     heading: '068°',
-    stage: 'TRANSIT // PATH 01 → PATH 02',
+    stage: 'TRANSIT // GLOBAL SOURCING → COMPLIANCE AUDIT',
   });
 
   useEffect(() => {
     let animId;
     let startTime = null;
     let lastT = 0;
-    const duration = 14000; // 14 seconds for smooth 3-path global circuit
+    const duration = 14000; // 14 seconds for smooth global transit circuit
     const trailPoints = [];
     const maxTrail = 26;
     const GLOBE_CX = 480;
@@ -86,7 +77,7 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
       }
       lastT = t;
 
-      // 1. Rotate World Continents horizontally across the sphere
+      // 1. Rotate World Continents horizontally across the globe
       if (continentsRef.current) {
         const globeOffset = (elapsed * 0.024) % 600;
         continentsRef.current.setAttribute('transform', `translate(${(-globeOffset).toFixed(1)}, 0)`);
@@ -132,9 +123,9 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
           const distFromCenter = Math.hypot(pt.x - GLOBE_CX, pt.y - GLOBE_CY);
           if (distFromCenter < 210) {
             const shadowX = GLOBE_CX + (pt.x - GLOBE_CX) * 0.92;
-            const shadowY = GLOBE_CY + (pt.y - GLOBE_CY) * 0.92 + 12;
+            const shadowY = GLOBE_CY + (pt.y - GLOBE_CY) * 0.92 + 10;
             shadowRef.current.setAttribute('transform', `translate(${shadowX.toFixed(1)}, ${shadowY.toFixed(1)}) rotate(${angle.toFixed(1)}) scale(0.62)`);
-            shadowRef.current.setAttribute('opacity', (0.42 * (1 - distFromCenter / 240)).toFixed(2));
+            shadowRef.current.setAttribute('opacity', (0.45 * (1 - distFromCenter / 240)).toFixed(2));
           } else {
             shadowRef.current.setAttribute('opacity', '0');
           }
@@ -186,7 +177,7 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
             speed: `MACH ${(0.82 + Math.sin(t * Math.PI * 4) * 0.05).toFixed(2)}`,
             altitude: `FL${Math.round(350 + Math.sin(t * Math.PI * 2) * 40)}`,
             heading: `${headingVal.toString().padStart(3, '0')}°`,
-            stage: `${currentWp.code} → ${nextWp.code} // ${currentWp.title}`,
+            stage: `${currentWp.stageLabel} → ${nextWp.stageLabel} // ${currentWp.title}`,
           });
         }
       }
@@ -253,15 +244,6 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
               <stop offset="0%" stopColor="rgba(255, 255, 255, 0.7)" />
               <stop offset="45%" stopColor="rgba(56, 189, 248, 0.4)" />
               <stop offset="100%" stopColor="rgba(201, 155, 71, 0)" />
-            </linearGradient>
-
-            {/* Multi-Leg Flight Trajectory Gradient */}
-            <linearGradient id="multiCorridorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#C99B47" />
-              <stop offset="25%" stopColor="#38BDF8" />
-              <stop offset="50%" stopColor="#C99B47" />
-              <stop offset="75%" stopColor="#38BDF8" />
-              <stop offset="100%" stopColor="#C99B47" />
             </linearGradient>
 
             {/* Tactical 3D Globe Gradients & Atmosphere */}
@@ -537,7 +519,7 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
               <polygon points="480,320 480,125 540,135" fill="url(#radarSectorGrad)" opacity="0.35" />
             </g>
 
-            {/* 3D Spherical Limb Shading & Edge Occlusion (Gives Realistic Depth) */}
+            {/* 3D Spherical Limb Shading & Edge Occlusion */}
             <circle cx="480" cy="320" r="195" fill="url(#globeLimbShading)" className="pointer-events-none" />
           </g>
 
@@ -552,36 +534,8 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
             className="pointer-events-none"
           />
 
-          {/* Strategic Airspace Corridor Reference Guide Lines */}
-          <g stroke="rgba(56,189,248,0.18)" strokeWidth="1" strokeDasharray="3 6">
-            <line x1="130" y1="390" x2="480" y2="120" />
-            <line x1="480" y1="120" x2="830" y2="390" />
-            <line x1="830" y1="390" x2="130" y2="390" strokeDasharray="4 8" opacity="0.35" />
-          </g>
-
-          {/* Hidden Master Path Reference for Mathematical Tracking */}
+          {/* Invisible Master Path Reference for Mathematical Tracking (No visible path line drawn) */}
           <path ref={pathRef} d={PATH_D} fill="none" stroke="transparent" />
-
-          {/* Rendered Visible Flight Trajectory Route */}
-          {/* Base Corridor Path */}
-          <path
-            d={PATH_D}
-            fill="none"
-            stroke="rgba(110,135,152,0.25)"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
-
-          {/* Glowing Active Trajectory Line */}
-          <path
-            d={PATH_D}
-            fill="none"
-            stroke="url(#multiCorridorGrad)"
-            strokeWidth="2.5"
-            strokeDasharray="6 8"
-            className="animate-flow"
-            filter="url(#glowEffect)"
-          />
 
           {/* Dynamic Contrail Streams (trailing behind twin engine nozzles) */}
           <path
@@ -600,70 +554,6 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
             strokeLinecap="round"
             opacity="0.8"
           />
-
-          {/* 3 STRATEGIC WAYPOINTS (PATH 01 TO PATH 03) */}
-          {WAYPOINTS.map((wp, idx) => {
-            const isActive = activeWpIndex === idx;
-            return (
-              <g key={wp.id} className="transition-all duration-300">
-                {/* Outer Radar Range Ring */}
-                <circle
-                  cx={wp.x}
-                  cy={wp.y}
-                  r={isActive ? 32 : 22}
-                  stroke={isActive ? '#C99B47' : '#38BDF8'}
-                  strokeWidth={isActive ? 1.4 : 0.8}
-                  strokeDasharray="3 4"
-                  opacity={isActive ? 0.8 : 0.35}
-                  className={isActive ? 'animate-spin' : ''}
-                  style={{ animationDuration: '8s' }}
-                />
-                {/* Secondary Ripple Ring */}
-                <circle
-                  cx={wp.x}
-                  cy={wp.y}
-                  r={isActive ? 18 : 12}
-                  stroke={isActive ? '#FFE082' : '#64748B'}
-                  strokeWidth="1"
-                  opacity={isActive ? 0.9 : 0.4}
-                />
-                {/* Central Beacon Node */}
-                <circle
-                  cx={wp.x}
-                  cy={wp.y}
-                  r={isActive ? 5.5 : 4}
-                  fill={isActive ? '#C99B47' : '#38BDF8'}
-                  className={isActive ? 'animate-pulse' : ''}
-                />
-
-                {/* Waypoint Text Badges - Clean Neutral Typography */}
-                <text
-                  x={wp.labelPos.x}
-                  y={wp.labelPos.y}
-                  textAnchor={wp.labelPos.textAnchor}
-                  fill={isActive ? '#94A3B8' : '#64748B'}
-                  fontSize="10"
-                  fontFamily="'IBM Plex Mono', monospace"
-                  fontWeight="500"
-                  letterSpacing="1"
-                >
-                  {wp.code}
-                </text>
-                <text
-                  x={wp.labelPos.x}
-                  y={wp.labelPos.y + 14}
-                  textAnchor={wp.labelPos.textAnchor}
-                  fill={isActive ? '#FFFFFF' : '#94A3B8'}
-                  fontSize="9.5"
-                  fontFamily="'Inter', sans-serif"
-                  fontWeight={isActive ? '600' : '400'}
-                  letterSpacing="0.5"
-                >
-                  {wp.title}
-                </text>
-              </g>
-            );
-          })}
 
           {/* ======================================================== */}
           {/* DYNAMIC AIRCRAFT (Navigates continuously around globe)   */}
@@ -763,7 +653,7 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
                 <div className="flex items-center justify-center gap-1.5">
                   <span className={`h-1.5 w-1.5 rounded-full ${isActive ? 'bg-gold animate-pulse' : 'bg-steel-grey/60'}`} />
                   <span className={`text-[0.68rem] tracking-wider font-semibold ${isActive ? 'text-slate-200' : 'text-steel-grey'}`}>
-                    {wp.code}
+                    {wp.stageLabel}
                   </span>
                 </div>
                 <span className="truncate block mt-1 text-white text-[0.75rem] sm:text-[0.82rem] font-bold tracking-tight">
@@ -789,7 +679,7 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
                 {telemetry.stage}
               </span>
               <span className="text-gold text-[0.68rem]">
-                GLOBAL CORRIDOR TRANSIT: {telemetry.progress}% COMPLETE // ACTIVE LEG: {WAYPOINTS[activeWpIndex].code}
+                GLOBAL TRANSIT: {telemetry.progress}% COMPLETE // ACTIVE STAGE: {WAYPOINTS[activeWpIndex].title}
               </span>
             </div>
           </div>
