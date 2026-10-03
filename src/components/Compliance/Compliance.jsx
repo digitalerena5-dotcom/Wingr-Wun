@@ -51,18 +51,17 @@ export default function Compliance() {
             </Reveal>
 
             <Reveal as="div" delay={160} className="mt-10 grid gap-5 sm:grid-cols-2">
-              {complianceAreas.map((area, i) => {
+              {complianceAreas.map((area) => {
                 const Icon = area.icon;
                 return (
                   <div
                     key={area.title}
                     className="group rounded border border-[color:var(--line-dark)] bg-navy-900/60 p-6 transition-all duration-300 hover:border-gold/60 hover:bg-navy-900"
                   >
-                    <div className="flex items-center justify-between">
+                    <div>
                       <div className="flex h-9 w-9 items-center justify-center rounded border border-[color:var(--line-dark)] bg-navy-950 text-gold group-hover:border-gold transition-colors">
                         <Icon size={18} strokeWidth={1.5} />
                       </div>
-                      <span className="mono text-xs text-gold">0{i + 1}</span>
                     </div>
                     <h3 className="font-display mt-4 text-base font-semibold text-white group-hover:text-gold transition-colors">
                       {area.title}

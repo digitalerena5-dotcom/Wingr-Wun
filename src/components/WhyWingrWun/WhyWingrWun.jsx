@@ -25,12 +25,11 @@ export default function WhyWingrWun() {
               className={`border-b border-[color:var(--line-dark)] py-8 sm:px-8 sm:py-10 lg:border-b-0 lg:py-12
                 ${i % 2 === 1 ? 'sm:border-l' : 'sm:pl-0'} lg:border-l lg:pl-8 lg:first:border-l-0 lg:first:pl-0`}
             >
-              <div className="flex items-center justify-between">
-                <span className="mono text-xs text-gold">0{i + 1} // PRINCIPLE</span>
-                <span className="h-1.5 w-1.5 rounded-full bg-gold/50" />
+              <div className="flex items-center">
+                <span className="h-1.5 w-1.5 rounded-full bg-gold" />
               </div>
 
-              <h3 className="font-display mt-6 text-xl font-bold tracking-tight text-white">
+              <h3 className="font-display mt-5 text-xl font-bold tracking-tight text-white">
                 {p.title}
               </h3>
 
