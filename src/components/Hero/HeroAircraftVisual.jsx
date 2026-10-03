@@ -193,7 +193,7 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
     <div className="relative mx-auto w-full max-w-[720px] select-none">
       {/* Outer Tactical Radar Perimeter Box with Parallax */}
       <div
-        className="pointer-events-none absolute -inset-4 sm:-inset-6 rounded-3xl border border-steel-grey/15 bg-gradient-to-b from-navy-900/60 to-navy-950/80 backdrop-blur-sm shadow-2xl transition-transform duration-700 ease-out"
+        className="pointer-events-none absolute -inset-2 sm:-inset-6 rounded-2xl sm:rounded-3xl border border-steel-grey/15 bg-gradient-to-b from-navy-900/60 to-navy-950/80 backdrop-blur-sm shadow-2xl transition-transform duration-700 ease-out"
         style={{
           transform: `translate(${mousePos.x * -8}px, ${mousePos.y * -6}px)`,
         }}
@@ -201,7 +201,7 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
       />
 
       {/* Main High-Tech Aerospace Vector Stage */}
-      <div className="relative p-2 sm:p-4">
+      <div className="relative p-1 sm:p-4">
         <svg
           viewBox="0 0 940 540"
           fill="none"
@@ -638,28 +638,28 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
         </svg>
 
         {/* 3-STAGE SOURCING PIPELINE STEPPER BAR */}
-        <div className="mt-3.5 grid grid-cols-3 gap-2 sm:gap-3 mono text-xs">
+        <div className="mt-2.5 sm:mt-3.5 grid grid-cols-3 gap-1.5 sm:gap-3 mono text-xs">
           {WAYPOINTS.map((wp, idx) => {
             const isActive = activeWpIndex === idx;
             return (
               <div
                 key={wp.id}
-                className={`rounded-lg border px-3 py-2.5 text-center transition-all duration-300 ${
+                className={`rounded-lg border px-2 py-2 sm:px-3 sm:py-2.5 text-center transition-all duration-300 ${
                   isActive
                     ? 'border-gold bg-navy-900/95 text-white shadow-[0_0_18px_rgba(201,155,71,0.3)] font-semibold'
                     : 'border-[color:var(--line-dark)] bg-navy-950/70 text-steel-grey hover:border-steel-grey/40'
                 }`}
               >
-                <div className="flex items-center justify-center gap-1.5">
+                <div className="flex items-center justify-center gap-1 sm:gap-1.5">
                   <span className={`h-1.5 w-1.5 rounded-full ${isActive ? 'bg-gold animate-pulse' : 'bg-steel-grey/60'}`} />
-                  <span className={`text-[0.68rem] tracking-wider font-semibold ${isActive ? 'text-slate-200' : 'text-steel-grey'}`}>
+                  <span className={`text-[0.58rem] sm:text-[0.68rem] tracking-wider font-semibold truncate ${isActive ? 'text-slate-200' : 'text-steel-grey'}`}>
                     {wp.stageLabel}
                   </span>
                 </div>
-                <span className="truncate block mt-1 text-white text-[0.75rem] sm:text-[0.82rem] font-bold tracking-tight">
+                <span className="truncate block mt-0.5 sm:mt-1 text-white text-[0.68rem] sm:text-[0.82rem] font-bold tracking-tight">
                   {wp.title}
                 </span>
-                <span className="block mt-0.5 text-[0.62rem] sm:text-[0.68rem] text-[color:var(--text-muted-dark)] truncate">
+                <span className="hidden sm:block mt-0.5 text-[0.55rem] sm:text-[0.68rem] text-[color:var(--text-muted-dark)] truncate">
                   {wp.subtitle}
                 </span>
               </div>
@@ -668,34 +668,34 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
         </div>
 
         {/* Live Aerospace HUD Telemetry Dashboard */}
-        <div className="mt-3 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-[color:var(--line-dark)] bg-navy-950/90 p-3 sm:p-4 backdrop-blur-md mono text-[0.7rem] sm:text-[0.75rem] text-steel-grey">
-          <div className="flex items-center gap-3">
-            <span className="relative flex h-2 w-2">
+        <div className="mt-2.5 sm:mt-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5 rounded-lg border border-[color:var(--line-dark)] bg-navy-950/90 p-2.5 sm:p-4 backdrop-blur-md mono text-[0.68rem] sm:text-[0.75rem] text-steel-grey">
+          <div className="flex items-center gap-2.5">
+            <span className="relative flex h-2 w-2 shrink-0">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-gold" />
             </span>
-            <div>
-              <span className="text-white font-medium block">
+            <div className="min-w-0">
+              <span className="text-white font-medium block truncate text-[0.7rem] sm:text-[0.78rem]">
                 {telemetry.stage}
               </span>
-              <span className="text-gold text-[0.68rem]">
-                GLOBAL TRANSIT: {telemetry.progress}% COMPLETE // ACTIVE STAGE: {WAYPOINTS[activeWpIndex].title}
+              <span className="text-gold text-[0.6rem] sm:text-[0.68rem] block truncate">
+                GLOBAL TRANSIT: {telemetry.progress}% COMPLETE // {WAYPOINTS[activeWpIndex].title}
               </span>
             </div>
           </div>
 
           {/* Transit Coordinates & Flight Telemetry */}
-          <div className="flex items-center gap-4 text-[0.68rem] sm:text-[0.72rem]">
-            <div className="hidden sm:block">
-              <span className="text-steel-grey block">VELOCITY</span>
+          <div className="grid grid-cols-3 gap-2 border-t border-[color:var(--line-dark)]/50 pt-2 sm:border-0 sm:pt-0 sm:flex sm:items-center sm:gap-4 text-[0.62rem] sm:text-[0.72rem] text-center sm:text-left">
+            <div>
+              <span className="text-steel-grey text-[0.55rem] sm:text-[0.64rem] block">VELOCITY</span>
               <span className="text-white font-semibold">{telemetry.speed}</span>
             </div>
-            <div className="hidden sm:block">
-              <span className="text-steel-grey block">ALTITUDE</span>
+            <div>
+              <span className="text-steel-grey text-[0.55rem] sm:text-[0.64rem] block">ALTITUDE</span>
               <span className="text-white font-semibold">{telemetry.altitude}</span>
             </div>
             <div>
-              <span className="text-steel-grey block">BEARING</span>
+              <span className="text-steel-grey text-[0.55rem] sm:text-[0.64rem] block">BEARING</span>
               <span className="text-gold font-semibold">{telemetry.heading}</span>
             </div>
           </div>

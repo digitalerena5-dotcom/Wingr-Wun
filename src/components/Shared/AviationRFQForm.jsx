@@ -86,9 +86,9 @@ export default function AviationRFQForm({ inModal = false, onClose }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 p-6 sm:p-8">
+    <form onSubmit={handleSubmit} className="space-y-4 p-4 sm:space-y-6 sm:p-8">
       {/* Contact Details */}
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-2 sm:gap-5">
         <div>
           <label htmlFor="rfq-name" className="mono block text-xs uppercase text-steel-grey">
             Full Name <span className="text-gold">*</span>
@@ -121,7 +121,7 @@ export default function AviationRFQForm({ inModal = false, onClose }) {
         </div>
       </div>
 
-      <div className="grid gap-5 sm:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-3 sm:gap-5">
         <div>
           <label htmlFor="rfq-email" className="mono block text-xs uppercase text-steel-grey">
             Work Email <span className="text-gold">*</span>
@@ -169,8 +169,8 @@ export default function AviationRFQForm({ inModal = false, onClose }) {
       </div>
 
       {/* Technical Sourcing Parameters */}
-      <div className="rounded border border-[color:var(--line-dark)] bg-navy-950/60 p-4 sm:p-5">
-        <p className="mono mb-4 text-[0.72rem] tracking-wider uppercase text-gold">
+      <div className="rounded border border-[color:var(--line-dark)] bg-navy-950/60 p-3 sm:p-5">
+        <p className="mono mb-3 text-[0.72rem] tracking-wider uppercase text-gold sm:mb-4">
           Technical Sourcing Parameters
         </p>
 

@@ -46,8 +46,8 @@ export default function Hero({ onOpenRFQ }) {
       <span className="crosshair right-[var(--gutter)] top-[calc(var(--header-h)+28px)] hidden text-steel-grey/60 md:block" aria-hidden="true" />
 
       {/* Main Hero Container */}
-      <div className="container-x relative flex flex-1 flex-col justify-center py-12 lg:py-16">
-        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-8">
+      <div className="container-x relative flex flex-1 flex-col justify-center py-8 sm:py-12 lg:py-16">
+        <div className="grid items-center gap-8 sm:gap-12 lg:grid-cols-12 lg:gap-8">
           {/* LEFT: Business Positioning & Strong Editorial Typography */}
           <div className="lg:col-span-6 xl:col-span-6">
             <div className="intro flex flex-wrap items-center gap-3" style={{ '--d': '100ms' }}>
@@ -56,7 +56,7 @@ export default function Hero({ onOpenRFQ }) {
 
             <h1
               id="hero-title"
-              className="h1 intro mt-6 text-white md:mt-8 tracking-tight"
+              className="h1 intro mt-4 text-white sm:mt-6 md:mt-8 tracking-tight"
               style={{ '--d': '220ms' }}
             >
               Connecting<br />
@@ -68,7 +68,7 @@ export default function Hero({ onOpenRFQ }) {
 
             {/* Client Authorized Supporting Copy */}
             <p
-              className="lede intro mt-6 max-w-[36rem] text-[color:var(--text-muted-dark)]"
+              className="lede intro mt-4 max-w-[36rem] text-[color:var(--text-muted-dark)] sm:mt-6"
               style={{ '--d': '380ms' }}
             >
               Wingr Wun connects international defence markets with trusted Western aerospace suppliers through
@@ -77,7 +77,7 @@ export default function Hero({ onOpenRFQ }) {
 
             {/* Clear Primary & Secondary Actions */}
             <div
-              className="intro mt-9 flex flex-col gap-3.5 sm:flex-row sm:items-center sm:gap-4 md:mt-11"
+              className="intro mt-6 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:items-center sm:gap-4 md:mt-11"
               style={{ '--d': '520ms' }}
             >
               <button
@@ -95,7 +95,7 @@ export default function Hero({ onOpenRFQ }) {
             </div>
 
             {/* Subtle Telemetry Coordinates */}
-            <div className="intro mt-8 flex items-center gap-6 mono text-[0.7rem] text-steel-grey" style={{ '--d': '650ms' }}>
+            <div className="intro mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 mono text-[0.68rem] text-steel-grey sm:mt-8 sm:text-[0.7rem]" style={{ '--d': '650ms' }}>
               <span>INTERNATIONAL DEFENCE &amp; WESTERN SOURCING</span>
               <span className="text-gold">DEFENSE AVIATION EXPERTS</span>
             </div>
@@ -110,8 +110,8 @@ export default function Hero({ onOpenRFQ }) {
 
       {/* Bottom Hero Trust / Discipline Strip */}
       <div className="border-y border-[color:var(--line-dark)] bg-navy-900/70 backdrop-blur-sm">
-        <div className="container-x py-3.5 sm:py-4">
-          <div className="flex flex-wrap items-center justify-between gap-y-3 text-[0.72rem] sm:text-[0.78rem] tracking-wider mono text-steel-grey">
+        <div className="container-x py-3 sm:py-4">
+          <div className="flex flex-wrap items-center justify-center sm:justify-between gap-x-4 gap-y-2.5 text-[0.68rem] tracking-wider mono text-steel-grey sm:text-[0.78rem]">
             <div className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse-amber" />
               <span className="text-white font-medium">STRATEGIC SOURCING</span>
