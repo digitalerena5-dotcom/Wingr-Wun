@@ -1,28 +1,40 @@
 import { ArrowUp } from 'lucide-react';
-import Logo from '../Logo.jsx';
 import { homeHref } from '../../data/navigation.js';
 import { socialLinks } from '../../data/social.js';
-import { contact } from '../../data/contact.js';
 
 export default function Footer({ onOpenRFQ }) {
-  const colHead = 'mono text-[0.72rem] font-bold uppercase tracking-wider text-gold';
-  const linkClass = 'inline-flex items-center text-sm text-[color:var(--text-muted-dark)] transition-colors duration-200 hover:text-gold';
+  const colHead = 'mono text-sm font-bold uppercase tracking-wider text-gold';
+  const linkClass = 'inline-flex items-center text-[0.93rem] text-[#9FB1BD] transition-colors duration-200 hover:text-white';
 
   return (
     <footer className="relative border-t border-[color:var(--line-dark)] bg-[#071925] text-white">
       <div className="container-x py-16 lg:py-20">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
           {/* COLUMN 1: Logo & Company Statement */}
-          <div className="sm:col-span-2 lg:col-span-4">
-            <a href={homeHref('top')} className="inline-flex items-center text-white" aria-label="Wingr Wun — Back to top">
-              <Logo />
+          <div className="sm:col-span-2 lg:col-span-5 pr-0 lg:pr-6">
+            <a href={homeHref('top')} className="group inline-flex items-center gap-3.5 text-white" aria-label="Wingr Wun — Back to top">
+              <img
+                src="/images/wingr_wun_logo.png"
+                alt="Wingr Wun Official Seal"
+                width="54"
+                height="54"
+                className="h-13 w-13 sm:h-14 sm:w-14 shrink-0 object-contain drop-shadow-[0_2px_12px_rgba(201,155,71,0.35)] transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="flex flex-col justify-center text-left">
+                <span className="font-display text-xl sm:text-2xl font-bold uppercase tracking-[0.14em] text-white leading-none">
+                  WINGR <span className="text-gold">WUN</span>
+                </span>
+                <span className="mono text-[0.65rem] sm:text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-[#8FA5B5] leading-none mt-2">
+                  AEROSPACE PROCUREMENT
+                </span>
+              </div>
             </a>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-[color:var(--text-muted-dark)]">
               Global aviation procurement and component sourcing support connecting operational requirements with trusted supply. Dedicated to airworthiness integrity, regulatory compliance, and mission readiness.
             </p>
 
             <div className="mt-6 flex items-center gap-3 mono text-xs text-steel-grey">
-              <span className="h-2 w-2 rounded-full bg-gold animate-pulse-amber" />
+              <span className="h-2 w-2 rounded-full bg-gold shrink-0" />
               <span>Aviation Sourcing &amp; Procurement Desk</span>
             </div>
           </div>
@@ -30,9 +42,9 @@ export default function Footer({ onOpenRFQ }) {
           {/* COLUMN 2: Company Navigation */}
           <nav aria-label="Company Links" className="lg:col-span-2 lg:col-start-6">
             <h2 className={colHead}>Company</h2>
-            <ul className="mt-5 space-y-3">
+            <ul className="mt-5 space-y-3.5">
               <li><a href="#about" className={linkClass}>About Us</a></li>
-              <li><a href="#services" className={linkClass}>Capabilities</a></li>
+              <li><a href="#capabilities" className={linkClass}>Capabilities</a></li>
               <li><a href="#compliance" className={linkClass}>Compliance</a></li>
               <li><a href="#platforms" className={linkClass}>Platforms</a></li>
               <li><a href="#testimonials" className={linkClass}>Perspectives</a></li>
@@ -41,7 +53,7 @@ export default function Footer({ onOpenRFQ }) {
                 <button
                   type="button"
                   onClick={onOpenRFQ}
-                  className="text-sm text-gold hover:underline"
+                  className="text-[0.93rem] text-gold font-medium hover:underline transition-colors"
                 >
                   Contact Desk
                 </button>
@@ -52,7 +64,7 @@ export default function Footer({ onOpenRFQ }) {
           {/* COLUMN 3: Sourcing Disciplines */}
           <div className="lg:col-span-3">
             <h2 className={colHead}>Services</h2>
-            <ul className="mt-5 space-y-3">
+            <ul className="mt-5 space-y-3.5">
               <li><a href="#services" className={linkClass}>Aircraft Components</a></li>
               <li><a href="#services" className={linkClass}>Global Sourcing</a></li>
               <li><a href="#services" className={linkClass}>Legacy Procurement</a></li>
@@ -62,10 +74,10 @@ export default function Footer({ onOpenRFQ }) {
             </ul>
           </div>
 
-          {/* COLUMN 4: Connect & Direct Contact */}
-          <div className="lg:col-span-3">
+          {/* COLUMN 4: Connect */}
+          <div className="lg:col-span-2">
             <h2 className={colHead}>Connect</h2>
-            <ul className="mt-5 space-y-3">
+            <ul className="mt-5 space-y-3.5">
               <li>
                 <a
                   href={socialLinks.linkedin}
@@ -117,17 +129,6 @@ export default function Footer({ onOpenRFQ }) {
                 </a>
               </li>
             </ul>
-
-            <div className="mt-6 border-t border-[color:var(--line-dark)] pt-4 text-xs text-steel-grey space-y-1">
-              <p className="text-[color:var(--text-muted-dark)]">Direct inquiries through the advisory desk.</p>
-              <button
-                type="button"
-                onClick={onOpenRFQ}
-                className="mt-1 text-gold hover:underline inline-flex items-center gap-1 font-medium"
-              >
-                Submit Requirement Details &rarr;
-              </button>
-            </div>
           </div>
         </div>
 
