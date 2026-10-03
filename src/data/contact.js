@@ -13,11 +13,12 @@
  */
 export const contact = {
   formEndpoint: null,
-  email: null,
+  email: 'hamid@wingrwun.co.uk',
+  address: '3 Woodbridge Close, Appleton, WA4 5RD, UK',
   phone: null,
   privacyUrl: null,
   termsUrl: null,
 };
 
-export const hasDirectChannel = Boolean(contact.email || contact.phone);
+export const hasDirectChannel = Boolean(contact.email || contact.phone || contact.address);
 export const canSubmit = Boolean(contact.formEndpoint || contact.email);

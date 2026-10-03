@@ -1,6 +1,7 @@
-import { ArrowUp } from 'lucide-react';
+import { ArrowUp, Mail, MapPin } from 'lucide-react';
 import { homeHref } from '../../data/navigation.js';
 import { socialLinks } from '../../data/social.js';
+import { contact } from '../../data/contact.js';
 
 export default function Footer({ onOpenRFQ }) {
   const colHead = 'mono text-sm font-bold uppercase tracking-wider text-gold';
@@ -9,9 +10,9 @@ export default function Footer({ onOpenRFQ }) {
   return (
     <footer className="relative border-t border-[color:var(--line-dark)] bg-[#071925] text-white">
       <div className="container-x py-16 lg:py-20">
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
           {/* COLUMN 1: Logo & Company Statement */}
-          <div className="sm:col-span-2 lg:col-span-5 pr-0 lg:pr-6">
+          <div className="sm:col-span-2 lg:col-span-4 pr-0 lg:pr-4">
             <a href={homeHref('top')} className="group inline-flex items-center gap-3.5 text-white" aria-label="Wingr Wun — Back to top">
               <img
                 src="/images/wingr_wun_logo.png"
@@ -35,12 +36,12 @@ export default function Footer({ onOpenRFQ }) {
 
             <div className="mt-6 flex items-center gap-3 mono text-xs text-steel-grey">
               <span className="h-2 w-2 rounded-full bg-gold shrink-0" />
-              <span>Aviation Sourcing &amp; Procurement Desk</span>
+              <span>United Kingdom // Global Defence Sourcing</span>
             </div>
           </div>
 
           {/* COLUMN 2: Company Navigation */}
-          <nav aria-label="Company Links" className="lg:col-span-2 lg:col-start-6">
+          <nav aria-label="Company Links" className="lg:col-span-2">
             <h2 className={colHead}>Company</h2>
             <ul className="mt-5 space-y-3.5">
               <li><a href="#about" className={linkClass}>About Us</a></li>
@@ -74,61 +75,48 @@ export default function Footer({ onOpenRFQ }) {
             </ul>
           </div>
 
-          {/* COLUMN 4: Connect */}
-          <div className="lg:col-span-2">
-            <h2 className={colHead}>Connect</h2>
-            <ul className="mt-5 space-y-3.5">
-              <li>
-                <a
-                  href={socialLinks.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={linkClass}
-                >
-                  LinkedIn
-                </a>
+          {/* COLUMN 4: Contact & Registered Office */}
+          <div className="lg:col-span-3">
+            <h2 className={colHead}>Direct Contact</h2>
+            <ul className="mt-5 space-y-4 text-sm text-[color:var(--text-muted-dark)]">
+              <li className="flex items-start gap-3">
+                <Mail size={18} strokeWidth={1.5} className="mt-0.5 shrink-0 text-gold" aria-hidden="true" />
+                <div>
+                  <span className="block text-[0.7rem] uppercase mono text-steel-grey font-semibold tracking-wider">Direct Email</span>
+                  <a
+                    href={`mailto:${contact.email}`}
+                    className="text-white hover:text-gold transition-colors font-medium break-all text-[0.92rem] underline decoration-gold/60 underline-offset-4"
+                  >
+                    {contact.email}
+                  </a>
+                </div>
               </li>
-              <li>
-                <a
-                  href={socialLinks.twitter}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={linkClass}
-                >
-                  X (Twitter)
-                </a>
-              </li>
-              <li>
-                <a
-                  href={socialLinks.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={linkClass}
-                >
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a
-                  href={socialLinks.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={linkClass}
-                >
-                  Facebook
-                </a>
-              </li>
-              <li>
-                <a
-                  href={socialLinks.youtube}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={linkClass}
-                >
-                  YouTube
-                </a>
+              <li className="flex items-start gap-3">
+                <MapPin size={18} strokeWidth={1.5} className="mt-0.5 shrink-0 text-gold" aria-hidden="true" />
+                <div>
+                  <span className="block text-[0.7rem] uppercase mono text-steel-grey font-semibold tracking-wider">Registered Address</span>
+                  <p className="text-[0.92rem] text-[#9FB1BD] leading-relaxed mt-0.5">
+                    3 Woodbridge Close<br />
+                    Appleton, WA4 5RD<br />
+                    United Kingdom
+                  </p>
+                </div>
               </li>
             </ul>
+
+            {/* Social Channels */}
+            <div className="mt-6 border-t border-[color:var(--line-dark)]/60 pt-4">
+              <p className="mono text-[0.68rem] uppercase tracking-wider text-steel-grey mb-2.5">Channels</p>
+              <div className="flex flex-wrap items-center gap-3 text-xs text-[#9FB1BD]">
+                <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
+                <span>&middot;</span>
+                <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">X</a>
+                <span>&middot;</span>
+                <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
+                <span>&middot;</span>
+                <a href={socialLinks.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">YouTube</a>
+              </div>
+            </div>
           </div>
         </div>
 

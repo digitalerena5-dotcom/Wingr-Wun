@@ -1,4 +1,4 @@
-import { Mail, Phone } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { Reveal } from '../../hooks/useScrollReveal.jsx';
 import { contact, hasDirectChannel } from '../../data/contact.js';
 import { homeHref } from '../../data/navigation.js';
@@ -96,6 +96,12 @@ export default function ContactPage() {
                     <li className="flex items-center gap-3">
                       <Phone size={18} strokeWidth={1.5} className="text-gold" aria-hidden="true" />
                       <a href={`tel:${contact.phone.replace(/\s/g, '')}`} className="inline-flex min-h-[44px] items-center font-medium text-white">{contact.phone}</a>
+                    </li>
+                  )}
+                  {contact.address && (
+                    <li className="flex items-start gap-3 pt-1">
+                      <MapPin size={18} strokeWidth={1.5} className="mt-1 text-gold shrink-0" aria-hidden="true" />
+                      <span className="font-medium text-white leading-relaxed">{contact.address}</span>
                     </li>
                   )}
                 </ul>
