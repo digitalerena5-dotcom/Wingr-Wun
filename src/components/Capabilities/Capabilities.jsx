@@ -15,13 +15,13 @@ export default function Capabilities() {
           <Reveal className="lg:col-span-7">
             <span className="eyebrow">PROCUREMENT METHODOLOGY</span>
             <h2 id="cap-title" className="h2 mt-4 text-white tracking-tight">
-              From Operational Requirement<br />
-              to Resilient Supply.
+              Structured Aviation Procurement<br />
+              from Requirement to Delivery.
             </h2>
           </Reveal>
           <Reveal delay={120} className="lg:col-span-5">
             <p className="text-base text-[color:var(--text-muted-dark)] leading-relaxed">
-              A disciplined, stage-gated aerospace framework that advances a sourcing requirement through market intelligence, strict vendor vetting, and cross-border compliance.
+              A disciplined procurement process with clearly defined review stages that advances each sourcing requirement through market intelligence, rigorous vendor evaluation, and international trade compliance.
             </p>
           </Reveal>
         </div>

@@ -13,7 +13,7 @@
  */
 export const contact = {
   formEndpoint: null,
-  email: 'hamid@wingrwun.co.uk',
+  email: 'contact@wingrwun.co.uk',
   address: '3 Woodbridge Close, Appleton, WA4 5RD, UK',
   phone: null,
   privacyUrl: null,

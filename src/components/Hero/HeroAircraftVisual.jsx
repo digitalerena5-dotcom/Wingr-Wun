@@ -4,15 +4,15 @@ import { useState, useEffect, useRef } from 'react';
 // Aerodynamic closed loop traversing across and around the 3D revolving globe
 const PATH_D =
   'M 190 350 ' +
-  'C 270 230, 370 190, 480 190 ' + // Ascending across western hemisphere & northern flight corridors
+  'C 270 230, 370 190, 480 190 ' + // Ascending across transatlantic & northern flight corridors
   'C 590 190, 690 230, 770 350 ' + // Descending across eastern hemisphere & allied operational corridors
   'C 730 450, 590 460, 480 460 ' + // Returning across southern hemisphere
-  'C 370 460, 230 450, 190 350';    // Reconnecting to western global corridor
+  'C 370 460, 230 450, 190 350';    // Reconnecting to primary global corridor
 
 const WAYPOINTS = [
   {
     id: 'sourcing',
-    title: 'WESTERN OEM HUB',
+    title: 'GLOBAL OEM HUB',
     subtitle: 'STRATEGIC SOURCING',
     stageLabel: 'GLOBAL SOURCING',
     tStart: 0.0,
@@ -368,7 +368,7 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
                     stroke="rgba(56, 189, 248, 0.6)"
                     strokeWidth="1"
                   />
-                  {/* Seattle / Western OEM Hub Node */}
+                  {/* Primary / Global OEM Hub Node */}
                   <circle cx="265" cy="275" r="3" fill="#C99B47" />
 
                   {/* SOUTH AMERICA */}

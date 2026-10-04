@@ -19,7 +19,7 @@ export const platformCategories = [
     id: 'regional',
     label: 'Regional & Commuter',
     aircraft: 'ATR 42/72 · Embraer E-Jets · De Havilland Dash-8',
-    description: 'Specialized rotable pools, PW100 / CF34 engine accessories, propellers, environmental control systems, and structural spares.',
+    description: 'Specialised rotable inventories, PW100 / CF34 engine accessories, propellers, environmental control systems, and structural spares.',
     components: [
       { name: 'Propeller Electronic Controls (PEC)', spec: 'Overhauled with factory warranty' },
       { name: 'Auxiliary Power Units (APUs)', spec: 'Honeywell GTCP series with logbook trace' },
@@ -43,11 +43,11 @@ export const platformCategories = [
     id: 'legacy',
     label: 'Legacy & Mission Aircraft',
     aircraft: 'C-130 Hercules · F-16 Falcon · P-3 Orion · Bell 212/412',
-    description: 'Out-of-production structural parts, vintage avionics repair corridors, hard-to-find hydraulic pumps, and obsolete component engineering.',
+    description: 'Out-of-production structural parts, classic avionics repair channels, scarce hydraulic pumps, and obsolete component sourcing solutions.',
     components: [
       { name: 'T56 / 501-D22 Engine Hardware', spec: 'Vetted military surplus & overhauled spares' },
       { name: 'Mechanical Flight Control Cables', spec: 'Mil-spec certified tensile testing' },
-      { name: 'Analog Flight Instruments & Gyros', spec: 'Calibrated with certification records' },
+      { name: 'Analogue Flight Instruments & Gyros', spec: 'Calibrated with certification records' },
       { name: 'Emergency Escape Hatch Actuators', spec: 'ITAR and export compliance approved' },
     ],
   },

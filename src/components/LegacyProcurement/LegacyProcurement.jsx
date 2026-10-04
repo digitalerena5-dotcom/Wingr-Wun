@@ -3,7 +3,7 @@ import ExplodedDrawing from '../illustrations/ExplodedDrawing.jsx';
 
 const callouts = [
   { label: 'Obsolete Spares', body: 'Sourcing parts that are no longer in active production.' },
-  { label: 'Hard-to-Find Components', body: 'Locating items with limited or fragmented availability.' },
+  { label: 'Scarce Aircraft Components', body: 'Locating items with limited or fragmented availability.' },
   { label: 'Lifecycle Support', body: 'Supporting the continued readiness of older aircraft fleets.' },
 ];
 

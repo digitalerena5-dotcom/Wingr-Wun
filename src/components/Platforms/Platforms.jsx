@@ -174,12 +174,11 @@ export default function Platforms({ onOpenRFQ }) {
             <Reveal>
               <span className="eyebrow">COMPONENT &amp; SUBSYSTEM SCOPE</span>
               <h2 id="platforms-title" className="h2 mt-4 text-white tracking-tight">
-                Keeping Proven<br />
-                Platforms<br />
-                Operational.
+                Keeping Legacy Aircraft<br />
+                Platforms Operational.
               </h2>
               <p className="lede mt-6 text-[color:var(--text-muted-dark)]">
-                Our sourcing work spans aircraft components, subsystems, and legacy technologies. We locate hard-to-find components and obsolete spares to extend the lifecycle and readiness of older aircraft fleets.
+                Our sourcing work spans aircraft components, subsystems, and legacy technologies. We locate scarce components and obsolete spares to extend the operational service life and readiness of mature aircraft fleets.
               </p>
             </Reveal>
 
@@ -230,7 +229,7 @@ export default function Platforms({ onOpenRFQ }) {
                   onClick={onOpenRFQ}
                   className="btn btn-primary"
                 >
-                  Enquire About Component Sourcing
+                  Discuss Component Sourcing
                   <ChevronRight size={16} />
                 </button>
               </div>

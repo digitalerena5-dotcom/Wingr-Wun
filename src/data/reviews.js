@@ -34,7 +34,7 @@ export const verifiedReviews = [
     id: 'r-5',
     rating: 5,
     title: 'Rare Component Located Where Others Failed',
-    comment: 'Hard-to-find legacy rotable tracked down across vetted Western aerospace channels. Full compliance trail provided before payment disbursement.',
+    comment: 'Scarce legacy rotable tracked down through verified international aerospace channels. Full airworthiness and compliance trail provided before payment disbursement.',
     source: 'Defence Systems Specialist',
     date: 'March 2026',
     verified: true,

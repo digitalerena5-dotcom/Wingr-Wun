@@ -8,9 +8,9 @@ export const insightsArticles = [
     tag: 'Quality & Airworthiness',
     date: 'March 2026',
     readTime: '6 min read',
-    title: 'Mitigating Counterfeit Risk & Suspect Unapproved Parts in Hard-to-Find Rotables',
+    title: 'Mitigating Counterfeit Risk and Suspect Unapproved Parts in Scarce Aircraft Rotables',
     summary:
-      'With extended lead times on legacy platforms, the market for suspect parts has grown. A breakdown of four-tier pedigree inspection, back-to-birth documentation audits, and physical metallurgy verification.',
+      'With extended lead times on legacy platforms, the market for suspect unapproved parts has expanded. A breakdown of structured pedigree inspection, back-to-birth documentation audits, and material verification protocols.',
     image: '/images/avionics_inspection.jpg',
     author: 'Wingr Wun Technical Advisory Desk',
     keyPoints: [
@@ -40,9 +40,9 @@ export const insightsArticles = [
     tag: 'Logistics Facilitation',
     date: 'January 2026',
     readTime: '5 min read',
-    title: 'Optimizing AOG Response Through Pre-Vetted Western Supplier Corridors',
+    title: 'Optimising AOG Response Through Verified International Supply Corridors',
     summary:
-      'Aircraft On Ground (AOG) events cost operators upwards of $150,000 per day. How structured procurement partnerships and pre-audited dispatch agreements reduce critical replacement delays by 60%.',
+      'Aircraft On Ground (AOG) events impose severe financial and operational costs on operators. How structured procurement partnerships and verified dispatch protocols significantly mitigate critical replacement delays.',
     image: '/images/aerospace_engine_overhaul.jpg',
     author: 'Operational Readiness Lead',
     keyPoints: [

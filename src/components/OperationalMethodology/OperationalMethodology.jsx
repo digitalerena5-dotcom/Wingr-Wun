@@ -5,7 +5,7 @@ const pillars = [
   {
     icon: CheckSquare,
     title: 'Standard Operating Procedures & Checklists',
-    body: 'Translating flight-deck and defense aviation discipline into procurement pipelines. Eliminating unverified assumptions and single points of failure before commitments are locked.',
+    body: 'Translating flight deck and defence aviation discipline into procurement pipelines. Eliminating unverified assumptions and single points of failure before commitments are locked.',
   },
   {
     icon: Target,
@@ -15,7 +15,7 @@ const pillars = [
   {
     icon: Users,
     title: 'Operational Cross-Functional Coordination',
-    body: 'Applying crew resource management (CRM) principles to complex cross-border trade — aligning technical engineers, procurement directors, legal teams, and logistics agents.',
+    body: 'Applying crew resource management (CRM) principles to complex international transactions — aligning technical engineers, procurement directors, legal teams, and logistics agents.',
   },
   {
     icon: Compass,
@@ -40,7 +40,7 @@ export default function OperationalMethodology() {
           </Reveal>
           <Reveal delay={120} className="lg:col-span-4">
             <p className="text-sm leading-relaxed text-[#4A6272]">
-              Established by Defense Aviation Experts and Aviation Professionals to streamline everyday operations, solve routine organizational problems, and offer consultancy based on proven aviation methodologies.
+              Established by Defence Aviation Experts and Aviation Professionals to streamline everyday operations, solve routine organisational problems, and offer consultancy based on proven aviation methodologies.
             </p>
           </Reveal>
         </div>
@@ -87,16 +87,16 @@ export default function OperationalMethodology() {
                   </span>
                 </div>
                 <blockquote className="mt-4 font-display text-lg sm:text-xl font-medium leading-snug text-white">
-                  "In defense aviation, operational discipline is not an afterthought — it is the foundation of survival and mission success. Our Aviation Specialists translate that exact rigor into commercial procurement, vendor accountability, and organizational workflows."
+                  "In defence aviation, operational discipline is not an afterthought — it is the foundation of survival and mission success. Our Aviation Specialists translate that exact rigour into commercial procurement, vendor accountability, and organisational workflows."
                 </blockquote>
                 <p className="mt-4 text-xs leading-relaxed text-[color:var(--text-muted-dark)]">
-                  By applying structured pre-flight checklist methodologies, cross-functional crew resource management (CRM), and proactive risk matrices, Wingr Wun eliminates single points of failure across complex cross-border procurement pipelines.
+                  By applying structured pre-flight checklist methodologies, crew resource management (CRM), and proactive risk matrices, Wingr Wun eliminates single points of failure across complex international procurement pipelines.
                 </p>
               </div>
 
               <div className="mt-8 pt-6 border-t border-[color:var(--line-dark)] flex flex-wrap items-center justify-between gap-4 mono text-[0.7rem] text-steel-grey">
                 <span className="text-white font-medium">WINGR WUN // ADVISORY PRACTICE</span>
-                <span className="text-gold">DEFENSE AVIATION EXPERTS</span>
+                <span className="text-gold">DEFENCE AVIATION EXPERTS</span>
               </div>
             </div>
 

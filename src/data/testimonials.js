@@ -34,12 +34,12 @@ export const testimonials = [
     id: 't-3',
     rating: 5,
     quote:
-      'Cross-border ITAR and export compliance can be a legal minefield. The consultancy’s rigorous pre-clearance protocol and transparent milestone reporting gave our compliance committee total confidence throughout the multi-million dollar acquisition.',
+      'International ITAR and export compliance can be a complex regulatory challenge. The consultancy’s rigorous compliance protocol and transparent milestone reporting gave our compliance committee total confidence throughout the multi-million dollar acquisition.',
     author: 'VP of Supply Chain & Compliance',
     role: 'Defence Support Contractor',
     organization: 'Aerospace Logistics International',
     location: 'North America / Allied Nations',
     category: 'Regulatory & Export Compliance',
-    verifiedTrace: 'ITAR & EAR Pre-Screened Corridor',
+    verifiedTrace: 'ITAR & EAR Verified Corridor',
   },
 ];

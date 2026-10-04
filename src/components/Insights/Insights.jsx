@@ -16,8 +16,8 @@ export default function Insights() {
           <Reveal>
             <span className="eyebrow">INTELLIGENCE &amp; ADVISORY</span>
             <h2 id="insights-title" className="h2 mt-4 text-white tracking-tight">
-              Aviation Supply<br />
-              Insights.
+              Aviation Supply Intelligence<br />
+              &amp; Operational Briefs.
             </h2>
           </Reveal>
           <Reveal delay={120}>
@@ -137,7 +137,7 @@ export default function Insights() {
                 ))}
               </ul>
               <p className="pt-2 text-xs text-steel-grey">
-                To consult with our technical advisory team regarding specific part numbers, platform airworthiness requirements, or export corridors, submit your inquiry through the RFQ desk.
+                To consult with our technical advisory team regarding specific part numbers, platform airworthiness requirements, or export corridors, submit your enquiry through the RFQ desk.
               </p>
             </div>
 

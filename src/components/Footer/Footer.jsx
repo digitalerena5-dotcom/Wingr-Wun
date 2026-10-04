@@ -31,7 +31,7 @@ export default function Footer({ onOpenRFQ }) {
               </div>
             </a>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-[color:var(--text-muted-dark)]">
-              Global aviation procurement and component sourcing support connecting operational requirements with trusted supply. Dedicated to airworthiness integrity, regulatory compliance, and mission readiness.
+              Specialised aviation procurement and aircraft component sourcing connecting operational requirements with verified supply. Dedicated to airworthiness integrity, regulatory compliance, and fleet readiness.
             </p>
 
             <div className="mt-6 flex items-center gap-3 mono text-xs text-steel-grey">

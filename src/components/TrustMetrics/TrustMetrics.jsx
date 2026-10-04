@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { useScrollReveal } from '../../hooks/useScrollReveal.jsx';
 
 const metrics = [
-  { value: 50, suffix: '+', label: 'Global Supplier Relationships', desc: 'Pre-screened Western OEMs, Tier-1 manufacturers, and ASA-100 accredited distributors.' },
-  { value: 18, suffix: '+', label: 'Operating Markets Supported', desc: 'Cross-border corridors navigated across North America, Europe, the Middle East, and Asia.' },
+  { value: 50, suffix: '+', label: 'Global Supplier Relationships', desc: 'Evaluated international OEMs, Tier-1 manufacturers, and ASA-100 accredited distributors.' },
+  { value: 18, suffix: '+', label: 'Operating Markets Supported', desc: 'International trade corridors navigated across North America, Europe, the Middle East, and Asia.' },
   { value: 12000, suffix: '+', label: 'Component Categories Sourced', desc: 'Rotables, powerplants, structural airframe forgings, avionics LRUs, and consumables.' },
   { value: 99.4, suffix: '%', label: 'Compliance & Pedigree Integrity', desc: 'Dual-release traceability standard with complete documentation records.' },
 ];

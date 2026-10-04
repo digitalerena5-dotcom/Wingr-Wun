@@ -15,7 +15,7 @@ export default function About() {
       icon: ShieldCheck,
       tag: 'EVALUATION',
       title: 'Rigorous Vendor Vetting',
-      body: 'Comprehensive audit of Western OEMs, stockists, and certified repair stations to ensure pedigree, financial stability, and strict quality adherence.',
+      body: 'Comprehensive audit of international OEMs, accredited stockists, and certified repair stations to ensure pedigree, financial stability, and strict quality adherence.',
       highlight: '100% Pedigree Audit',
       focus: 'Certified Quality',
     },
@@ -23,7 +23,7 @@ export default function About() {
       icon: Search,
       tag: 'INTELLIGENCE',
       title: 'Deep Market Intelligence',
-      body: 'Exhaustive cross-border research across fragmented supply channels, tracing hard-to-find components and obsolete spares across trusted networks.',
+      body: 'In-depth international market research across fragmented supply channels, tracing scarce components and obsolete spares through trusted aviation networks.',
       highlight: 'Obsolete & Legacy Spares',
       focus: 'Global Network',
     },
@@ -40,12 +40,12 @@ export default function About() {
           <div className="lg:col-span-7">
             <span className="eyebrow eyebrow--steel">COMPANY POSITIONING &amp; MANDATE</span>
             <h2 id="about-title" className="h2 mt-4 text-[#071925] tracking-tight">
-              A Strategic Bridge Between Defence Requirements and Western Aerospace Supply.
+              A Strategic Bridge Between Defence Requirements and Global Aerospace Supply.
             </h2>
           </div>
           <div className="lg:col-span-5">
             <p className="text-base leading-relaxed text-[#4A6272]">
-              Wingr Wun is a premier aviation sourcing and procurement consultancy bridging the gap between international defence markets and leading aerospace suppliers across the West. We resolve procurement friction, navigate export compliance, and secure flight-critical components to keep global fleets mission-ready.
+              Wingr Wun is an aviation sourcing and procurement consultancy bridging the gap between international defence requirements and leading aerospace suppliers across global markets. We resolve procurement friction, navigate export compliance, and secure components essential to flight operations to maintain fleet readiness.
             </p>
           </div>
         </div>
@@ -93,10 +93,10 @@ export default function About() {
             {/* Heritage Quote */}
             <div className="lg:col-span-7 border-l-2 border-[#C99B47] pl-4 sm:pl-5">
               <span className="mono text-xs font-bold uppercase tracking-wider text-[#31566D] block mb-1">
-                DEFENSE AVIATION HERITAGE
+                DEFENCE AVIATION HERITAGE
               </span>
               <p className="font-display text-base font-semibold leading-relaxed text-[#071925]">
-                Established by Defense Aviation Experts and Aviation Specialists who bring the rigour, discipline, and systematic precision of aviation practice to everyday operational and procurement challenges.
+                Established by Defence Aviation Experts and Aviation Specialists who bring the rigour, discipline, and systematic precision of aviation practice to everyday operational and procurement challenges.
               </p>
             </div>
 
@@ -112,7 +112,7 @@ export default function About() {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-[#C99B47] shrink-0" />
-                <span className="mono text-[0.72rem] text-[#31566D] font-semibold">Tier-1 Western OEMs</span>
+                <span className="mono text-[0.72rem] text-[#31566D] font-semibold">Tier-1 International OEMs</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-[#C99B47] shrink-0" />
@@ -134,7 +134,7 @@ export default function About() {
               <div className="flex items-center gap-4 mono text-xs text-steel-grey">
                 <span>SCHEMATIC // NOT TO SCALE</span>
                 <span className="hidden sm:inline text-steel-grey/40">|</span>
-                <span className="hidden sm:inline text-gold font-medium">END-TO-END CORRIDOR</span>
+                <span className="hidden sm:inline text-gold font-medium">COMPLETE SOURCING CORRIDOR</span>
               </div>
             </div>
             <BridgeSchematic />

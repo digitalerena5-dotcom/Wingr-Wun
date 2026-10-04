@@ -71,8 +71,7 @@ export default function Hero({ onOpenRFQ }) {
               className="lede intro mt-4 max-w-[36rem] text-[color:var(--text-muted-dark)] sm:mt-6"
               style={{ '--d': '380ms' }}
             >
-              Wingr Wun connects international defence markets with trusted Western aerospace suppliers through
-              strategic sourcing, vendor vetting, legacy component procurement, and supply chain advisory.
+              Wingr Wun provides specialised aviation procurement and aircraft component sourcing for defence and commercial operations. Through strategic global sourcing, rigorous vendor vetting, and legacy component procurement, we connect complex operational requirements with trusted aerospace suppliers worldwide.
             </p>
 
             {/* Clear Primary & Secondary Actions */}
@@ -96,8 +95,8 @@ export default function Hero({ onOpenRFQ }) {
 
             {/* Subtle Telemetry Coordinates */}
             <div className="intro mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 mono text-[0.68rem] text-steel-grey sm:mt-8 sm:text-[0.7rem]" style={{ '--d': '650ms' }}>
-              <span>INTERNATIONAL DEFENCE &amp; WESTERN SOURCING</span>
-              <span className="text-gold">DEFENSE AVIATION EXPERTS</span>
+              <span>INTERNATIONAL DEFENCE &amp; GLOBAL SOURCING</span>
+              <span className="text-gold">DEFENCE AVIATION EXPERTS</span>
             </div>
           </div>
 

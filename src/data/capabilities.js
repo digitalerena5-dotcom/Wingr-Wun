@@ -10,11 +10,11 @@ export const capabilities = [
 export const pillars = [
   {
     title: 'Aviation Expertise',
-    body: 'Established by Defense Aviation Experts and Aviation Professionals who bring the rigour of aviation practice to everyday operational and organisational work.',
+    body: 'Established by Defence Aviation Experts and Aviation Professionals who bring the rigour of aviation practice to everyday operational and organisational work.',
   },
   {
     title: 'Global Supplier Perspective',
-    body: 'Bridging international market requirements with leading aerospace suppliers across the West.',
+    body: 'Connecting international market requirements with trusted aerospace suppliers worldwide.',
   },
   {
     title: 'Procurement Intelligence',
@@ -22,6 +22,6 @@ export const pillars = [
   },
   {
     title: 'Operational Focus',
-    body: 'Supporting critical-part availability, resilient supply chains and fleet operational readiness.',
+    body: 'Supporting critical component availability, resilient supply chains and fleet operational readiness.',
   },
 ];

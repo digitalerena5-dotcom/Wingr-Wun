@@ -20,13 +20,13 @@ export default function Services({ onOpenRFQ }) {
           <Reveal className="lg:col-span-7">
             <span className="eyebrow">CORE CONSULTANCY DISCIPLINES</span>
             <h2 id="services-title" className="h2 mt-4 text-white tracking-tight">
-              Four Core Services.<br />
-              One Disciplined Partner.
+              Global Aviation Procurement<br />
+              Built Around Operational Requirements.
             </h2>
           </Reveal>
           <Reveal delay={120} className="lg:col-span-5">
             <p className="text-base leading-relaxed text-[color:var(--text-muted-dark)]">
-              Grounded in the realities of aerospace procurement. Each service is delivered as structured consultancy to secure parts, navigate regulatory regimes, and protect operational flight readiness.
+              Grounded in the realities of aerospace procurement. Each service is delivered as structured consultancy to secure components, navigate regulatory regimes, and protect operational aircraft readiness.
             </p>
           </Reveal>
         </div>

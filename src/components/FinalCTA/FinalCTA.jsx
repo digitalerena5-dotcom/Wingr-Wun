@@ -31,7 +31,7 @@ export default function FinalCTA({ onOpenRFQ }) {
               Aviation Requirement?
             </h2>
             <p className="lede mt-6 text-[color:var(--text-muted-dark)]">
-              Engage early. Share the aircraft, component, platform or supply-chain requirement and our team will assess the available sourcing route.
+              Engage early. Share the aircraft, component, platform or supply chain requirement and our team will assess the available sourcing route.
             </p>
 
             <div className="mt-10 flex flex-col gap-3.5 sm:flex-row sm:items-center sm:gap-4">
@@ -44,7 +44,7 @@ export default function FinalCTA({ onOpenRFQ }) {
                 <ArrowRight size={18} strokeWidth={1.5} aria-hidden="true" />
               </button>
               <a href="#services" className="btn btn-outline">
-                Explore Services
+                Explore Our Services
               </a>
             </div>
           </Reveal>

@@ -6,12 +6,12 @@ const complianceAreas = [
   {
     icon: Globe,
     title: 'International Trade Laws & Regulations',
-    body: 'Navigating cross-border trade legalities governing aerospace goods moving between sovereign jurisdictions, minimizing delays through informed transactional structuring.',
+    body: 'Navigating international trade legalities governing aerospace goods moving between sovereign jurisdictions, minimising delays through informed transactional structuring.',
   },
   {
     icon: ShieldCheck,
     title: 'Export Licensing & ITAR Advisory',
-    body: 'Guidance concerning licensing requirements that may attach to cross-border transactions, including ITAR considerations where US defence articles or technical data are involved.',
+    body: 'Guidance concerning licensing requirements that attach to international aerospace transfers, including ITAR considerations where US defence articles or technical data are involved.',
   },
   {
     icon: FileText,
@@ -39,8 +39,8 @@ export default function Compliance() {
             <Reveal>
               <span className="eyebrow">REGULATORY &amp; EXPORT GUIDANCE</span>
               <h2 id="comp-title" className="h2 mt-4 text-white tracking-tight">
-                Compliance is Built<br />
-                Into the Supply Chain.
+                Compliance Integrated Throughout<br />
+                the Procurement Process.
               </h2>
               <p className="lede mt-6 text-[color:var(--text-muted-dark)]">
                 Structured consultancy for navigating the complexities of international trade regulations and export controls.

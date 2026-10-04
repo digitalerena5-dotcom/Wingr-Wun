@@ -35,11 +35,11 @@ export default function ContactPage() {
         </nav>
         <div className="mt-6 grid gap-6 md:mt-8 lg:grid-cols-12 lg:items-end lg:gap-10">
           <h1 id="contact-title" className="h2 intro text-white lg:col-span-7" style={{ '--d': '160ms' }}>
-            Discuss Your <span className="text-[color:var(--c-gold-soft)]">Requirement.</span>
+            Contact Our Aviation <span className="text-[color:var(--c-gold-soft)]">Procurement Team.</span>
           </h1>
           <p className="lede intro text-[color:var(--text-muted-dark)] lg:col-span-4 lg:col-start-9" style={{ '--d': '300ms' }}>
-            Tell us about the component, subsystem or supply challenge you are working on. The more detail you can share, the
-            more useful our first conversation will be.
+            Tell us about the aircraft component, subsystem or supply challenge you are addressing. The more detail you provide, the
+            more effective our initial assessment will be.
           </p>
         </div>
       </div>

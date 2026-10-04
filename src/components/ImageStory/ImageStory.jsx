@@ -10,7 +10,7 @@ export default function ImageStory() {
         {/* Section Header */}
         <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
           <Reveal className="lg:col-span-8">
-            <span className="eyebrow">OPERATIONAL EXCELLENCE</span>
+            <span className="eyebrow">TECHNICAL PEDIGREE &amp; TRACEABILITY</span>
             <h2 id="story-title" className="h2 mt-4 text-white tracking-tight">
               Precision in Every Component.<br />
               Integrity Across Every Corridor.
@@ -48,10 +48,10 @@ export default function ImageStory() {
               <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[color:var(--line-dark)] bg-navy-950/90 px-4 py-3 sm:px-6 sm:py-4 mono text-[0.68rem] sm:text-[0.7rem] text-steel-grey">
                 <div>
                   <span className="text-white font-medium block">TACTICAL AIRFRAME &amp; PROPULSION</span>
-                  <span className="text-[0.65rem] text-gold">WESTERN OEM SOURCING &amp; AIRFRAME ROTABLES</span>
+                  <span className="text-[0.65rem] text-gold">GLOBAL OEM SOURCING &amp; AIRFRAME ROTABLES</span>
                 </div>
                 <span className="rounded border border-[color:var(--line-dark)] px-2 py-0.5 text-[0.65rem]">
-                  LOC: WESTERN DEFENCE CORRIDOR
+                  LOC: INTERNATIONAL DEFENCE CORRIDOR
                 </span>
               </div>
             </div>
@@ -88,7 +88,7 @@ export default function ImageStory() {
                 <div className="relative overflow-hidden">
                   <img
                     src="/images/air_cargo_pallet.jpg"
-                    alt="Bonded parts logistics and pre-vetted western distributor corridors"
+                    alt="Bonded aerospace freight logistics and verified international supply corridors"
                     className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                     loading="lazy"
                   />

@@ -71,7 +71,7 @@ export default function AviationRFQForm({ inModal = false, onClose }) {
         <div className="mx-auto my-6 max-w-sm rounded border border-[color:var(--line-dark)] bg-navy-950 p-4">
           <p className="mono text-[0.7rem] uppercase text-steel-grey">Procurement Tracking Reference</p>
           <p className="mono mt-1 text-lg font-bold tracking-wider text-gold">{referenceId}</p>
-          <p className="mono mt-1 text-[0.68rem] text-steel-grey">Priority: HIGH // Target Response: &lt; 4 Hours</p>
+          <p className="mono mt-1 text-[0.68rem] text-steel-grey">Priority: HIGH // Priority Review Active</p>
         </div>
 
         <button

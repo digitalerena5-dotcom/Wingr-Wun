@@ -2,17 +2,17 @@ import { useState } from 'react';
 import { Reveal } from '../../hooks/useScrollReveal.jsx';
 
 const demandNodes = [
-  { id: 'd1', label: 'International Defence Fleets', sub: 'Air forces & mission programs requiring critical rotable readiness.', detail: 'Requirement intake, mission impact assessment, and specification definitions.' },
+  { id: 'd1', label: 'International Defence Fleets', sub: 'Air forces and operational programmes requiring reliable rotable availability.', detail: 'Requirement intake, mission impact assessment, and specification definitions.' },
   { id: 'd2', label: 'Fleet Operators & Airlines', sub: 'Scheduled maintenance and urgent AOG rotable replenishment.', detail: 'High-cycle rotable replacement, line replaceable unit (LRU) exchanges.' },
-  { id: 'd3', label: 'Heavy MRO Facilities', sub: 'Base maintenance depots requiring difficult-to-locate assemblies.', detail: 'Overhaul component synchronization and structural airframe spares.' },
+  { id: 'd3', label: 'Heavy MRO Facilities', sub: 'Base maintenance depots requiring difficult-to-locate assemblies.', detail: 'Overhaul component synchronisation and structural airframe spares.' },
   { id: 'd4', label: 'Procurement Directorates', sub: 'Government and institutional aviation purchasing divisions.', detail: 'Long-lead pipeline planning, obsolescence management, and contract sourcing.' },
 ];
 
 const supplyNodes = [
-  { id: 's1', label: 'Premier Western OEMs', sub: 'Direct tier-1 original equipment manufacturers in the US & Europe.', detail: 'Factory-new component acquisition with original manufacturing records.' },
+  { id: 's1', label: 'Established International OEMs', sub: 'Direct tier-1 original equipment manufacturers across leading aerospace hubs.', detail: 'Factory-new component acquisition with original manufacturing records.' },
   { id: 's2', label: 'Certified Distributors', sub: 'Accredited aerospace stockists and vetted rotable inventories.', detail: 'Dual-release FAA 8130-3 and EASA Form 1 traceable stock.' },
-  { id: 's3', label: 'Specialized Repair Stations', sub: 'Part-145 accredited maintenance and overhaul facilities.', detail: 'Bench-tested rotable overhauls, calibration, and recalibration records.' },
-  { id: 's4', label: 'Bonded Transit Corridors', sub: 'Secure, compliant international shipping and customs pathways.', detail: 'Pre-cleared ITAR and export license compliance transit corridors.' },
+  { id: 's3', label: 'Specialised Repair Stations', sub: 'Part-145 accredited maintenance and overhaul facilities.', detail: 'Bench-tested rotable overhauls, calibration, and recalibration records.' },
+  { id: 's4', label: 'Bonded Transit Corridors', sub: 'Secure, compliant international shipping and customs pathways.', detail: 'Pre-cleared ITAR and export licence compliance transit corridors.' },
 ];
 
 export default function SupplyNetwork() {
@@ -32,12 +32,12 @@ export default function SupplyNetwork() {
             <span className="eyebrow">SUPPLIER NETWORK &amp; INTELLIGENCE</span>
             <h2 id="network-title" className="h2 mt-4 text-white tracking-tight">
               Bridging Requirements<br />
-              to Western Aerospace Supply.
+              to Global Aerospace Supply.
             </h2>
           </Reveal>
           <Reveal delay={120} className="lg:col-span-4">
             <p className="text-sm text-[color:var(--text-muted-dark)] leading-relaxed">
-              How Wingr Wun applies vendor vetting and market intelligence to connect international requirements with certified Western supply sources.
+              How Wingr Wun applies vendor vetting and market intelligence to connect international requirements with certified international supply sources.
             </p>
           </Reveal>
         </div>
@@ -128,10 +128,10 @@ export default function SupplyNetwork() {
               </div>
             </div>
 
-            {/* RIGHT COLUMN: Western Aerospace Supply */}
+            {/* RIGHT COLUMN: Global Aerospace Supply */}
             <div className="space-y-3 lg:col-span-4">
               <div className="mb-2 flex items-center justify-between border-b border-[color:var(--line-dark)] pb-2">
-                <span className="mono text-xs uppercase text-gold font-bold">Western Aerospace Supply</span>
+                <span className="mono text-xs uppercase text-gold font-bold">Global Aerospace Supply</span>
                 <span className="mono text-[0.65rem] text-steel-grey">VERIFIED SOURCES</span>
               </div>
 
@@ -168,8 +168,8 @@ export default function SupplyNetwork() {
 
           {/* Bottom Telemetry Bar */}
           <div className="mt-8 border-t border-[color:var(--line-dark)] pt-4 flex flex-wrap items-center justify-between gap-4 mono text-[0.68rem] text-steel-grey">
-            <span>VENDOR VETTING &amp; CROSS-BORDER LOGISTICS PIPELINE</span>
-            <span className="text-gold">COMPLIANCE CONSCIOUS PROCUREMENT</span>
+            <span>VENDOR VETTING &amp; INTERNATIONAL LOGISTICS PIPELINE</span>
+            <span className="text-gold">COMPLIANCE-ALIGNED PROCUREMENT ARCHITECTURE</span>
           </div>
         </div>
       </div>

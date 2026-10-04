@@ -19,8 +19,8 @@ import RFQModal from './components/RFQModal/RFQModal.jsx';
 import { CONTACT_HASH } from './data/navigation.js';
 
 const TITLES = {
-  home: 'Wingr Wun | Aviation Sourcing & Procurement Consultancy',
-  contact: 'Contact | Wingr Wun',
+  home: 'Aviation Procurement & Aircraft Component Sourcing | Wingr Wun',
+  contact: 'Contact Aviation Procurement Team | Wingr Wun',
 };
 
 function initialPage() {
