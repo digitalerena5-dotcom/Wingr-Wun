@@ -6,11 +6,11 @@ import AviationRFQForm from '../Shared/AviationRFQForm.jsx';
 
 const nextSteps = [
   { title: 'Review', body: 'Your requirement is reviewed against the sourcing, compliance and logistics considerations involved.' },
-  { title: 'Clarify', body: 'Where needed, we follow up to confirm specifications, quantities or timing.' },
-  { title: 'Discuss an approach', body: 'We discuss how the requirement could be sourced and moved through an appropriate pathway.' },
+  { title: 'Clarify', body: 'If required, send a follow-up email to confirm or clarify.' },
+  { title: 'Modus Operandi', body: '' },
 ];
 
-const areas = ['Strategic global sourcing', 'Legacy component procurement', 'Regulatory & export compliance', 'Logistics & pipeline facilitation'];
+const areas = ['Strategic global sourcing', 'Legacy component procurement', 'Regulatory & export compliance', 'Logistic & pipeline facilitation'];
 
 export default function ContactPage() {
   return (
@@ -35,11 +35,10 @@ export default function ContactPage() {
         </nav>
         <div className="mt-6 grid gap-6 md:mt-8 lg:grid-cols-12 lg:items-end lg:gap-10">
           <h1 id="contact-title" className="h2 intro text-white lg:col-span-7" style={{ '--d': '160ms' }}>
-            Contact Our Aviation <span className="text-[color:var(--c-gold-soft)]">Procurement Team.</span>
+            Contact Our <span className="text-[color:var(--c-gold-soft)]">Team.</span>
           </h1>
           <p className="lede intro text-[color:var(--text-muted-dark)] lg:col-span-4 lg:col-start-9" style={{ '--d': '300ms' }}>
-            Tell us about the aircraft component, subsystem or supply challenge you are addressing. The more detail you provide, the
-            more effective our initial assessment will be.
+            Share your requirements and we will address the same for you.
           </p>
         </div>
       </div>
@@ -55,11 +54,8 @@ export default function ContactPage() {
                   Aviation RFQ &amp; Sourcing Desk
                 </h2>
               </div>
-              <p className="mono text-[0.72rem] uppercase tracking-wider text-steel-grey">
-                Priority Dispatch Queue
-              </p>
             </div>
-            <AviationRFQForm />
+            <AviationRFQForm showTechnicalParameters={false} />
           </div>
 
           <aside className="lg:col-span-4" aria-label="About your enquiry">
@@ -75,7 +71,7 @@ export default function ContactPage() {
                     <span className="relative mt-[6px] block h-[11px] w-[11px] border border-gold bg-navy-950" aria-hidden="true" />
                     <div>
                       <h3 className="font-display font-semibold text-white">{s.title}</h3>
-                      <p className="mt-1 text-[0.95rem] leading-relaxed text-[color:var(--text-muted-dark)]">{s.body}</p>
+                      {s.body && <p className="mt-1 text-[0.95rem] leading-relaxed text-[color:var(--text-muted-dark)]">{s.body}</p>}
                     </div>
                   </li>
                 ))}

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { CheckCircle, ArrowRight, ShieldCheck } from 'lucide-react';
 
-export default function AviationRFQForm({ inModal = false, onClose }) {
+export default function AviationRFQForm({ inModal = false, showTechnicalParameters = true, onClose }) {
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -100,7 +100,7 @@ export default function AviationRFQForm({ inModal = false, onClose }) {
             required
             value={formData.name}
             onChange={handleChange}
-            placeholder="e.g. Captain James Mitchell"
+            placeholder="e.g. James Mitchell"
             className="mt-2 w-full rounded border border-[color:var(--line-dark)] bg-navy-950 px-3.5 py-2.5 text-sm text-white placeholder-steel-grey/60 focus:border-gold focus:outline-none"
           />
         </div>
@@ -169,93 +169,95 @@ export default function AviationRFQForm({ inModal = false, onClose }) {
       </div>
 
       {/* Technical Sourcing Parameters */}
-      <div className="rounded border border-[color:var(--line-dark)] bg-navy-950/60 p-3 sm:p-5">
-        <p className="mono mb-3 text-[0.72rem] tracking-wider uppercase text-gold sm:mb-4">
-          Technical Sourcing Parameters
-        </p>
+      {showTechnicalParameters && (
+        <div className="rounded border border-[color:var(--line-dark)] bg-navy-950/60 p-3 sm:p-5">
+          <p className="mono mb-3 text-[0.72rem] tracking-wider uppercase text-gold sm:mb-4">
+            Technical Sourcing Parameters
+          </p>
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div>
-            <label htmlFor="rfq-type" className="mono block text-xs uppercase text-steel-grey">
-              Urgency / Requirement Type
-            </label>
-            <select
-              id="rfq-type"
-              name="requirementType"
-              value={formData.requirementType}
-              onChange={handleChange}
-              className="select mt-2 w-full rounded border border-[color:var(--line-dark)] bg-navy-950 px-3.5 py-2.5 text-sm text-white focus:border-gold focus:outline-none"
-            >
-              <option>AOG Emergency (Immediate Dispatch)</option>
-              <option>Scheduled Maintenance / C-Check</option>
-              <option>Legacy / Obsolete Component Sourcing</option>
-              <option>Rotable Exchange / Core Return</option>
-              <option>Export Compliance &amp; Pre-Clearance</option>
-            </select>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label htmlFor="rfq-type" className="mono block text-xs uppercase text-steel-grey">
+                Urgency / Requirement Type
+              </label>
+              <select
+                id="rfq-type"
+                name="requirementType"
+                value={formData.requirementType}
+                onChange={handleChange}
+                className="select mt-2 w-full rounded border border-[color:var(--line-dark)] bg-navy-950 px-3.5 py-2.5 text-sm text-white focus:border-gold focus:outline-none"
+              >
+                <option>AOG Emergency (Immediate Dispatch)</option>
+                <option>Scheduled Maintenance / C-Check</option>
+                <option>Legacy / Obsolete Component Sourcing</option>
+                <option>Rotable Exchange / Core Return</option>
+                <option>Export Compliance &amp; Pre-Clearance</option>
+              </select>
+            </div>
+
+            <div>
+              <label htmlFor="rfq-aircraft" className="mono block text-xs uppercase text-steel-grey">
+                Aircraft Type / Platform
+              </label>
+              <input
+                type="text"
+                id="rfq-aircraft"
+                name="aircraftPlatform"
+                value={formData.aircraftPlatform}
+                onChange={handleChange}
+                placeholder="e.g. Boeing 777-300ER / CFM56-7B"
+                className="mt-2 w-full rounded border border-[color:var(--line-dark)] bg-navy-950 px-3.5 py-2.5 text-sm text-white placeholder-steel-grey/60 focus:border-gold focus:outline-none"
+              />
+            </div>
           </div>
 
-          <div>
-            <label htmlFor="rfq-aircraft" className="mono block text-xs uppercase text-steel-grey">
-              Aircraft Type / Platform
-            </label>
-            <input
-              type="text"
-              id="rfq-aircraft"
-              name="aircraftPlatform"
-              value={formData.aircraftPlatform}
-              onChange={handleChange}
-              placeholder="e.g. Boeing 777-300ER / CFM56-7B"
-              className="mt-2 w-full rounded border border-[color:var(--line-dark)] bg-navy-950 px-3.5 py-2.5 text-sm text-white placeholder-steel-grey/60 focus:border-gold focus:outline-none"
-            />
+          <div className="mt-4 grid gap-4 sm:grid-cols-3">
+            <div>
+              <label htmlFor="rfq-part" className="mono block text-xs uppercase text-steel-grey">
+                Part Number (P/N)
+              </label>
+              <input
+                type="text"
+                id="rfq-part"
+                name="partNumber"
+                value={formData.partNumber}
+                onChange={handleChange}
+                placeholder="e.g. 331-200ER / OEM P/N"
+                className="mt-2 w-full rounded border border-[color:var(--line-dark)] bg-navy-950 px-3.5 py-2.5 text-sm text-white placeholder-steel-grey/60 focus:border-gold focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="rfq-qty" className="mono block text-xs uppercase text-steel-grey">
+                Quantity
+              </label>
+              <input
+                type="number"
+                id="rfq-qty"
+                name="quantity"
+                min="1"
+                value={formData.quantity}
+                onChange={handleChange}
+                className="mt-2 w-full rounded border border-[color:var(--line-dark)] bg-navy-950 px-3.5 py-2.5 text-sm text-white focus:border-gold focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="rfq-date" className="mono block text-xs uppercase text-steel-grey">
+                Required On-Site By
+              </label>
+              <input
+                type="date"
+                id="rfq-date"
+                name="requiredBy"
+                value={formData.requiredBy}
+                onChange={handleChange}
+                className="mt-2 w-full rounded border border-[color:var(--line-dark)] bg-navy-950 px-3.5 py-2.5 text-sm text-white focus:border-gold focus:outline-none"
+              />
+            </div>
           </div>
         </div>
-
-        <div className="mt-4 grid gap-4 sm:grid-cols-3">
-          <div>
-            <label htmlFor="rfq-part" className="mono block text-xs uppercase text-steel-grey">
-              Part Number (P/N)
-            </label>
-            <input
-              type="text"
-              id="rfq-part"
-              name="partNumber"
-              value={formData.partNumber}
-              onChange={handleChange}
-              placeholder="e.g. 331-200ER / OEM P/N"
-              className="mt-2 w-full rounded border border-[color:var(--line-dark)] bg-navy-950 px-3.5 py-2.5 text-sm text-white placeholder-steel-grey/60 focus:border-gold focus:outline-none"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="rfq-qty" className="mono block text-xs uppercase text-steel-grey">
-              Quantity
-            </label>
-            <input
-              type="number"
-              id="rfq-qty"
-              name="quantity"
-              min="1"
-              value={formData.quantity}
-              onChange={handleChange}
-              className="mt-2 w-full rounded border border-[color:var(--line-dark)] bg-navy-950 px-3.5 py-2.5 text-sm text-white focus:border-gold focus:outline-none"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="rfq-date" className="mono block text-xs uppercase text-steel-grey">
-              Required On-Site By
-            </label>
-            <input
-              type="date"
-              id="rfq-date"
-              name="requiredBy"
-              value={formData.requiredBy}
-              onChange={handleChange}
-              className="mt-2 w-full rounded border border-[color:var(--line-dark)] bg-navy-950 px-3.5 py-2.5 text-sm text-white focus:border-gold focus:outline-none"
-            />
-          </div>
-        </div>
-      </div>
+      )}
 
       <div>
         <label htmlFor="rfq-message" className="mono block text-xs uppercase text-steel-grey">
@@ -267,7 +269,6 @@ export default function AviationRFQForm({ inModal = false, onClose }) {
           rows={3}
           value={formData.message}
           onChange={handleChange}
-          placeholder="Include required condition (Factory New, New Surplus, Overhauled), target certification (FAA 8130-3 / EASA Form 1), and delivery airport code..."
           className="mt-2 w-full rounded border border-[color:var(--line-dark)] bg-navy-950 p-3.5 text-sm text-white placeholder-steel-grey/60 focus:border-gold focus:outline-none"
         />
       </div>

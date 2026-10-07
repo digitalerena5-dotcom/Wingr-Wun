@@ -32,7 +32,7 @@ export default function TopRightInsignia({ onOpenRFQ }) {
             if (onOpenRFQ) onOpenRFQ();
             else window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
-          title="Wingr Wun Official Crest — Click to discuss your requirement"
+          title="Wingr Wun Official Crest — Click to discuss requirements"
           aria-label="Wingr Wun Official Crest"
           className="group relative flex h-14 w-14 items-center justify-center rounded-full border border-gold/40 bg-navy-950/90 shadow-[0_4px_24px_rgba(7,25,37,0.85)] backdrop-blur-md transition-all duration-500 hover:border-gold hover:shadow-[0_0_28px_rgba(201,155,71,0.45)] sm:h-16 sm:w-16"
         >

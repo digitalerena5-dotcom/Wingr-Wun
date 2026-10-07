@@ -63,7 +63,7 @@ export default function Hero({ onOpenRFQ }) {
               Critical Aviation<br />
               Requirements<br />
               With <span className="text-[color:var(--c-gold-soft)]">Trusted</span><br />
-              Global Supply
+              Global Supply Chain
             </h1>
 
             {/* Client Authorized Supporting Copy */}
@@ -84,12 +84,12 @@ export default function Hero({ onOpenRFQ }) {
                 onClick={onOpenRFQ}
                 className="btn btn-primary"
               >
-                Discuss Your Requirement
+                Discuss Requirements
                 <ArrowRight size={18} strokeWidth={1.5} aria-hidden="true" />
               </button>
 
               <a href="#services" className="btn btn-outline">
-                Explore Our Services
+                Our Services
               </a>
             </div>
 

@@ -117,7 +117,7 @@ export default function Header({ page = 'home', onOpenRFQ }) {
               onClick={handleCtaClick}
               className="btn btn-outline btn-sm hidden sm:inline-flex"
             >
-              Discuss Your Requirement
+              Discuss Requirements
               <ArrowRight size={15} strokeWidth={1.5} aria-hidden="true" />
             </button>
 
@@ -175,7 +175,7 @@ export default function Header({ page = 'home', onOpenRFQ }) {
               onClick={handleCtaClick}
               className="btn btn-primary w-full"
             >
-              Discuss Your Requirement
+              Discuss Requirements
               <ArrowRight size={18} strokeWidth={1.5} aria-hidden="true" />
             </button>
           </div>

@@ -4,7 +4,7 @@ export const requirementAreas = [
   'Strategic global sourcing',
   'Legacy component procurement',
   'Regulatory & export compliance',
-  'Logistics & pipeline facilitation',
+  'Logistic & pipeline facilitation',
   'General consultancy enquiry',
 ];
 

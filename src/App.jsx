@@ -20,7 +20,7 @@ import { CONTACT_HASH } from './data/navigation.js';
 
 const TITLES = {
   home: 'Aviation Procurement & Aircraft Component Sourcing | Wingr Wun',
-  contact: 'Contact Aviation Procurement Team | Wingr Wun',
+  contact: 'Contact Our Team | Wingr Wun',
 };
 
 function initialPage() {
