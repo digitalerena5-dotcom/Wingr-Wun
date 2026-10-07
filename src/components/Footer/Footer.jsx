@@ -1,9 +1,8 @@
 import { ArrowUp, Mail, MapPin } from 'lucide-react';
 import { homeHref } from '../../data/navigation.js';
-import { socialLinks } from '../../data/social.js';
 import { contact } from '../../data/contact.js';
 
-export default function Footer({ onOpenRFQ }) {
+export default function Footer({ onOpenRFQ, onOpenLegal }) {
   const colHead = 'mono text-sm font-bold uppercase tracking-wider text-gold';
   const linkClass = 'inline-flex items-center text-[0.93rem] text-[#9FB1BD] transition-colors duration-200 hover:text-white';
 
@@ -89,6 +88,15 @@ export default function Footer({ onOpenRFQ }) {
                   >
                     {contact.email}
                   </a>
+                  <div className="mt-1.5">
+                    <button
+                      type="button"
+                      onClick={onOpenRFQ}
+                      className="inline-flex items-center gap-1 mono text-[0.72rem] text-gold hover:underline uppercase tracking-wider font-semibold transition-colors"
+                    >
+                      Discuss Requirements &rarr;
+                    </button>
+                  </div>
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -103,20 +111,6 @@ export default function Footer({ onOpenRFQ }) {
                 </div>
               </li>
             </ul>
-
-            {/* Social Channels */}
-            <div className="mt-6 border-t border-[color:var(--line-dark)]/60 pt-4">
-              <p className="mono text-[0.68rem] uppercase tracking-wider text-steel-grey mb-2.5">Channels</p>
-              <div className="flex flex-wrap items-center gap-3 text-xs text-[#9FB1BD]">
-                <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
-                <span>&middot;</span>
-                <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">X</a>
-                <span>&middot;</span>
-                <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
-                <span>&middot;</span>
-                <a href={socialLinks.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">YouTube</a>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -129,11 +123,29 @@ export default function Footer({ onOpenRFQ }) {
 
           {/* CENTER: Legal Links */}
           <div className="flex flex-wrap items-center gap-6">
-            <a href="#privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+            <button
+              type="button"
+              onClick={() => onOpenLegal && onOpenLegal('privacy')}
+              className="hover:text-white transition-colors cursor-pointer"
+            >
+              Privacy Policy
+            </button>
             <span>&middot;</span>
-            <a href="#terms" className="hover:text-white transition-colors">Terms of Supply</a>
+            <button
+              type="button"
+              onClick={() => onOpenLegal && onOpenLegal('terms')}
+              className="hover:text-white transition-colors cursor-pointer"
+            >
+              Terms of Supply
+            </button>
             <span>&middot;</span>
-            <a href="#cookies" className="hover:text-white transition-colors">Cookie Policy</a>
+            <button
+              type="button"
+              onClick={() => onOpenLegal && onOpenLegal('cookies')}
+              className="hover:text-white transition-colors cursor-pointer"
+            >
+              Cookie Policy
+            </button>
           </div>
 
           {/* RIGHT: Powered by DigitalErena */}

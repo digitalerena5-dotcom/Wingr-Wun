@@ -16,6 +16,7 @@ import FinalCTA from './components/FinalCTA/FinalCTA.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import ContactPage from './components/ContactPage/ContactPage.jsx';
 import RFQModal from './components/RFQModal/RFQModal.jsx';
+import LegalModal from './components/LegalModal/LegalModal.jsx';
 import { CONTACT_HASH } from './data/navigation.js';
 
 const TITLES = {
@@ -31,17 +32,35 @@ function initialPage() {
 export default function App() {
   const [page, setPage] = useState(initialPage);
   const [isRFQOpen, setIsRFQOpen] = useState(false);
+  const [legalModalState, setLegalModalState] = useState({ isOpen: false, tab: 'privacy' });
   const isFilePage = document.body.dataset.page === 'contact';
 
-  // Single-file preview: switch views on hash change (#contact-us ↔ any home anchor).
+  const openLegal = (tab = 'privacy') => setLegalModalState({ isOpen: true, tab });
+  const closeLegal = () => setLegalModalState((prev) => ({ ...prev, isOpen: false }));
+
+  // Single-file preview: switch views on hash change (#contact-us ↔ any home anchor) and legal popups.
   useEffect(() => {
-    if (isFilePage) return undefined;
+    const handleLegalHash = () => {
+      const hash = window.location.hash;
+      if (hash === '#privacy') openLegal('privacy');
+      else if (hash === '#terms') openLegal('terms');
+      else if (hash === '#cookies') openLegal('cookies');
+    };
+
+    handleLegalHash();
+
+    if (isFilePage) {
+      window.addEventListener('hashchange', handleLegalHash);
+      return () => window.removeEventListener('hashchange', handleLegalHash);
+    }
+
     const onHash = () => {
       const hash = window.location.hash;
+      handleLegalHash();
       if (hash === `#${CONTACT_HASH}`) {
         setPage('contact');
         window.scrollTo({ top: 0 });
-      } else {
+      } else if (!['#privacy', '#terms', '#cookies'].includes(hash)) {
         setPage((prev) => {
           if (prev === 'contact') {
             requestAnimationFrame(() => {
@@ -69,6 +88,11 @@ export default function App() {
     <>
       <Preloader />
       <RFQModal isOpen={isRFQOpen} onClose={closeRFQ} />
+      <LegalModal
+        isOpen={legalModalState.isOpen}
+        initialTab={legalModalState.tab}
+        onClose={closeLegal}
+      />
       <a href="#main" className="skip-link">Skip to content</a>
       <Header page={page} onOpenRFQ={openRFQ} />
 
@@ -116,8 +140,8 @@ export default function App() {
         )}
       </main>
 
-      {/* Complete Footer with Real Social Channels & Powered by DigitalErena */}
-      <Footer onOpenRFQ={openRFQ} />
+      {/* Complete Footer & Powered by DigitalErena */}
+      <Footer onOpenRFQ={openRFQ} onOpenLegal={openLegal} />
     </>
   );
 }

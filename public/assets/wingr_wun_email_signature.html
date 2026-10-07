@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wingr Wun — Official Email Signature</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #071925;
+      color: #F3F5F3;
+      padding: 40px 20px;
+      margin: 0;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #0B2230;
+      border: 1px solid rgba(201, 155, 71, 0.4);
+      border-radius: 8px;
+      padding: 32px;
+      box-shadow: 0 12px 36px rgba(0,0,0,0.4);
+    }
+    .header-bar {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .title {
+      color: #C99B47;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin: 0;
+    }
+    .instructions {
+      font-size: 13px;
+      color: #9FB1BD;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    .signature-card {
+      background: #FFFFFF;
+      color: #071925;
+      border-radius: 6px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .copy-btn {
+      background: #C99B47;
+      color: #071925;
+      border: none;
+      padding: 10px 22px;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 4px;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: background 0.2s;
+    }
+    .copy-btn:hover {
+      background: #D8B062;
+    }
+    .feedback {
+      color: #6E8798;
+      font-size: 12px;
+      margin-top: 8px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header-bar">
+      <h1 class="title">Wingr Wun Official Email Signature</h1>
+      <button class="copy-btn" onclick="copySignature()">Copy Signature</button>
+    </div>
+    
+    <p class="instructions">
+      This email signature is designed with standard HTML email tables for maximum compatibility across Microsoft Outlook, Apple Mail, Gmail, and mobile clients. Click <strong>"Copy Signature"</strong> above, then paste directly into your email client settings.
+    </p>
+
+    <!-- LIVE SIGNATURE CONTAINER (READY FOR EMAIL CLIENTS) -->
+    <div class="signature-card" id="signature-root">
+      <table cellpadding="0" cellspacing="0" border="0" style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 1.4; color: #071925; max-width: 600px;">
+        <tr>
+          <!-- LOGO COLUMN -->
+          <td valign="top" style="padding-right: 20px; border-right: 2px solid #C99B47; width: 75px; text-align: center;">
+            <a href="https://wingrwun.co.uk" target="_blank" style="text-decoration: none;">
+              <img src="https://wingrwun.co.uk/images/wingr_wun_logo.png" alt="Wingr Wun Crest" width="68" height="68" style="display: block; border: 0; outline: none; margin: 0 auto;" />
+            </a>
+            <div style="font-family: 'Courier New', Courier, monospace; font-size: 8px; color: #6E8798; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; margin-top: 6px;">
+              UK SOURCING
+            </div>
+          </td>
+
+          <!-- DETAILS COLUMN -->
+          <td valign="top" style="padding-left: 20px;">
+            <div style="font-size: 16px; font-weight: bold; color: #071925; letter-spacing: 0.5px;">
+              Hamid Qayyum
+            </div>
+            <div style="font-size: 12px; font-weight: 600; color: #C99B47; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 2px;">
+              Managing Director
+            </div>
+            <div style="font-size: 12px; color: #31566D; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: 2px;">
+              Wingr Wun // Aerospace Procurement
+            </div>
+
+            <table cellpadding="0" cellspacing="0" border="0" style="margin-top: 10px; font-size: 12px; color: #4A6272; line-height: 1.5;">
+              <tr>
+                <td style="padding-right: 6px; font-weight: bold; color: #C99B47;">Email:</td>
+                <td><a href="mailto:contact@wingrwun.co.uk" style="color: #071925; text-decoration: none; font-weight: 600;">contact@wingrwun.co.uk</a></td>
+              </tr>
+              <tr>
+                <td style="padding-right: 6px; font-weight: bold; color: #C99B47;">Web:</td>
+                <td><a href="https://wingrwun.co.uk" target="_blank" style="color: #071925; text-decoration: none; font-weight: 600;">www.wingrwun.co.uk</a></td>
+              </tr>
+              <tr>
+                <td style="padding-right: 6px; font-weight: bold; color: #C99B47;">Address:</td>
+                <td>3 Woodbridge Close, Appleton, WA4 5RD, United Kingdom</td>
+              </tr>
+              <tr>
+                <td style="padding-right: 6px; font-weight: bold; color: #C99B47;">RFQ Desk:</td>
+                <td><a href="https://wingrwun.co.uk/#contact-us" target="_blank" style="color: #C99B47; text-decoration: underline; font-weight: bold;">Submit / Discuss Requirements Online &rarr;</a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <!-- COMPLIANCE & CONFIDENTIALITY DISCLAIMER -->
+          <td colspan="2" style="padding-top: 14px; border-top: 1px solid #E2E8F0; margin-top: 12px;">
+            <p style="font-size: 9px; line-height: 1.35; color: #8295A2; margin: 0; font-family: Arial, sans-serif;">
+              <strong>CONFIDENTIALITY &amp; EXPORT NOTICE:</strong> This transmission and any attachments contain confidential commercial and technical information intended exclusively for the named addressee. Sourcing activities are conducted in accordance with applicable UK Strategic Export Controls and international dual-use regulations. If you received this communication in error, please immediately notify the sender and delete this email without copying or disclosure.
+            </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="feedback" id="feedback">Signature copied to clipboard! You can now paste it into Outlook or your email client.</div>
+  </div>
+
+  <script>
+    function copySignature() {
+      const container = document.getElementById('signature-root');
+      const range = document.createRange();
+      range.selectNode(container);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      try {
+        document.execCommand('copy');
+        const fb = document.getElementById('feedback');
+        fb.style.display = 'block';
+        setTimeout(() => fb.style.display = 'none', 3500);
+      } catch (err) {
+        alert('Please manually select the signature box and press Ctrl+C to copy.');
+      }
+      window.getSelection().removeAllRanges();
+    }
+  </script>
+</body>
+</html>

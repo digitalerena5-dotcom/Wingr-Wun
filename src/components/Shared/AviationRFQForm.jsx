@@ -287,6 +287,18 @@ export default function AviationRFQForm({ inModal = false, showTechnicalParamete
           <ArrowRight size={18} strokeWidth={1.5} />
         </button>
       </div>
+
+      <div className="pt-2 text-center sm:text-left border-t border-[color:var(--line-dark)]/50">
+        <p className="mono text-[0.72rem] text-steel-grey">
+          Direct email transmission channel:{' '}
+          <a
+            href="mailto:contact@wingrwun.co.uk"
+            className="text-gold hover:underline font-medium underline decoration-gold/50 underline-offset-2"
+          >
+            contact@wingrwun.co.uk
+          </a>
+        </p>
+      </div>
     </form>
   );
 }
