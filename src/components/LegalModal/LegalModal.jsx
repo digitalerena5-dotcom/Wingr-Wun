@@ -56,7 +56,7 @@ export default function LegalModal({ isOpen, initialTab = 'privacy', onClose }) 
             <img
               src="/images/wingr_wun_logo.png"
               alt="Wingr Wun"
-              className="h-7 w-7 object-contain"
+              className="h-7 w-auto object-contain"
             />
             <div>
               <p className="mono text-[0.68rem] tracking-wider uppercase text-gold">Official Governance &amp; Compliance</p>

@@ -20,7 +20,7 @@ export default function Hero({ onOpenRFQ }) {
     <section
       id="top"
       aria-labelledby="hero-title"
-      className="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-navy-950 pt-[var(--header-h)]"
+      className="relative isolate flex min-h-[100svh] lg:min-h-[calc(100vh-var(--header-h))] flex-col justify-between overflow-hidden bg-navy-950 pt-[var(--header-h)]"
     >
       {/* Background Engineering Grid */}
       <div
@@ -46,29 +46,26 @@ export default function Hero({ onOpenRFQ }) {
       <span className="crosshair right-[var(--gutter)] top-[calc(var(--header-h)+28px)] hidden text-steel-grey/60 md:block" aria-hidden="true" />
 
       {/* Main Hero Container */}
-      <div className="container-x relative flex flex-1 flex-col justify-center py-8 sm:py-12 lg:py-16">
-        <div className="grid grid-cols-1 items-center gap-8 sm:gap-12 lg:grid-cols-12 lg:gap-8">
+      <div className="container-x relative flex flex-1 flex-col justify-center py-6 sm:py-8 lg:py-8 xl:py-10">
+        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-8 xl:gap-12">
           {/* LEFT: Business Positioning & Strong Editorial Typography */}
-          <div className="min-w-0 lg:col-span-6 xl:col-span-6">
+          <div className="min-w-0 lg:col-span-6 xl:col-span-6 flex flex-col justify-center">
             <div className="intro flex flex-wrap items-center gap-3" style={{ '--d': '100ms' }}>
               <span className="eyebrow">AVIATION SOURCING &amp; PROCUREMENT CONSULTANCY</span>
             </div>
 
             <h1
               id="hero-title"
-              className="h1 intro mt-4 text-white sm:mt-6 md:mt-8 tracking-tight"
+              className="intro mt-3 sm:mt-4 text-white font-display font-bold text-[1.65rem] sm:text-[1.95rem] md:text-[2.2rem] lg:text-[2.45rem] xl:text-[2.65rem] leading-[1.18] sm:leading-[1.16] tracking-tight"
               style={{ '--d': '220ms' }}
             >
-              Connecting<br />
-              Critical Aviation<br />
-              Requirements<br />
-              With <span className="text-[color:var(--c-gold-soft)]">Trusted</span><br />
-              Global Supply Chain
+              Connecting Critical Requirements With{' '}
+              <span className="text-[color:var(--c-gold-soft)]">Trusted</span> Global Supply Chain
             </h1>
 
             {/* Client Authorized Supporting Copy */}
             <p
-              className="lede intro mt-4 max-w-[36rem] text-[color:var(--text-muted-dark)] sm:mt-6"
+              className="intro mt-3 sm:mt-4 max-w-[34rem] lg:max-w-[36rem] xl:max-w-[38rem] text-[0.95rem] sm:text-[1.02rem] xl:text-[1.0625rem] leading-[1.65] text-[color:var(--text-muted-dark)]"
               style={{ '--d': '380ms' }}
             >
               Wingr Wun provides specialised aviation procurement and aircraft component sourcing for defence and commercial operations. Through strategic global sourcing, rigorous vendor vetting, and legacy component procurement, we connect complex operational requirements with trusted aerospace suppliers worldwide.
@@ -76,7 +73,7 @@ export default function Hero({ onOpenRFQ }) {
 
             {/* Clear Primary & Secondary Actions */}
             <div
-              className="intro mt-6 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:items-center sm:gap-4 md:mt-11"
+              className="intro mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:items-center sm:gap-4 md:mt-8"
               style={{ '--d': '520ms' }}
             >
               <button
@@ -94,14 +91,14 @@ export default function Hero({ onOpenRFQ }) {
             </div>
 
             {/* Subtle Telemetry Coordinates */}
-            <div className="intro mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 mono text-[0.68rem] text-steel-grey sm:mt-8 sm:text-[0.7rem]" style={{ '--d': '650ms' }}>
+            <div className="intro mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 mono text-[0.68rem] text-steel-grey sm:mt-6 sm:text-[0.7rem]" style={{ '--d': '650ms' }}>
               <span>INTERNATIONAL DEFENCE &amp; GLOBAL SOURCING</span>
               <span className="text-gold">DEFENCE AVIATION EXPERTS</span>
             </div>
           </div>
 
           {/* RIGHT: Professional 3/4 Perspective Aircraft Visual with Layered Motion */}
-          <div className="relative min-w-0 lg:col-span-6 xl:col-span-6">
+          <div className="relative min-w-0 lg:col-span-6 xl:col-span-6 flex items-center justify-center">
             <HeroAircraftVisual mousePos={mousePos} />
           </div>
         </div>

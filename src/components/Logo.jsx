@@ -1,23 +1,16 @@
-export default function Logo({ className = '', subtitle = true }) {
+export default function Logo({ className = '' }) {
   return (
-    <div className={`inline-flex shrink-0 items-center gap-2.5 sm:gap-3.5 whitespace-nowrap select-none ${className}`}>
+    <div className={`inline-flex shrink-0 items-center gap-3 sm:gap-3.5 whitespace-nowrap select-none ${className}`}>
       <img
         src="/images/wingr_wun_logo.png"
         alt="Wingr Wun Official Seal"
-        width="64"
-        height="64"
-        className="h-11 w-11 sm:h-16 sm:w-16 shrink-0 object-contain drop-shadow-[0_2px_12px_rgba(201,155,71,0.35)] transition-transform duration-300 group-hover:scale-105"
+        width="80"
+        height="80"
+        className="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 shrink-0 object-contain drop-shadow-[0_4px_16px_rgba(201,155,71,0.4)] transition-transform duration-300 group-hover:scale-105"
       />
-      <div className="flex flex-col justify-center text-left">
-        <span className="font-display text-[0.98rem] sm:text-[1.12rem] font-bold uppercase tracking-[0.14em] sm:tracking-[0.16em] text-white leading-none">
-          WINGR <span className="text-gold">WUN</span>
-        </span>
-        {subtitle && (
-          <span className="font-sans text-[0.52rem] sm:text-[0.6rem] font-semibold uppercase tracking-[0.12em] sm:tracking-[0.14em] text-[#9FB1BD] leading-none mt-1 sm:mt-1.5">
-            Aerospace Procurement
-          </span>
-        )}
-      </div>
+      <span className="font-display text-[1.25rem] sm:text-[1.45rem] lg:text-[1.65rem] font-black uppercase tracking-[0.16em] sm:tracking-[0.18em] text-white leading-none">
+        WINGR <span className="text-gold">WUN</span>
+      </span>
     </div>
   );
 }

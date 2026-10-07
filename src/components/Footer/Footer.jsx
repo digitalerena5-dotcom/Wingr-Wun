@@ -12,22 +12,14 @@ export default function Footer({ onOpenRFQ, onOpenLegal }) {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
           {/* COLUMN 1: Logo & Company Statement */}
           <div className="sm:col-span-2 lg:col-span-4 pr-0 lg:pr-4">
-            <a href={homeHref('top')} className="group inline-flex items-center gap-3.5 text-white" aria-label="Wingr Wun — Back to top">
+            <a href={homeHref('top')} className="group inline-flex items-center text-white" aria-label="Wingr Wun — Back to top">
               <img
                 src="/images/wingr_wun_logo.png"
                 alt="Wingr Wun Official Seal"
-                width="54"
-                height="54"
-                className="h-13 w-13 sm:h-14 sm:w-14 shrink-0 object-contain drop-shadow-[0_2px_12px_rgba(201,155,71,0.35)] transition-transform duration-300 group-hover:scale-105"
+                width="64"
+                height="64"
+                className="h-16 w-16 sm:h-20 sm:w-20 shrink-0 object-contain drop-shadow-[0_2px_14px_rgba(201,155,71,0.4)] transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="flex flex-col justify-center text-left">
-                <span className="font-display text-xl sm:text-2xl font-bold uppercase tracking-[0.14em] text-white leading-none">
-                  WINGR <span className="text-gold">WUN</span>
-                </span>
-                <span className="mono text-[0.65rem] sm:text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-[#8FA5B5] leading-none mt-2">
-                  AEROSPACE PROCUREMENT
-                </span>
-              </div>
             </a>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-[color:var(--text-muted-dark)]">
               Specialised aviation procurement and aircraft component sourcing connecting operational requirements with verified supply. Dedicated to airworthiness integrity, regulatory compliance, and fleet readiness.
@@ -46,7 +38,6 @@ export default function Footer({ onOpenRFQ, onOpenLegal }) {
               <li><a href="#about" className={linkClass}>About Us</a></li>
               <li><a href="#capabilities" className={linkClass}>Capabilities</a></li>
               <li><a href="#compliance" className={linkClass}>Compliance</a></li>
-              <li><a href="#platforms" className={linkClass}>Platforms</a></li>
               <li><a href="#testimonials" className={linkClass}>Perspectives</a></li>
               <li><a href="#insights" className={linkClass}>Insights</a></li>
               <li>

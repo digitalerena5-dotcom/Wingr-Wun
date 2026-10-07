@@ -200,10 +200,10 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
   }, []);
 
   return (
-    <div className="relative mx-auto w-full max-w-[720px] select-none">
+    <div className="relative mx-auto w-full max-w-[620px] xl:max-w-[660px] select-none">
       {/* Outer Tactical Radar Perimeter Box with Parallax */}
       <div
-        className="pointer-events-none absolute inset-0 sm:-inset-6 rounded-2xl sm:rounded-3xl border border-steel-grey/15 bg-gradient-to-b from-navy-900/60 to-navy-950/80 backdrop-blur-sm shadow-2xl transition-transform duration-700 ease-out"
+        className="pointer-events-none absolute inset-0 sm:-inset-3 lg:-inset-4 rounded-2xl sm:rounded-3xl border border-steel-grey/15 bg-gradient-to-b from-navy-900/60 to-navy-950/80 backdrop-blur-sm shadow-2xl transition-transform duration-700 ease-out"
         style={{
           transform: `translate(${mousePos.x * -8}px, ${mousePos.y * -6}px)`,
         }}
@@ -211,7 +211,7 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
       />
 
       {/* Main High-Tech Aerospace Vector Stage */}
-      <div className="relative p-1 sm:p-4">
+      <div className="relative p-1 sm:p-3">
         <svg
           viewBox="0 0 940 540"
           fill="none"
@@ -648,13 +648,13 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
         </svg>
 
         {/* 3-STAGE SOURCING PIPELINE STEPPER BAR */}
-        <div className="mt-2.5 sm:mt-3.5 grid grid-cols-3 gap-1.5 sm:gap-3 mono text-xs">
+        <div className="mt-2 sm:mt-2.5 grid grid-cols-3 gap-1.5 sm:gap-2.5 mono text-xs">
           {WAYPOINTS.map((wp, idx) => {
             const isActive = activeWpIndex === idx;
             return (
               <div
                 key={wp.id}
-                className={`rounded-lg border px-2 py-2 sm:px-3 sm:py-2.5 text-center transition-all duration-300 ${
+                className={`rounded-lg border px-2 py-1.5 sm:px-3 sm:py-2 text-center transition-all duration-300 ${
                   isActive
                     ? 'border-gold bg-navy-900/95 text-white shadow-[0_0_18px_rgba(201,155,71,0.3)] font-semibold'
                     : 'border-[color:var(--line-dark)] bg-navy-950/70 text-steel-grey hover:border-steel-grey/40'
@@ -678,41 +678,47 @@ export default function HeroAircraftVisual({ mousePos = { x: 0, y: 0 } }) {
         </div>
 
         {/* Live Aerospace HUD Telemetry Dashboard */}
-        <div className="mt-2.5 sm:mt-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5 rounded-lg border border-[color:var(--line-dark)] bg-navy-950/90 p-2.5 sm:p-4 backdrop-blur-md mono text-[0.68rem] sm:text-[0.75rem] text-steel-grey">
-          <div className="flex items-center gap-2.5">
-            <span className="relative flex h-2 w-2 shrink-0">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-gold" />
-            </span>
-            <div className="min-w-0">
-              <span className="text-white font-medium block truncate text-[0.7rem] sm:text-[0.78rem]">
-                {telemetry.stage}
+        <div className="mt-2 sm:mt-2.5 overflow-hidden rounded-lg border border-[color:var(--line-dark)] bg-navy-950/90 p-2.5 sm:p-3 backdrop-blur-md mono text-[0.68rem] sm:text-[0.72rem] text-steel-grey space-y-2">
+          {/* Top Row: Mission Stage & Live Telemetry Ping */}
+          <div className="flex items-center justify-between gap-2.5 border-b border-[color:var(--line-dark)]/50 pb-2">
+            <div className="flex items-center gap-2 min-w-0 flex-1">
+              <span className="relative flex h-2 w-2 shrink-0">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-gold" />
               </span>
-              <span className="text-gold text-[0.6rem] sm:text-[0.68rem] block truncate">
-                GLOBAL TRANSIT: {telemetry.progress}% COMPLETE // {WAYPOINTS[activeWpIndex].title}
-              </span>
+              <div className="min-w-0 flex-1">
+                <span className="text-white font-medium block truncate text-[0.68rem] sm:text-[0.75rem]">
+                  {telemetry.stage}
+                </span>
+                <span className="text-gold text-[0.6rem] sm:text-[0.66rem] block truncate">
+                  GLOBAL TRANSIT: {telemetry.progress}% COMPLETE // {WAYPOINTS[activeWpIndex].title}
+                </span>
+              </div>
+            </div>
+            <div className="shrink-0 px-2 py-0.5 rounded bg-gold/10 border border-gold/30 mono text-[0.62rem] sm:text-[0.68rem] font-semibold text-gold">
+              LIVE FLIGHT
             </div>
           </div>
 
-          {/* Transit Coordinates & Flight Telemetry */}
-          <div className="grid grid-cols-3 gap-2 border-t border-[color:var(--line-dark)]/50 pt-2 sm:border-0 sm:pt-0 sm:flex sm:items-center sm:gap-4 text-[0.62rem] sm:text-[0.72rem] text-center sm:text-left">
-            <div>
-              <span className="text-steel-grey text-[0.55rem] sm:text-[0.64rem] block">VELOCITY</span>
-              <span className="text-white font-semibold">{telemetry.speed}</span>
+          {/* Bottom Row: 3 Tactical Flight Metrics (Contained 3-Col Grid) */}
+          <div className="grid grid-cols-3 gap-2 text-center">
+            <div className="rounded bg-navy-900/80 px-2 py-1 border border-[color:var(--line-dark)]/40">
+              <span className="text-steel-grey text-[0.55rem] sm:text-[0.62rem] block tracking-wider">VELOCITY</span>
+              <span className="text-white font-semibold text-[0.68rem] sm:text-[0.76rem]">{telemetry.speed}</span>
             </div>
-            <div>
-              <span className="text-steel-grey text-[0.55rem] sm:text-[0.64rem] block">ALTITUDE</span>
-              <span className="text-white font-semibold">{telemetry.altitude}</span>
+            <div className="rounded bg-navy-900/80 px-2 py-1 border border-[color:var(--line-dark)]/40">
+              <span className="text-steel-grey text-[0.55rem] sm:text-[0.62rem] block tracking-wider">ALTITUDE</span>
+              <span className="text-white font-semibold text-[0.68rem] sm:text-[0.76rem]">{telemetry.altitude}</span>
             </div>
-            <div>
-              <span className="text-steel-grey text-[0.55rem] sm:text-[0.64rem] block">BEARING</span>
-              <span className="text-gold font-semibold">{telemetry.heading}</span>
+            <div className="rounded bg-navy-900/80 px-2 py-1 border border-[color:var(--line-dark)]/40">
+              <span className="text-steel-grey text-[0.55rem] sm:text-[0.62rem] block tracking-wider">BEARING</span>
+              <span className="text-gold font-semibold text-[0.68rem] sm:text-[0.76rem]">{telemetry.heading}</span>
             </div>
           </div>
         </div>
 
         {/* Dynamic Telemetry Corridor Progress Bar */}
-        <div className="mt-2 h-1 w-full overflow-hidden rounded-full bg-navy-900 border border-[color:var(--line-dark)]">
+        <div className="mt-1.5 h-1 w-full overflow-hidden rounded-full bg-navy-900 border border-[color:var(--line-dark)]">
           <div
             className="h-full bg-gradient-to-r from-gold via-sky-400 to-gold transition-all duration-200"
             style={{ width: `${telemetry.progress}%` }}

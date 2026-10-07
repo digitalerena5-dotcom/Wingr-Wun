@@ -16,8 +16,7 @@ export default function Insights() {
           <Reveal>
             <span className="eyebrow">INTELLIGENCE &amp; ADVISORY</span>
             <h2 id="insights-title" className="h2 mt-4 text-white tracking-tight">
-              Aviation Supply Intelligence<br />
-              &amp; Operational Briefs.
+              Aviation Supply Intelligence &amp; Operational Briefs.
             </h2>
           </Reveal>
           <Reveal delay={120}>

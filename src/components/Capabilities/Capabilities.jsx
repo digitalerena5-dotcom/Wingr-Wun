@@ -15,8 +15,7 @@ export default function Capabilities() {
           <Reveal className="lg:col-span-7">
             <span className="eyebrow">PROCUREMENT METHODOLOGY</span>
             <h2 id="cap-title" className="h2 mt-4 text-white tracking-tight">
-              Structured Aviation Procurement<br />
-              from Requirement to Delivery.
+              Procurement Module
             </h2>
           </Reveal>
           <Reveal delay={120} className="lg:col-span-5">
@@ -91,7 +90,7 @@ export default function Capabilities() {
                       <h3 className="font-display text-base font-semibold text-white group-hover/item:text-gold transition-colors">
                         {c.title}
                       </h3>
-                      <p className="mt-2 text-xs leading-relaxed text-[color:var(--text-muted-dark)]">
+                      <p className="mt-2 text-xs leading-relaxed text-[color:var(--text-muted-dark)] text-left">
                         {c.body}
                       </p>
                     </div>

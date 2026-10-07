@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import { ArrowRight, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Logo from '../Logo.jsx';
-import TopRightInsignia from '../TopRightInsignia/TopRightInsignia.jsx';
-import { navigation, navHref, contactHref, homeHref } from '../../data/navigation.js';
+import { navigation, navHref, homeHref } from '../../data/navigation.js';
 import { useActiveSection } from '../../hooks/useActiveSection.js';
 
 const ids = navigation.filter((n) => !n.page).map((n) => n.id);
@@ -46,25 +45,8 @@ export default function Header({ page = 'home', onOpenRFQ }) {
 
   const solid = scrolled || open;
 
-  const handleCtaClick = (e) => {
-    if (onOpenRFQ) {
-      e.preventDefault();
-      onOpenRFQ();
-      setOpen(false);
-      return;
-    }
-    if (page === 'contact') {
-      e.preventDefault();
-      const form = document.getElementById('enquiry-form');
-      if (form) form.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <>
-      {/* Top Right Corner Insignia */}
-      <TopRightInsignia onOpenRFQ={onOpenRFQ} />
-
       <header
         className={`fixed inset-x-0 top-0 z-40 border-b transition-[background-color,border-color,backdrop-filter,height] duration-300 ease-precise ${
           solid
@@ -72,7 +54,7 @@ export default function Header({ page = 'home', onOpenRFQ }) {
             : 'border-transparent bg-transparent'
         }`}
       >
-        <div className="container-x flex h-[var(--header-h)] items-center justify-between gap-3 sm:gap-6 lg:pr-20">
+        <div className="container-x flex h-[var(--header-h)] items-center justify-between gap-4 sm:gap-6">
           {/* Brand Anchor (Logo) with guaranteed isolation from navigation */}
           <div className="flex items-center shrink-0">
             <a
@@ -83,12 +65,6 @@ export default function Header({ page = 'home', onOpenRFQ }) {
             >
               <Logo />
             </a>
-
-            {/* Precision Aerospace Vertical Divider */}
-            <div
-              className="hidden lg:block h-6 w-px bg-white/15 ml-6 xl:ml-8 mr-2 shrink-0"
-              aria-hidden="true"
-            />
           </div>
 
           {/* Desktop Navigation Links with generous breathing room */}
@@ -110,29 +86,18 @@ export default function Header({ page = 'home', onOpenRFQ }) {
             </ul>
           </nav>
 
-          {/* Actions */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-            <button
-              type="button"
-              onClick={handleCtaClick}
-              className="btn btn-outline btn-sm hidden sm:inline-flex"
-            >
-              Discuss Requirements
-              <ArrowRight size={15} strokeWidth={1.5} aria-hidden="true" />
-            </button>
-
-            <button
-              ref={toggleRef}
-              type="button"
-              className="inline-flex h-10 w-10 items-center justify-center rounded border border-[color:var(--line-dark-strong)] text-white transition-colors hover:border-gold lg:hidden"
-              aria-expanded={open}
-              aria-controls="mobile-menu"
-              aria-label={open ? 'Close menu' : 'Open menu'}
-              onClick={() => setOpen((o) => !o)}
-            >
-              {open ? <X size={20} strokeWidth={1.5} /> : <Menu size={20} strokeWidth={1.5} />}
-            </button>
-          </div>
+          {/* Mobile Menu Toggle Button */}
+          <button
+            ref={toggleRef}
+            type="button"
+            className="inline-flex h-10 w-10 items-center justify-center rounded border border-[color:var(--line-dark-strong)] text-white transition-colors hover:border-gold lg:hidden"
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            onClick={() => setOpen((o) => !o)}
+          >
+            {open ? <X size={20} strokeWidth={1.5} /> : <Menu size={20} strokeWidth={1.5} />}
+          </button>
         </div>
       </header>
 
@@ -169,22 +134,10 @@ export default function Header({ page = 'home', onOpenRFQ }) {
             ))}
           </ul>
 
-          <div className="mt-8 flex flex-col gap-3">
-            <button
-              type="button"
-              onClick={handleCtaClick}
-              className="btn btn-primary w-full"
-            >
-              Discuss Requirements
-              <ArrowRight size={18} strokeWidth={1.5} aria-hidden="true" />
-            </button>
-          </div>
-
           <div className="mt-auto pt-8 border-t border-[color:var(--line-dark)] flex items-center justify-between">
             <p className="mono text-[0.72rem] uppercase text-steel-grey">
               Wingr Wun // Global Aerospace Supply
             </p>
-            <img src="/images/wingr_wun_logo.png" alt="Wingr Wun" className="h-6 w-6 object-contain" />
           </div>
         </nav>
       </div>

@@ -39,8 +39,7 @@ export default function Compliance() {
             <Reveal>
               <span className="eyebrow">REGULATORY &amp; EXPORT GUIDANCE</span>
               <h2 id="comp-title" className="h2 mt-4 text-white tracking-tight">
-                Compliance Integrated Throughout<br />
-                the Procurement Process.
+                Compliance Integrated Throughout the Procurement Process.
               </h2>
               <p className="lede mt-6 text-[color:var(--text-muted-dark)]">
                 Structured consultancy for navigating the complexities of international trade regulations and export controls.

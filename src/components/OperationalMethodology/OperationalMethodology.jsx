@@ -34,8 +34,7 @@ export default function OperationalMethodology() {
           <Reveal className="lg:col-span-8">
             <span className="eyebrow eyebrow--steel">AVIATION SPECIALISTS &amp; METHODOLOGY</span>
             <h2 id="methodology-title" className="h2 mt-4 text-[#071925] tracking-tight">
-              Operational Consultancy<br />
-              Rooted in Aviation Practice.
+              Operational Consultancy Rooted in Aviation Practice.
             </h2>
           </Reveal>
           <Reveal delay={120} className="lg:col-span-4">

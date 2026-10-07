@@ -12,8 +12,7 @@ export default function ImageStory() {
           <Reveal className="lg:col-span-8">
             <span className="eyebrow">TECHNICAL PEDIGREE &amp; TRACEABILITY</span>
             <h2 id="story-title" className="h2 mt-4 text-white tracking-tight">
-              Precision in Every Component.<br />
-              Integrity Across Every Corridor.
+              Precision in Every Component
             </h2>
           </Reveal>
           <Reveal delay={120} className="lg:col-span-4">

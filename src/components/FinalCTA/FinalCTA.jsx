@@ -27,8 +27,7 @@ export default function FinalCTA({ onOpenRFQ }) {
           <Reveal className="max-w-[44rem] min-w-0 lg:col-span-7">
             <span className="eyebrow">ENGAGE THE SOURCING DESK</span>
             <h2 id="cta-title" className="h2 mt-4 text-white tracking-tight">
-              Have a Critical<br />
-              Aviation Requirement?
+              How Can We Help?
             </h2>
             <p className="lede mt-6 text-[color:var(--text-muted-dark)]">
               Engage early. Share the aircraft, component, platform or supply chain requirement and our team will assess the available sourcing route.

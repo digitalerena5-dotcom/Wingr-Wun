@@ -11,7 +11,6 @@ export const navigation = [
   { id: 'services', label: 'Services' },
   { id: 'capabilities', label: 'Process' },
   { id: 'compliance', label: 'Compliance' },
-  { id: 'platforms', label: 'Platforms' },
   { id: 'contact', label: 'Contact', page: true },
 ];
 

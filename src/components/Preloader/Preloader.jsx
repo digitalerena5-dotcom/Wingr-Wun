@@ -41,10 +41,10 @@ export default function Preloader() {
           <div className="absolute -inset-3 animate-ping-slow rounded-full bg-gold/10" />
           <img
             src="/images/wingr_wun_logo.png"
-            alt="Wingr Wun Seal"
+            alt="Wingr Wun Official Seal"
             width="64"
             height="64"
-            className="relative h-16 w-16 object-contain drop-shadow-[0_0_20px_rgba(201,155,71,0.4)]"
+            className="relative h-16 w-16 object-contain drop-shadow-[0_0_24px_rgba(201,155,71,0.45)]"
           />
         </div>
 

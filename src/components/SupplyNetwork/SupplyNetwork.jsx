@@ -31,8 +31,7 @@ export default function SupplyNetwork() {
           <Reveal className="lg:col-span-8">
             <span className="eyebrow">SUPPLIER NETWORK &amp; INTELLIGENCE</span>
             <h2 id="network-title" className="h2 mt-4 text-white tracking-tight">
-              Bridging Requirements<br />
-              to Global Aerospace Supply.
+              Bridging Requirements
             </h2>
           </Reveal>
           <Reveal delay={120} className="lg:col-span-4">
@@ -104,16 +103,12 @@ export default function SupplyNetwork() {
                   <div className="absolute -inset-1.5 sm:-inset-3 rounded-full border border-gold/20 pointer-events-none" />
 
                   {/* Central Hub Insignia */}
-                  <div className="relative z-10 flex h-28 w-28 sm:h-32 sm:w-32 flex-col items-center justify-center rounded-full border-2 border-gold bg-navy-950 shadow-[0_0_35px_rgba(201,155,71,0.35)]">
+                  <div className="relative z-10 flex h-28 w-28 sm:h-32 sm:w-32 items-center justify-center rounded-full border-2 border-gold bg-navy-950 p-3 shadow-[0_0_35px_rgba(201,155,71,0.35)]">
                     <img
                       src="/images/wingr_wun_logo.png"
-                      alt="Wingr Wun Hub"
-                      className="h-14 w-14 object-contain"
+                      alt="Wingr Wun Official Seal"
+                      className="h-20 w-20 sm:h-24 sm:w-24 object-contain drop-shadow-[0_2px_14px_rgba(201,155,71,0.45)]"
                     />
-                    <span className="mono mt-1 text-[0.62rem] font-bold uppercase tracking-wider text-gold">
-                      WINGR WUN
-                    </span>
-                    <span className="mono text-[0.55rem] text-steel-grey">ADVISORY CORE</span>
                   </div>
                 </div>
 

@@ -21,8 +21,7 @@ export default function Testimonials() {
           <Reveal className="lg:col-span-8">
             <span className="eyebrow eyebrow--steel">CLIENT PERSPECTIVES</span>
             <h2 id="test-title" className="h2 mt-4 text-[#071925] tracking-tight">
-              Trusted by Aviation<br />
-              Professionals Worldwide.
+              Trusted by Aviation Professionals Worldwide.
             </h2>
           </Reveal>
           <Reveal delay={120} className="lg:col-span-4">

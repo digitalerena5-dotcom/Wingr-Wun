@@ -20,8 +20,7 @@ export default function Services({ onOpenRFQ }) {
           <Reveal className="lg:col-span-7">
             <span className="eyebrow">CORE CONSULTANCY DISCIPLINES</span>
             <h2 id="services-title" className="h2 mt-4 text-white tracking-tight">
-              Global Aviation Procurement<br />
-              Built Around Operational Requirements.
+              Procurement Built Around Operational Requirements
             </h2>
           </Reveal>
           <Reveal delay={120} className="lg:col-span-5">
@@ -57,9 +56,11 @@ export default function Services({ onOpenRFQ }) {
                 </p>
 
                 {/* Practical Purpose Callout */}
-                <div className="mt-6 rounded border border-[color:var(--line-dark)] bg-navy-950/60 p-4">
-                  <span className="mono text-[0.68rem] uppercase text-gold block">Practical Purpose:</span>
-                  <p className="mt-1 text-xs leading-relaxed text-[color:var(--text-muted-dark)]">
+                <div className="mt-6 rounded-lg border border-gold/35 bg-navy-900/90 p-5 sm:p-6 shadow-md backdrop-blur-sm">
+                  <span className="mono text-[0.78rem] sm:text-[0.82rem] font-bold tracking-wider uppercase text-gold block">
+                    PRACTICAL PURPOSE:
+                  </span>
+                  <p className="mt-2 text-[0.88rem] sm:text-[0.94rem] leading-relaxed text-slate-200">
                     {s.purpose}
                   </p>
                 </div>

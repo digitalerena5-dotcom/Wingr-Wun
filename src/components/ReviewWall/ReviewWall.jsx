@@ -14,8 +14,7 @@ export default function ReviewWall({ onOpenRFQ }) {
             <Reveal>
               <span className="eyebrow">QUALITY VERIFICATION</span>
               <h2 className="h2 mt-4 text-white tracking-tight">
-                Client Reviews &amp;<br />
-                Audit Pedigree.
+                Client Reviews &amp; Audit Pedigree.
               </h2>
 
               <div className="mt-8 rounded border border-[color:var(--line-dark)] bg-navy-900/80 p-6 backdrop-blur-sm">

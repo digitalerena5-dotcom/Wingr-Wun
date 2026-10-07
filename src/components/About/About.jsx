@@ -30,7 +30,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" aria-labelledby="about-title" className="section-y relative bg-[#F2F2EF] text-[#071925] overflow-hidden">
+    <section id="about" aria-labelledby="about-title" className="pt-[var(--section-y)] pb-12 sm:pb-16 lg:pb-20 relative bg-[#F2F2EF] text-[#071925] overflow-hidden">
       {/* Precision Light Grid */}
       <div className="grid-bg--light absolute inset-0 opacity-60" aria-hidden="true" />
 
@@ -38,13 +38,15 @@ export default function About() {
         {/* Top Header & Executive Lead */}
         <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
-            <span className="eyebrow eyebrow--steel">COMPANY POSITIONING &amp; MANDATE</span>
+            <span className="eyebrow eyebrow--steel text-[0.88rem] sm:text-[0.98rem] font-bold tracking-[0.18em]">
+              COMPANY POSITIONING &amp; MANDATE
+            </span>
             <h2 id="about-title" className="h2 mt-4 text-[#071925] tracking-tight">
-              A Strategic Bridge Between Defence Requirements and Global Aerospace Supply.
+              A Strategic Bridge Between Defence Requirements and Global Aerospace Supply
             </h2>
           </div>
           <div className="lg:col-span-5">
-            <p className="text-base leading-relaxed text-[#4A6272]">
+            <p className="text-base sm:text-[1.04rem] leading-relaxed text-[#4A6272]">
               Wingr Wun is an aviation sourcing and procurement consultancy bridging the gap between international defence requirements and leading aerospace suppliers across global markets. We resolve procurement friction, navigate export compliance, and secure components essential to flight operations to maintain fleet readiness.
             </p>
           </div>

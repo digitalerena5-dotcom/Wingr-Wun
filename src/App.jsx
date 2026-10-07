@@ -5,7 +5,6 @@ import Hero from './components/Hero/Hero.jsx';
 import About from './components/About/About.jsx';
 import Services from './components/Services/Services.jsx';
 import SupplyNetwork from './components/SupplyNetwork/SupplyNetwork.jsx';
-import Platforms from './components/Platforms/Platforms.jsx';
 import ImageStory from './components/ImageStory/ImageStory.jsx';
 import Capabilities from './components/Capabilities/Capabilities.jsx';
 import Compliance from './components/Compliance/Compliance.jsx';
@@ -113,10 +112,7 @@ export default function App() {
             {/* 4. Supplier Network, Vendor Vetting, and Market Intelligence */}
             <SupplyNetwork />
 
-            {/* 5. Aircraft Components, Subsystems, and Legacy Procurement */}
-            <Platforms onOpenRFQ={openRFQ} />
-
-            {/* 6. Premium Aviation Image Story */}
+            {/* 5. Premium Aviation Image Story */}
             <ImageStory />
 
             {/* 7. Sourcing and Consultancy Process (6 Stages) */}
