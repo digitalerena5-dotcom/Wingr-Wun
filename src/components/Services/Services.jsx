@@ -51,7 +51,7 @@ export default function Services({ onOpenRFQ }) {
                   {s.title}
                 </h3>
 
-                <p className="mt-2.5 sm:mt-3 text-[0.98rem] leading-relaxed text-[color:var(--text-muted-dark)] [text-wrap:pretty]">
+                <p className="mt-2.5 sm:mt-3 text-[0.98rem] leading-relaxed text-[color:var(--text-muted-dark)] text-left [text-wrap:pretty]">
                   {s.body}
                 </p>
 
@@ -60,7 +60,7 @@ export default function Services({ onOpenRFQ }) {
                   <span className="mono text-[0.78rem] sm:text-[0.82rem] font-bold tracking-wider uppercase text-gold block">
                     PRACTICAL PURPOSE:
                   </span>
-                  <p className="mt-2 text-[0.88rem] sm:text-[0.94rem] leading-relaxed text-slate-200">
+                  <p className="mt-2 text-[0.88rem] sm:text-[0.94rem] leading-relaxed text-slate-200 text-left [text-wrap:pretty]">
                     {s.purpose}
                   </p>
                 </div>

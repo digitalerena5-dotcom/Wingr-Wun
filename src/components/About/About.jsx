@@ -76,7 +76,7 @@ export default function About() {
                     {p.title}
                   </h3>
 
-                  <p className="mt-2.5 text-sm leading-relaxed text-[#4A6272] [text-wrap:pretty]">
+                  <p className="mt-2.5 text-sm leading-relaxed text-[#4A6272] text-left [text-wrap:pretty]">
                     {p.body}
                   </p>
                 </div>

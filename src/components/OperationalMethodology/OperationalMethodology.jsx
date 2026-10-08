@@ -65,7 +65,7 @@ export default function OperationalMethodology() {
                   {p.title}
                 </h3>
 
-                <p className="mt-2 text-xs leading-relaxed text-[#4A6272]">
+                <p className="mt-2 text-xs leading-relaxed text-[#4A6272] text-left [text-wrap:pretty]">
                   {p.body}
                 </p>
               </Reveal>
