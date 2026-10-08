@@ -30,7 +30,7 @@ export default function SupplyNetwork() {
         <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
           <Reveal className="lg:col-span-8">
             <span className="eyebrow">SUPPLIER NETWORK &amp; INTELLIGENCE</span>
-            <h2 id="network-title" className="h2 mt-4 text-white tracking-tight">
+            <h2 id="network-title" className="h2 mt-2.5 sm:mt-3 text-white tracking-tight">
               Bridging requirements
             </h2>
           </Reveal>
@@ -42,9 +42,9 @@ export default function SupplyNetwork() {
         </div>
 
         {/* Technical Architecture Canvas */}
-        <div className="mt-14 rounded border border-[color:var(--line-dark)] bg-navy-900/60 p-4 sm:p-10 lg:p-12 shadow-2xl backdrop-blur-sm">
+        <div className="mt-8 sm:mt-10 rounded border border-[color:var(--line-dark)] bg-navy-900/60 p-4 sm:p-6 lg:p-8 shadow-2xl backdrop-blur-sm">
           {/* Header Bar */}
-          <div className="flex flex-wrap items-center justify-between gap-2.5 sm:gap-4 border-b border-[color:var(--line-dark)] pb-4 sm:pb-5 mono text-[0.7rem] sm:text-[0.72rem] text-steel-grey">
+          <div className="flex flex-wrap items-center justify-between gap-2.5 sm:gap-4 border-b border-[color:var(--line-dark)] pb-3 sm:pb-3.5 mono text-[0.7rem] sm:text-[0.72rem] text-steel-grey">
             <div className="flex items-center gap-2">
               <span className="h-2 w-2 shrink-0 rounded-full bg-gold animate-pulse-amber" />
               <span className="text-white uppercase tracking-wider font-semibold break-words">
@@ -55,7 +55,7 @@ export default function SupplyNetwork() {
           </div>
 
           {/* Diagram Body */}
-          <div className="relative mt-8 grid gap-8 lg:grid-cols-12 lg:items-center">
+          <div className="relative mt-6 grid gap-6 lg:grid-cols-12 lg:items-center">
             {/* LEFT COLUMN: International Defence & Fleet Requirements */}
             <div className="space-y-3 lg:col-span-4">
               <div className="mb-2 flex items-center justify-between border-b border-[color:var(--line-dark)] pb-2">
@@ -162,7 +162,7 @@ export default function SupplyNetwork() {
           </div>
 
           {/* Bottom Telemetry Bar */}
-          <div className="mt-8 border-t border-[color:var(--line-dark)] pt-4 flex flex-wrap items-center justify-between gap-4 mono text-[0.68rem] text-steel-grey">
+          <div className="mt-6 border-t border-[color:var(--line-dark)] pt-3 flex flex-wrap items-center justify-between gap-4 mono text-[0.68rem] text-steel-grey">
             <span>VENDOR VETTING &amp; INTERNATIONAL LOGISTICS PIPELINE</span>
             <span className="text-gold">COMPLIANCE-ALIGNED PROCUREMENT ARCHITECTURE</span>
           </div>

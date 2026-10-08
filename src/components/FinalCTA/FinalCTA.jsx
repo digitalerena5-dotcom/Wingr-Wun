@@ -26,14 +26,14 @@ export default function FinalCTA({ onOpenRFQ }) {
           {/* LEFT: Copy & CTAs */}
           <Reveal className="max-w-[44rem] min-w-0 lg:col-span-7">
             <span className="eyebrow">ENGAGE THE SOURCING DESK</span>
-            <h2 id="cta-title" className="h2 mt-4 text-white tracking-tight">
+            <h2 id="cta-title" className="h2 mt-2.5 sm:mt-3 text-white tracking-tight">
               How can we help?
             </h2>
-            <p className="lede mt-6 text-[color:var(--text-muted-dark)]">
+            <p className="lede mt-3 sm:mt-3.5 text-[color:var(--text-muted-dark)]">
               Engage early. Share the aircraft, component, platform or supply chain requirement and our team will assess the available sourcing route.
             </p>
 
-            <div className="mt-10 flex flex-col gap-3.5 sm:flex-row sm:items-center sm:gap-4">
+            <div className="mt-6 sm:mt-7 flex flex-col gap-3.5 sm:flex-row sm:items-center sm:gap-4">
               <button
                 type="button"
                 onClick={onOpenRFQ}
@@ -96,16 +96,16 @@ export default function FinalCTA({ onOpenRFQ }) {
         {/* Preparing an Enquiry Checklist Box */}
         <Reveal
           delay={150}
-          className="brackets mt-14 rounded border border-[color:var(--line-dark)] bg-navy-950/70 p-6 sm:p-10 shadow-2xl backdrop-blur-sm lg:mt-20"
+          className="brackets mt-8 sm:mt-10 rounded border border-[color:var(--line-dark)] bg-navy-950/70 p-5 sm:p-7 lg:p-8 shadow-2xl backdrop-blur-sm"
         >
-          <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[color:var(--line-dark)] pb-4">
+          <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[color:var(--line-dark)] pb-3 sm:pb-3.5">
             <h3 className="mono text-xs font-semibold uppercase text-gold">Preparing a requirement enquiry</h3>
             <p className="mono text-[0.7rem] uppercase text-steel-grey">Key parameters for expedited dispatch</p>
           </div>
 
-          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-4 sm:mt-5 grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {enquiryPoints.map((item) => (
-              <div key={item.title} className="border-t border-[color:var(--line-dark)] pt-4 lg:border-t-0 lg:border-l lg:pl-6 lg:first:border-l-0 lg:first:pl-0">
+              <div key={item.title} className="border-t border-[color:var(--line-dark)] pt-3.5 sm:pt-4 lg:border-t-0 lg:border-l lg:pl-6 lg:first:border-l-0 lg:first:pl-0">
                 <h4 className="font-display text-base font-bold text-white">{item.title}</h4>
                 <p className="mt-2 text-xs leading-relaxed text-[color:var(--text-muted-dark)]">{item.body}</p>
               </div>

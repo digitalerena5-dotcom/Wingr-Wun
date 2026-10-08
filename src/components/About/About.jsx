@@ -30,18 +30,18 @@ export default function About() {
   ];
 
   return (
-    <section id="about" aria-labelledby="about-title" className="pt-[var(--section-y)] pb-12 sm:pb-16 lg:pb-20 relative bg-[#F2F2EF] text-[#071925] overflow-hidden">
+    <section id="about" aria-labelledby="about-title" className="section-y relative bg-[#F2F2EF] text-[#071925] overflow-hidden">
       {/* Precision Light Grid */}
       <div className="grid-bg--light absolute inset-0 opacity-60" aria-hidden="true" />
 
       <div className="container-x relative">
         {/* Top Header & Executive Lead */}
-        <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
+        <div className="grid gap-6 sm:gap-8 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
             <span className="eyebrow eyebrow--steel text-[0.88rem] sm:text-[0.98rem] font-bold tracking-[0.18em]">
               COMPANY POSITIONING &amp; MANDATE
             </span>
-            <h2 id="about-title" className="h2 mt-4 text-[#071925] tracking-tight">
+            <h2 id="about-title" className="h2 mt-2.5 sm:mt-3 text-[#071925] tracking-tight">
               A strategic bridge between defence requirements and global aerospace <br />
               supply
             </h2>
@@ -54,34 +54,34 @@ export default function About() {
         </div>
 
         {/* Three Core Strategic Advisory Pillars (Full 3-Column Grid) */}
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 sm:mt-10 grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {pillars.map((p) => {
             const Icon = p.icon;
             return (
               <div
                 key={p.title}
-                className="group flex flex-col justify-between rounded-lg border border-[rgba(7,25,37,0.12)] bg-white p-5 sm:p-7 shadow-sm transition-all duration-300 hover:border-[#C99B47] hover:shadow-lg"
+                className="group flex flex-col justify-between rounded-lg border border-[rgba(7,25,37,0.12)] bg-white p-5 sm:p-6 shadow-sm transition-all duration-300 hover:border-[#C99B47] hover:shadow-lg"
               >
                 <div>
-                  <div className="flex items-center justify-between border-b border-[rgba(7,25,37,0.08)] pb-4">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-md border border-[rgba(7,25,37,0.1)] bg-[#F2F2EF] text-[#31566D] transition-colors duration-300 group-hover:border-[#C99B47] group-hover:text-[#C99B47] group-hover:bg-[#C99B47]/10">
-                      <Icon size={22} strokeWidth={1.6} />
+                  <div className="flex items-center justify-between border-b border-[rgba(7,25,37,0.08)] pb-3 sm:pb-3.5">
+                    <div className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-md border border-[rgba(7,25,37,0.1)] bg-[#F2F2EF] text-[#31566D] transition-colors duration-300 group-hover:border-[#C99B47] group-hover:text-[#C99B47] group-hover:bg-[#C99B47]/10">
+                      <Icon size={20} strokeWidth={1.6} />
                     </div>
                     <span className="mono text-[0.68rem] font-bold uppercase tracking-wider text-[#31566D] bg-[#F2F2EF] px-2.5 py-1 rounded">
                       {p.tag}
                     </span>
                   </div>
 
-                  <h3 className="font-display mt-5 text-lg font-bold text-[#071925] transition-colors group-hover:text-[#071925]">
+                  <h3 className="font-display mt-4 text-lg font-bold text-[#071925] transition-colors group-hover:text-[#071925]">
                     {p.title}
                   </h3>
 
-                  <p className="mt-3 text-sm leading-relaxed text-[#4A6272]">
+                  <p className="mt-2.5 text-sm leading-relaxed text-[#4A6272]">
                     {p.body}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-[rgba(7,25,37,0.08)] flex items-center justify-between mono text-[0.7rem] text-[#31566D]">
+                <div className="mt-5 pt-3.5 border-t border-[rgba(7,25,37,0.08)] flex items-center justify-between mono text-[0.7rem] text-[#31566D]">
                   <span className="font-semibold text-[#C99B47]">{p.highlight}</span>
                   <span className="text-[0.65rem] uppercase text-[#6E8798]">{p.focus}</span>
                 </div>
@@ -91,8 +91,8 @@ export default function About() {
         </div>
 
         {/* Executive Heritage & Compliance Credential Bar */}
-        <div className="mt-8 rounded-lg border border-[rgba(7,25,37,0.12)] bg-white p-5 sm:p-8 shadow-sm">
-          <div className="grid gap-6 lg:grid-cols-12 lg:items-center">
+        <div className="mt-6 sm:mt-7 rounded-lg border border-[rgba(7,25,37,0.12)] bg-white p-5 sm:p-6 shadow-sm">
+          <div className="grid gap-5 lg:grid-cols-12 lg:items-center">
             {/* Heritage Quote */}
             <div className="lg:col-span-7 border-l-2 border-[#C99B47] pl-4 sm:pl-5">
               <span className="mono text-xs font-bold uppercase tracking-wider text-[#31566D] block mb-1">
@@ -126,10 +126,10 @@ export default function About() {
         </div>
 
         {/* Technical Bridge Schematic Illustration */}
-        <div className="brackets relative mt-12 overflow-hidden rounded-lg bg-navy-950 p-4 sm:p-10 lg:mt-16 text-white shadow-2xl">
+        <div className="brackets relative mt-8 sm:mt-10 overflow-hidden rounded-lg bg-navy-950 p-4 sm:p-6 lg:p-8 text-white shadow-2xl">
           <div className="grid-bg absolute inset-0 opacity-40" aria-hidden="true" />
           <div className="relative">
-            <div className="mb-6 flex flex-wrap items-center justify-between gap-3 border-b border-[color:var(--line-dark)] pb-4">
+            <div className="mb-4 flex flex-wrap items-center justify-between gap-3 border-b border-[color:var(--line-dark)] pb-3">
               <div className="flex items-center gap-2">
                 <span className="h-2 w-2 rounded-full bg-gold animate-pulse-amber" />
                 <span className="mono text-xs uppercase tracking-wider text-gold">PROCUREMENT PIPELINE ROUTE</span>

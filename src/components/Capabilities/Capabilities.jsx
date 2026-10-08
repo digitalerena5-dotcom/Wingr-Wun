@@ -14,7 +14,7 @@ export default function Capabilities() {
         <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
           <Reveal className="lg:col-span-7">
             <span className="eyebrow">PROCUREMENT METHODOLOGY</span>
-            <h2 id="cap-title" className="h2 mt-4 text-white tracking-tight">
+            <h2 id="cap-title" className="h2 mt-2.5 sm:mt-3 text-white tracking-tight">
               Procurement module
             </h2>
           </Reveal>
@@ -26,9 +26,9 @@ export default function Capabilities() {
         </div>
 
         {/* Process Box */}
-        <div className="relative mt-14 border border-[color:var(--line-dark)] bg-navy-900/60 shadow-2xl backdrop-blur-sm sm:mt-18 lg:mt-20">
+        <div className="relative mt-8 sm:mt-10 border border-[color:var(--line-dark)] bg-navy-900/60 shadow-2xl backdrop-blur-sm">
           {/* Header Bar */}
-          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[color:var(--line-dark)] px-4 py-3 sm:px-10 sm:py-4 mono text-[0.7rem] sm:text-[0.72rem] text-steel-grey">
+          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[color:var(--line-dark)] px-4 py-3 sm:px-8 sm:py-3.5 mono text-[0.7rem] sm:text-[0.72rem] text-steel-grey">
             <p>
               <span className="text-gold font-bold">INPUT</span> — Flight Readiness Requirement
             </p>
@@ -37,8 +37,8 @@ export default function Capabilities() {
             </p>
           </div>
 
-          <div ref={ref} className="group px-4 py-8 sm:px-10 sm:py-14 lg:py-16">
-            <ol className="relative grid gap-8 lg:grid-cols-6 lg:gap-4">
+          <div ref={ref} className="group px-4 py-6 sm:px-8 sm:py-8 lg:py-10">
+            <ol className="relative grid gap-6 sm:gap-8 lg:grid-cols-6 lg:gap-4">
               {/* Vertical line (Mobile/Tablet) */}
               <span
                 className="absolute bottom-6 left-[7px] top-4 w-px bg-[color:var(--line-dark-strong)] lg:hidden"
@@ -62,7 +62,7 @@ export default function Capabilities() {
                     key={c.number}
                     onMouseEnter={() => setActiveStage(c.number)}
                     onMouseLeave={() => setActiveStage(null)}
-                    className="relative pb-8 pl-10 last:pb-0 lg:pb-0 lg:pl-0 lg:pr-5 group/item cursor-pointer"
+                    className="relative pb-6 pl-10 last:pb-0 lg:pb-0 lg:pl-0 lg:pr-5 group/item cursor-pointer"
                   >
                     <span
                       className="mono block text-xs font-bold text-gold opacity-0 transition-opacity duration-500 group-[.is-visible]:opacity-100 lg:h-7"
@@ -71,7 +71,7 @@ export default function Capabilities() {
                       STAGE {c.number}
                     </span>
 
-                    <div className="lg:mb-8 lg:flex lg:h-9 lg:items-center">
+                    <div className="lg:mb-5 lg:flex lg:h-7 lg:items-center">
                       <span
                         className={`absolute left-0 top-[6px] block h-3.5 w-3.5 border transition-all duration-300 lg:static ${
                           isHovered

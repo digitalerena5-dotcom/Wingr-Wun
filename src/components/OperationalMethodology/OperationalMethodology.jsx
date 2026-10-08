@@ -30,10 +30,10 @@ export default function OperationalMethodology() {
       <div className="grid-bg--light absolute inset-0 opacity-50" aria-hidden="true" />
 
       <div className="container-x relative">
-        <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
+        <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
           <Reveal className="lg:col-span-8">
             <span className="eyebrow eyebrow--steel">AVIATION SPECIALISTS &amp; METHODOLOGY</span>
-            <h2 id="methodology-title" className="h2 mt-4 text-[#071925] tracking-tight">
+            <h2 id="methodology-title" className="h2 mt-2.5 sm:mt-3 text-[#071925] tracking-tight">
               Operational consultancy built for real-world challenges
             </h2>
           </Reveal>
@@ -45,7 +45,7 @@ export default function OperationalMethodology() {
         </div>
 
         {/* 4 Pillars Grid */}
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 sm:mt-10 grid gap-4 sm:gap-5 lg:gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {pillars.map((p, i) => {
             const Icon = p.icon;
             return (
@@ -55,17 +55,17 @@ export default function OperationalMethodology() {
                 delay={i * 90}
                 className="group rounded border border-[rgba(7,25,37,0.12)] bg-white p-5 sm:p-6 shadow-sm transition-all duration-300 hover:border-[#C99B47] hover:shadow-md"
               >
-                <div className="border-b border-[rgba(7,25,37,0.08)] pb-4">
+                <div className="border-b border-[rgba(7,25,37,0.08)] pb-3 sm:pb-3.5">
                   <div className="flex h-10 w-10 items-center justify-center rounded border border-[rgba(7,25,37,0.1)] bg-[#F2F2EF] text-[#31566D] group-hover:border-[#C99B47] group-hover:text-[#C99B47] transition-colors">
                     <Icon size={20} strokeWidth={1.5} />
                   </div>
                 </div>
 
-                <h3 className="font-display mt-5 text-base font-bold text-[#071925] group-hover:text-[#071925]">
+                <h3 className="font-display mt-3.5 sm:mt-4 text-base font-bold text-[#071925] group-hover:text-[#071925]">
                   {p.title}
                 </h3>
 
-                <p className="mt-2.5 text-xs leading-relaxed text-[#4A6272]">
+                <p className="mt-2 text-xs leading-relaxed text-[#4A6272]">
                   {p.body}
                 </p>
               </Reveal>
@@ -74,10 +74,10 @@ export default function OperationalMethodology() {
         </div>
 
         {/* Enhanced Visual & Quote Banner */}
-        <div className="mt-14 overflow-hidden rounded border border-[rgba(7,25,37,0.14)] bg-navy-950 text-white shadow-xl">
+        <div className="mt-8 sm:mt-10 overflow-hidden rounded border border-[rgba(7,25,37,0.14)] bg-navy-950 text-white shadow-xl">
           <div className="grid lg:grid-cols-12 items-stretch">
             {/* Left Content */}
-            <div className="p-5 sm:p-10 lg:col-span-7 flex flex-col justify-between">
+            <div className="p-5 sm:p-7 lg:p-8 lg:col-span-7 flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse-amber" />
@@ -85,22 +85,22 @@ export default function OperationalMethodology() {
                     FLIGHT DECK DISCIPLINE IN COMMERCIAL PRACTICE
                   </span>
                 </div>
-                <blockquote className="mt-4 font-display text-lg sm:text-xl font-medium leading-snug text-white">
+                <blockquote className="mt-3 sm:mt-3.5 font-display text-lg sm:text-xl font-medium leading-snug text-white">
                   "In defence aviation, operational discipline is not an afterthought — it is the foundation of survival and mission success. Our Aviation Specialists translate that exact rigour into commercial procurement, vendor accountability, and organisational workflows."
                 </blockquote>
-                <p className="mt-4 text-xs leading-relaxed text-[color:var(--text-muted-dark)]">
+                <p className="mt-3 text-xs leading-relaxed text-[color:var(--text-muted-dark)]">
                   By applying structured pre-flight checklist methodologies, crew resource management (CRM), and proactive risk matrices, Wingr Wun eliminates single points of failure across complex international procurement pipelines.
                 </p>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-[color:var(--line-dark)] flex flex-wrap items-center justify-between gap-4 mono text-[0.7rem] text-steel-grey">
+              <div className="mt-5 sm:mt-6 pt-4 border-t border-[color:var(--line-dark)] flex flex-wrap items-center justify-between gap-4 mono text-[0.7rem] text-steel-grey">
                 <span className="text-white font-medium">WINGR WUN // ADVISORY PRACTICE</span>
                 <span className="text-gold">DEFENCE AVIATION EXPERTS</span>
               </div>
             </div>
 
             {/* Right Cockpit Imagery with Precision HUD / Telemetry */}
-            <div className="relative lg:col-span-5 min-h-[340px] lg:min-h-full overflow-hidden border-t lg:border-t-0 lg:border-l border-[color:var(--line-dark)] group">
+            <div className="relative lg:col-span-5 min-h-[240px] sm:min-h-[280px] lg:min-h-full overflow-hidden border-t lg:border-t-0 lg:border-l border-[color:var(--line-dark)] group">
               <img
                 src="/images/cockpit_annunciator.jpg"
                 alt="High-precision glass cockpit avionics flight deck and flight management systems"

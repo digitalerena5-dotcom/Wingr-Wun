@@ -38,31 +38,31 @@ export default function Compliance() {
           <div className="lg:col-span-7">
             <Reveal>
               <span className="eyebrow">REGULATORY &amp; EXPORT GUIDANCE</span>
-              <h2 id="comp-title" className="h2 mt-4 text-white tracking-tight">
+              <h2 id="comp-title" className="h2 mt-2.5 sm:mt-3 text-white tracking-tight">
                 Compliance integrated throughout the procurement process
               </h2>
-              <p className="lede mt-6 text-[color:var(--text-muted-dark)]">
+              <p className="lede mt-3 sm:mt-3.5 text-[color:var(--text-muted-dark)]">
                 Structured consultancy for navigating the complexities of international trade regulations and export controls.
               </p>
-              <p className="mt-4 text-sm text-[color:var(--text-muted-dark)] leading-relaxed">
+              <p className="mt-2.5 sm:mt-3 text-sm text-[color:var(--text-muted-dark)] leading-relaxed">
                 International aerospace procurement is shaped by multiple regulatory layers. Wingr Wun provides guidance on navigating export licensing, trade laws, and documentation requirements as an integral part of procurement strategy.
               </p>
             </Reveal>
 
-            <Reveal as="div" delay={160} className="mt-10 grid gap-5 sm:grid-cols-2">
+            <Reveal as="div" delay={160} className="mt-6 sm:mt-8 grid gap-4 sm:gap-5 sm:grid-cols-2">
               {complianceAreas.map((area) => {
                 const Icon = area.icon;
                 return (
                   <div
                     key={area.title}
-                    className="group rounded border border-[color:var(--line-dark)] bg-navy-900/60 p-4 sm:p-6 transition-all duration-300 hover:border-gold/60 hover:bg-navy-900"
+                    className="group rounded border border-[color:var(--line-dark)] bg-navy-900/60 p-4 sm:p-5 transition-all duration-300 hover:border-gold/60 hover:bg-navy-900"
                   >
                     <div>
                       <div className="flex h-9 w-9 items-center justify-center rounded border border-[color:var(--line-dark)] bg-navy-950 text-gold group-hover:border-gold transition-colors">
                         <Icon size={18} strokeWidth={1.5} />
                       </div>
                     </div>
-                    <h3 className="font-display mt-4 text-base font-semibold text-white group-hover:text-gold transition-colors">
+                    <h3 className="font-display mt-3.5 text-base font-semibold text-white group-hover:text-gold transition-colors">
                       {area.title}
                     </h3>
                     <p className="mt-2 text-xs leading-relaxed text-[color:var(--text-muted-dark)]">
@@ -74,7 +74,7 @@ export default function Compliance() {
             </Reveal>
 
             {/* Clear Consultancy Notice */}
-            <p className="mt-6 mono text-[0.68rem] text-steel-grey">
+            <p className="mt-4 sm:mt-5 mono text-[0.68rem] text-steel-grey">
               * Wingr Wun operates as a strategic advisory consultancy. We assist clients in navigating regulatory frameworks and preparing compliant procurement documentation.
             </p>
           </div>
@@ -83,7 +83,7 @@ export default function Compliance() {
           <div className="lg:col-span-5 flex justify-center">
             <div
               ref={artRef}
-              className="brackets relative w-full max-w-[420px] rounded border border-[color:var(--line-dark-strong)] bg-navy-900/70 p-5 sm:p-8 shadow-2xl backdrop-blur-sm"
+              className="brackets relative w-full max-w-[420px] rounded border border-[color:var(--line-dark-strong)] bg-navy-900/70 p-4 sm:p-6 shadow-2xl backdrop-blur-sm"
             >
               <div className="mb-4 flex items-center justify-between border-b border-[color:var(--line-dark)] pb-3 mono text-[0.68rem] text-steel-grey">
                 <span className="text-gold font-medium">COMPLIANCE SCHEMATIC</span>

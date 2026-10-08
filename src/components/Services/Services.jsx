@@ -19,7 +19,7 @@ export default function Services({ onOpenRFQ }) {
         <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
           <Reveal className="lg:col-span-7">
             <span className="eyebrow">CORE CONSULTANCY DISCIPLINES</span>
-            <h2 id="services-title" className="h2 mt-4 text-white tracking-tight">
+            <h2 id="services-title" className="h2 mt-2.5 sm:mt-3 text-white tracking-tight">
               Procurement built around operational requirements
             </h2>
           </Reveal>
@@ -31,7 +31,7 @@ export default function Services({ onOpenRFQ }) {
         </div>
 
         {/* Refined 2x2 Services Matrix */}
-        <div className="mt-16 grid border-l border-t border-[color:var(--line-dark)] md:grid-cols-2 lg:mt-20">
+        <div className="mt-8 sm:mt-10 grid border-l border-t border-[color:var(--line-dark)] md:grid-cols-2">
           {services.map((s, i) => {
             const IconComponent = icons[s.id] || Globe2;
             return (
@@ -39,7 +39,7 @@ export default function Services({ onOpenRFQ }) {
                 as="article"
                 key={s.id}
                 delay={i * 90}
-                className="group relative border-b border-r border-[color:var(--line-dark)] p-5 transition-colors duration-500 hover:bg-[#081E2E] sm:p-12 lg:p-14"
+                className="group relative border-b border-r border-[color:var(--line-dark)] p-5 transition-colors duration-500 hover:bg-[#081E2E] sm:p-7 lg:p-8"
               >
                 <div>
                   <div className="flex h-11 w-11 items-center justify-center rounded border border-[color:var(--line-dark)] bg-navy-900 text-steel-grey transition-all duration-300 group-hover:border-gold group-hover:text-gold group-hover:scale-105">
@@ -47,16 +47,16 @@ export default function Services({ onOpenRFQ }) {
                   </div>
                 </div>
 
-                <h3 className="h3 mt-6 text-white sm:mt-12 transition-colors group-hover:text-white">
+                <h3 className="h3 mt-4 sm:mt-5 text-white transition-colors group-hover:text-white">
                   {s.title}
                 </h3>
 
-                <p className="mt-4 text-[0.98rem] leading-relaxed text-[color:var(--text-muted-dark)]">
+                <p className="mt-2.5 sm:mt-3 text-[0.98rem] leading-relaxed text-[color:var(--text-muted-dark)]">
                   {s.body}
                 </p>
 
                 {/* Practical Purpose Callout */}
-                <div className="mt-6 rounded-lg border border-gold/35 bg-navy-900/90 p-5 sm:p-6 shadow-md backdrop-blur-sm">
+                <div className="mt-4 sm:mt-5 rounded-lg border border-gold/35 bg-navy-900/90 p-4 sm:p-5 shadow-md backdrop-blur-sm">
                   <span className="mono text-[0.78rem] sm:text-[0.82rem] font-bold tracking-wider uppercase text-gold block">
                     PRACTICAL PURPOSE:
                   </span>
@@ -66,7 +66,7 @@ export default function Services({ onOpenRFQ }) {
                 </div>
 
                 {/* Relevant Enquiry Action */}
-                <div className="mt-8 pt-6 border-t border-[color:var(--line-dark)] flex items-center justify-between">
+                <div className="mt-5 pt-4 border-t border-[color:var(--line-dark)] flex items-center justify-between">
                   <button
                     type="button"
                     onClick={onOpenRFQ}

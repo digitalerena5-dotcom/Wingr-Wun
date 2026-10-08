@@ -12,10 +12,10 @@ export default function Insights() {
 
       <div className="container-x relative">
         {/* Header */}
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <Reveal>
             <span className="eyebrow">INTELLIGENCE &amp; ADVISORY</span>
-            <h2 id="insights-title" className="h2 mt-4 text-white tracking-tight">
+            <h2 id="insights-title" className="h2 mt-2.5 sm:mt-3 text-white tracking-tight">
               Operational briefs
             </h2>
           </Reveal>
@@ -27,7 +27,7 @@ export default function Insights() {
         </div>
 
         {/* 3 Editorial Article Cards */}
-        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 sm:mt-10 grid gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {insightsArticles.map((article, i) => (
             <Reveal
               as="article"
@@ -44,13 +44,13 @@ export default function Insights() {
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent" />
-                <span className="absolute left-4 top-4 rounded bg-navy-950/85 px-2.5 py-1 mono text-[0.65rem] text-gold border border-gold/30">
+                <span className="absolute left-3.5 top-3.5 rounded bg-navy-950/85 px-2.5 py-1 mono text-[0.65rem] text-gold border border-gold/30">
                   {article.tag}
                 </span>
               </div>
 
               {/* Card Body */}
-              <div className="flex flex-1 flex-col p-6 sm:p-7">
+              <div className="flex flex-1 flex-col p-5 sm:p-6">
                 <div className="flex items-center gap-3 mono text-[0.68rem] text-steel-grey">
                   <span>{article.date}</span>
                   <span>·</span>
@@ -60,15 +60,15 @@ export default function Insights() {
                   </span>
                 </div>
 
-                <h3 className="font-display mt-3 text-lg font-bold leading-snug text-white group-hover:text-gold transition-colors">
+                <h3 className="font-display mt-2.5 sm:mt-3 text-lg font-bold leading-snug text-white group-hover:text-gold transition-colors">
                   {article.title}
                 </h3>
 
-                <p className="mt-3 text-xs leading-relaxed text-[color:var(--text-muted-dark)] line-clamp-3">
+                <p className="mt-2 sm:mt-2.5 text-xs leading-relaxed text-[color:var(--text-muted-dark)] line-clamp-3">
                   {article.summary}
                 </p>
 
-                <div className="mt-auto pt-6 border-t border-[color:var(--line-dark)] flex items-center justify-between">
+                <div className="mt-auto pt-4 sm:pt-5 border-t border-[color:var(--line-dark)] flex items-center justify-between">
                   <span className="mono text-[0.68rem] text-steel-grey">{article.author}</span>
                   <button
                     type="button"

@@ -25,7 +25,7 @@ export default function ContactPage() {
       <span className="crosshair right-[var(--gutter)] top-[calc(var(--header-h)+28px)] hidden text-steel-grey/60 md:block" aria-hidden="true" />
 
       {/* Page intro */}
-      <div className="container-x pb-12 pt-[calc(var(--header-h)+2.5rem)] md:pb-16 md:pt-[calc(var(--header-h)+5rem)]">
+      <div className="container-x pb-8 pt-[calc(var(--header-h)+2rem)] md:pb-10 md:pt-[calc(var(--header-h)+3.5rem)]">
         <nav aria-label="Breadcrumb" className="intro" style={{ '--d': '60ms' }}>
           <ol className="mono flex items-center gap-2 text-[0.75rem] uppercase text-steel-grey">
             <li><a href={homeHref('top')} className="-my-3 inline-flex min-h-[44px] items-center transition-colors hover:text-white">Home</a></li>
@@ -33,7 +33,7 @@ export default function ContactPage() {
             <li aria-current="page" className="text-gold">Contact</li>
           </ol>
         </nav>
-        <div className="mt-6 grid gap-6 md:mt-8 lg:grid-cols-12 lg:items-end lg:gap-10">
+        <div className="mt-4 grid gap-4 md:mt-6 lg:grid-cols-12 lg:items-end lg:gap-8">
           <h1 id="contact-title" className="h2 intro text-white lg:col-span-7" style={{ '--d': '160ms' }}>
             Contact our <span className="text-[color:var(--c-gold-soft)]">team</span>
           </h1>
@@ -45,7 +45,7 @@ export default function ContactPage() {
 
       {/* Form + aside */}
       <div className="container-x pb-[var(--section-y)]">
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-10">
+        <div className="grid gap-8 lg:grid-cols-12 lg:gap-8">
           <div id="enquiry-form" className="intro brackets relative scroll-mt-[calc(var(--header-h)+1.5rem)] border border-[color:var(--line-dark-strong)] bg-navy-900/80 backdrop-blur-[2px] lg:col-span-8" style={{ '--d': '380ms' }}>
             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[color:var(--line-dark)] px-4 py-3 sm:px-8 sm:py-4">
               <div className="flex items-center gap-2.5">
@@ -59,11 +59,11 @@ export default function ContactPage() {
           </div>
 
           <aside className="lg:col-span-4" aria-label="About your enquiry">
-            <Reveal className="border-t border-[color:var(--line-dark-strong)] pt-8 lg:border-t-0 lg:pt-2">
+            <Reveal className="border-t border-[color:var(--line-dark-strong)] pt-6 lg:border-t-0 lg:pt-2">
               <h2 className="eyebrow">What happens next</h2>
-              <ol className="mt-7">
+              <ol className="mt-5">
                 {nextSteps.map((s, i) => (
-                  <li key={s.title} className="relative grid grid-cols-[2.25rem_1fr] pb-7 last:pb-0">
+                  <li key={s.title} className="relative grid grid-cols-[2.25rem_1fr] pb-5 last:pb-0">
                     {/* timeline rail */}
                     {i < nextSteps.length - 1 && (
                       <span className="absolute bottom-0 left-[5px] top-4 w-px bg-[color:var(--line-dark-strong)]" aria-hidden="true" />
@@ -79,9 +79,9 @@ export default function ContactPage() {
             </Reveal>
 
             {hasDirectChannel && (
-              <Reveal delay={120} className="mt-12 border-t border-[color:var(--line-dark)] pt-8">
+              <Reveal delay={120} className="mt-8 border-t border-[color:var(--line-dark)] pt-6">
                 <h2 className="eyebrow">Direct contact</h2>
-                <ul className="mt-6 space-y-3">
+                <ul className="mt-4 space-y-3">
                   {contact.email && (
                     <li className="flex items-center gap-3">
                       <Mail size={18} strokeWidth={1.5} className="text-gold" aria-hidden="true" />
@@ -104,9 +104,9 @@ export default function ContactPage() {
               </Reveal>
             )}
 
-            <Reveal delay={200} className="brackets relative mt-12 border border-[color:var(--line-dark)] bg-navy-900/70 p-7">
+            <Reveal delay={200} className="brackets relative mt-8 border border-[color:var(--line-dark)] bg-navy-900/70 p-5 sm:p-6">
               <h2 className="mono text-[0.75rem] font-medium uppercase text-gold">Areas we support</h2>
-              <ul className="mt-5 space-y-3 text-[0.95rem] text-[color:var(--text-on-dark)]">
+              <ul className="mt-4 space-y-2.5 text-[0.95rem] text-[color:var(--text-on-dark)]">
                 {areas.map((a) => (
                   <li key={a} className="flex items-center gap-3">
                     <span className="block h-[6px] w-[6px] shrink-0 rotate-45 border border-gold" aria-hidden="true" />

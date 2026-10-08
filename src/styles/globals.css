@@ -34,7 +34,7 @@
 
   --container: 1380px;
   --gutter: clamp(1.25rem, 4vw, 3rem);
-  --section-y: clamp(3.25rem, 5vw, 5rem);
+  --section-y: clamp(2.75rem, 4vw, 4.25rem);
   --header-h: 96px;
 
   --radius: 4px;
@@ -55,7 +55,7 @@
   :root {
     --header-h: 80px;
     --gutter: clamp(1rem, 4.5vw, 1.25rem);
-    --section-y: clamp(2.25rem, 6vw, 3.25rem);
+    --section-y: clamp(2.25rem, 5vw, 3rem);
     --fs-h1: clamp(1.65rem, 6vw, 2.15rem);
     --fs-h2: clamp(1.35rem, 4.8vw, 1.75rem);
     --fs-h3: clamp(1.05rem, 3.5vw, 1.25rem);
