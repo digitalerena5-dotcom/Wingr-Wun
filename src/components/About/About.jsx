@@ -15,7 +15,7 @@ export default function About() {
       icon: ShieldCheck,
       tag: 'EVALUATION',
       title: 'Rigorous vendor vetting',
-      body: 'Comprehensive audit of international OEMs, accredited stockists, and certified repair stations to ensure pedigree, financial stability, and strict quality adherence.',
+      body: 'Comprehensive audit of international OEMs and accredited stockists to ensure component pedigree, traceability, and strict quality adherence.',
       highlight: '100% Pedigree Audit',
       focus: 'Certified Quality',
     },
@@ -23,7 +23,7 @@ export default function About() {
       icon: Search,
       tag: 'INTELLIGENCE',
       title: 'Deep market intelligence',
-      body: 'In-depth international market research across fragmented supply channels, tracing scarce components and obsolete spares through trusted aviation networks.',
+      body: 'In-depth international market intelligence across fragmented channels, tracing scarce components and obsolete spares through trusted aviation networks.',
       highlight: 'Obsolete & Legacy Spares',
       focus: 'Global Network',
     },
@@ -76,7 +76,7 @@ export default function About() {
                     {p.title}
                   </h3>
 
-                  <p className="mt-2.5 text-sm leading-relaxed text-[#4A6272]">
+                  <p className="mt-2.5 text-sm leading-relaxed text-[#4A6272] [text-wrap:pretty]">
                     {p.body}
                   </p>
                 </div>
