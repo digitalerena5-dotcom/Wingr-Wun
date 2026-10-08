@@ -168,7 +168,6 @@ p {
 
 /* Prevent irrelevant spacing in narrow elements, step lists, badges, and controls */
 ol p,
-ul p,
 nav p,
 button p,
 .mono,

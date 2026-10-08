@@ -15,29 +15,29 @@ export default function WhyWingrWun() {
         </Reveal>
 
         {/* 4 Editorial Columns */}
-        <ul className="mt-16 grid border-t border-[color:var(--line-dark-strong)] sm:grid-cols-2 lg:mt-20 lg:grid-cols-4">
+        <div className="mt-16 grid border-t border-[color:var(--line-dark-strong)] sm:grid-cols-2 lg:mt-20 lg:grid-cols-4">
           {pillars.map((p, i) => (
             <Reveal
-              as="li"
+              as="div"
               key={p.title}
               delay={i * 100}
               className={`border-b border-[color:var(--line-dark)] py-8 sm:px-8 sm:py-10 lg:border-b-0 lg:py-12
-                ${i % 2 === 1 ? 'sm:border-l' : 'sm:pl-0'} lg:border-l lg:pl-8 lg:first:border-l-0 lg:first:pl-0`}
+                ${i % 2 === 1 ? 'sm:border-l' : 'sm:pl-0'} lg:border-l lg:pl-8 lg:first:border-l-0 lg:first:pl-0 flex flex-col justify-start`}
             >
               <div className="flex items-center">
                 <span className="h-1.5 w-1.5 rounded-full bg-gold" />
               </div>
 
-              <h3 className="font-display mt-5 text-xl font-bold tracking-tight text-white">
+              <h3 className="font-display mt-5 text-xl font-bold tracking-tight text-white [text-wrap:balance]">
                 {p.title}
               </h3>
 
-              <p className="mt-4 text-sm leading-relaxed text-[color:var(--text-muted-dark)]">
+              <p className="mt-4 text-sm leading-relaxed text-[color:var(--text-muted-dark)] [text-align:justify] [text-justify:inter-word] [text-align-last:left] [text-wrap:pretty]">
                 {p.body}
               </p>
             </Reveal>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );

@@ -48,11 +48,7 @@ export default function Header({ page = 'home', onOpenRFQ }) {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-40 border-b transition-[background-color,border-color,backdrop-filter,height] duration-300 ease-precise ${
-          solid
-            ? 'border-[color:var(--line-dark)] bg-[#071925]/92 backdrop-blur-md shadow-lg'
-            : 'border-transparent bg-transparent'
-        }`}
+        className="fixed inset-x-0 top-0 z-50 border-b border-[color:var(--line-dark)] bg-[#071925] shadow-[0_4px_24px_rgba(0,0,0,0.45)] transition-[height,background-color,border-color] duration-300 ease-precise"
       >
         <div className="container-x flex h-[var(--header-h)] items-center justify-between gap-4 sm:gap-6">
           {/* Brand Anchor (Logo) with guaranteed isolation from navigation */}
@@ -75,8 +71,8 @@ export default function Header({ page = 'home', onOpenRFQ }) {
                   <a
                     href={navHref(item)}
                     aria-current={active === item.id ? 'true' : undefined}
-                    className={`nav-link relative py-1 text-[0.85rem] xl:text-[0.88rem] font-medium tracking-wide transition-colors duration-200 ${
-                      active === item.id ? 'text-white font-semibold' : 'text-[color:var(--text-muted-dark)] hover:text-white'
+                    className={`nav-link relative py-1 text-[0.88rem] xl:text-[0.92rem] font-medium tracking-wide transition-colors duration-200 ${
+                      active === item.id ? 'text-white font-semibold' : 'text-slate-300 hover:text-white'
                     }`}
                   >
                     {item.label}
@@ -105,7 +101,7 @@ export default function Header({ page = 'home', onOpenRFQ }) {
       <div
         id="mobile-menu"
         ref={panelRef}
-        className={`fixed inset-x-0 bottom-0 top-[var(--header-h)] z-40 overscroll-contain overflow-y-auto bg-navy-950 transition-[opacity,visibility] duration-300 ease-precise lg:hidden ${
+        className={`fixed inset-x-0 bottom-0 top-[var(--header-h)] z-50 overscroll-contain overflow-y-auto bg-navy-950 transition-[opacity,visibility] duration-300 ease-precise lg:hidden ${
           open ? 'visible opacity-100' : 'invisible opacity-0'
         }`}
         aria-hidden={!open}
