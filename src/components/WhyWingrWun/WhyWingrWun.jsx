@@ -3,14 +3,14 @@ import { pillars } from '../../data/capabilities.js';
 
 export default function WhyWingrWun() {
   return (
-    <section id="why" aria-labelledby="why-title" className="section-y relative bg-navy-950">
+    <section id="why" aria-labelledby="why-title" className="pt-[var(--section-y)] pb-6 sm:pb-8 lg:pb-10 relative bg-navy-950">
       <div className="grid-bg absolute inset-0 opacity-30" aria-hidden="true" />
 
       <div className="container-x relative">
         <Reveal className="max-w-[52rem]">
           <span className="eyebrow">PHILOSOPHY &amp; PEDIGREE</span>
           <h2 id="why-title" className="h2 mt-2.5 sm:mt-3 text-white tracking-tight">
-            Aviation expertise applied to complex supply challenges
+            Expertise applied to complex supply challenges
           </h2>
         </Reveal>
 
