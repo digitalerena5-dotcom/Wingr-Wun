@@ -6,7 +6,7 @@ export default function About() {
     {
       icon: Compass,
       tag: 'ADVISORY',
-      title: 'Strategic Sourcing Advisory',
+      title: 'Strategic sourcing advisory',
       body: 'Informed procurement guidance evaluating mission parameters, platform lifecycles, and global market availability before commitments are made.',
       highlight: 'Platform Lifecycle Audit',
       focus: 'Operational Need',
@@ -14,7 +14,7 @@ export default function About() {
     {
       icon: ShieldCheck,
       tag: 'EVALUATION',
-      title: 'Rigorous Vendor Vetting',
+      title: 'Rigorous vendor vetting',
       body: 'Comprehensive audit of international OEMs, accredited stockists, and certified repair stations to ensure pedigree, financial stability, and strict quality adherence.',
       highlight: '100% Pedigree Audit',
       focus: 'Certified Quality',
@@ -22,7 +22,7 @@ export default function About() {
     {
       icon: Search,
       tag: 'INTELLIGENCE',
-      title: 'Deep Market Intelligence',
+      title: 'Deep market intelligence',
       body: 'In-depth international market research across fragmented supply channels, tracing scarce components and obsolete spares through trusted aviation networks.',
       highlight: 'Obsolete & Legacy Spares',
       focus: 'Global Network',
@@ -42,7 +42,7 @@ export default function About() {
               COMPANY POSITIONING &amp; MANDATE
             </span>
             <h2 id="about-title" className="h2 mt-4 text-[#071925] tracking-tight">
-              A Strategic Bridge Between Defence Requirements and Global Aerospace Supply
+              A strategic bridge between defence requirements and global aerospace supply
             </h2>
           </div>
           <div className="lg:col-span-5">

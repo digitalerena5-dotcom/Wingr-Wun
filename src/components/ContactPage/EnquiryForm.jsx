@@ -112,12 +112,12 @@ export default function EnquiryForm() {
     const content = {
       sent: {
         icon: Check,
-        title: 'Your enquiry has been sent.',
+        title: 'Your enquiry has been sent',
         body: 'Thank you. We will review your requirement and reply to the email address you provided.',
       },
       'mail-opened': {
         icon: Mail,
-        title: 'Your email app should now be open.',
+        title: 'Your email app should now be open',
         body: (
           <>
             The enquiry is written out and addressed to{' '}
@@ -128,7 +128,7 @@ export default function EnquiryForm() {
       },
       'not-configured': {
         icon: AlertCircle,
-        title: 'This form is not connected to an inbox yet.',
+        title: 'This form is not connected to an inbox yet',
         body: 'Your enquiry has not been sent. Copy it below so you keep a record of what you wrote.',
       },
     }[status];

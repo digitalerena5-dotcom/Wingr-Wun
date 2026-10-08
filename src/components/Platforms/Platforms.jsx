@@ -174,8 +174,7 @@ export default function Platforms({ onOpenRFQ }) {
             <Reveal>
               <span className="eyebrow">COMPONENT &amp; SUBSYSTEM SCOPE</span>
               <h2 id="platforms-title" className="h2 mt-4 text-white tracking-tight">
-                Keeping Legacy<br />
-                Platforms Operational.
+                Keeping legacy platforms operational
               </h2>
               <p className="lede mt-6 text-[color:var(--text-muted-dark)]">
                 Our sourcing work spans aircraft components, subsystems, and legacy technologies. We locate scarce components and obsolete spares to extend the operational service life and readiness of mature aircraft fleets.

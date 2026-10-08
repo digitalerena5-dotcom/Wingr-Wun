@@ -61,7 +61,7 @@ export default function LegalModal({ isOpen, initialTab = 'privacy', onClose }) 
             <div>
               <p className="mono text-[0.68rem] tracking-wider uppercase text-gold">Official Governance &amp; Compliance</p>
               <h2 id="legal-modal-title" className="font-display text-base sm:text-lg font-bold tracking-tight text-white">
-                Wingr Wun Statutory &amp; Commercial Policies
+                Wingr Wun statutory &amp; commercial policies
               </h2>
             </div>
           </div>

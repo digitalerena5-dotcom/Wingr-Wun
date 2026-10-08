@@ -27,7 +27,7 @@ export default function LegacyProcurement() {
             <Reveal>
               <p className="eyebrow eyebrow--steel">Legacy Procurement</p>
               <h2 id="legacy-title" className="h2 mt-6 text-navy-900">
-                Keeping Proven Platforms Operational.
+                Keeping proven platforms operational
               </h2>
             </Reveal>
             <Reveal delay={120} className="mt-8 space-y-5 text-[color:var(--text-muted-light)]">

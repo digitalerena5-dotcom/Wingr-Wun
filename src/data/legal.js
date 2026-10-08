@@ -7,7 +7,7 @@
 export const legalPolicies = {
   privacy: {
     id: 'privacy',
-    title: 'Privacy Policy',
+    title: 'Privacy policy',
     lastUpdated: 'October 2026',
     summary: 'Wingr Wun is committed to protecting your personal information, safeguarding commercial confidentiality, and processing data in strict compliance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.',
     sections: [
@@ -40,7 +40,7 @@ export const legalPolicies = {
 
   terms: {
     id: 'terms',
-    title: 'Terms of Supply & Advisory',
+    title: 'Terms of supply & advisory',
     lastUpdated: 'October 2026',
     summary: 'These Terms govern the aviation sourcing, component procurement advisory, and supply chain consultancy services provided by Wingr Wun to international commercial and defence clients.',
     sections: [
@@ -77,7 +77,7 @@ export const legalPolicies = {
 
   cookies: {
     id: 'cookies',
-    title: 'Cookie Policy',
+    title: 'Cookie policy',
     lastUpdated: 'October 2026',
     summary: 'Wingr Wun values visitor privacy. This policy explains how we use cookies and related web technologies on our website.',
     sections: [

@@ -67,7 +67,7 @@ export default function Footer({ onOpenRFQ, onOpenLegal }) {
 
           {/* COLUMN 4: Contact & Registered Office */}
           <div className="lg:col-span-3">
-            <h2 className={colHead}>Direct Contact</h2>
+            <h2 className={colHead}>Direct contact</h2>
             <ul className="mt-5 space-y-4 text-sm text-[color:var(--text-muted-dark)]">
               <li className="flex items-start gap-3">
                 <Mail size={18} strokeWidth={1.5} className="mt-0.5 shrink-0 text-gold" aria-hidden="true" />

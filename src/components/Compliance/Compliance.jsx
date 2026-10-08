@@ -5,22 +5,22 @@ import { ShieldCheck, FileText, Globe, AlertTriangle } from 'lucide-react';
 const complianceAreas = [
   {
     icon: Globe,
-    title: 'International Trade Laws & Regulations',
+    title: 'International trade laws & regulations',
     body: 'Navigating international trade legalities governing aerospace goods moving between sovereign jurisdictions, minimising delays through informed transactional structuring.',
   },
   {
     icon: ShieldCheck,
-    title: 'Export Licensing & ITAR Advisory',
+    title: 'Export licensing & ITAR advisory',
     body: 'Guidance concerning licensing requirements that attach to international aerospace transfers, including ITAR considerations where US defence articles or technical data are involved.',
   },
   {
     icon: FileText,
-    title: 'Traceability & Pedigree Verification',
+    title: 'Traceability & pedigree verification',
     body: 'Ensuring components are accompanied by proper airworthiness documentation, such as FAA 8130-3, EASA Form 1, or original manufacturer Certificates of Conformance.',
   },
   {
     icon: AlertTriangle,
-    title: 'Compliance-Conscious Transaction Structuring',
+    title: 'Compliance-conscious transaction structuring',
     body: 'Structuring each stage of procurement in accordance with applicable export control regulations, ensuring compliance is handled as an integral foundation rather than an afterthought.',
   },
 ];
@@ -39,7 +39,7 @@ export default function Compliance() {
             <Reveal>
               <span className="eyebrow">REGULATORY &amp; EXPORT GUIDANCE</span>
               <h2 id="comp-title" className="h2 mt-4 text-white tracking-tight">
-                Compliance Integrated Throughout the Procurement Process.
+                Compliance integrated throughout the procurement process
               </h2>
               <p className="lede mt-6 text-[color:var(--text-muted-dark)]">
                 Structured consultancy for navigating the complexities of international trade regulations and export controls.

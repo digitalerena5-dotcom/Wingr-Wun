@@ -60,7 +60,7 @@ export default function TrustMetrics() {
         <div className="text-center max-w-2xl mx-auto">
           <span className="eyebrow mx-auto">OPERATIONAL BENCHMARKS</span>
           <h2 className="h2 mt-4 text-white tracking-tight">
-            Measurable Procurement Performance.
+            Measurable procurement performance
           </h2>
           <p className="mt-3 text-sm text-[color:var(--text-muted-dark)]">
             Verified operational benchmarks reflecting disciplined sourcing, regulatory rigour, and resilient aerospace logistics.

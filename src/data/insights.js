@@ -8,7 +8,7 @@ export const insightsArticles = [
     tag: 'Quality & Airworthiness',
     date: 'March 2026',
     readTime: '6 min read',
-    title: 'Mitigating Counterfeit Risk and Suspect Unapproved Parts in Scarce Aircraft Rotables',
+    title: 'Mitigating counterfeit risk and suspect unapproved parts in scarce aircraft rotables',
     summary:
       'With extended lead times on legacy platforms, the market for suspect unapproved parts has expanded. A breakdown of structured pedigree inspection, back-to-birth documentation audits, and material verification protocols.',
     image: '/images/avionics_inspection.jpg',
@@ -24,7 +24,7 @@ export const insightsArticles = [
     tag: 'Regulatory Strategy',
     date: 'February 2026',
     readTime: '8 min read',
-    title: 'Navigating Dual-Release Certification & Multilateral Export Controls in 2026',
+    title: 'Navigating dual-release certification & multilateral export controls in 2026',
     summary:
       'How evolving ITAR, EAR, and European dual-use trade restrictions impact international aerospace procurement corridors — and how structured pre-clearance prevents customs impoundment.',
     image: '/images/defense_transport_c17.jpg',
@@ -40,7 +40,7 @@ export const insightsArticles = [
     tag: 'Logistics Facilitation',
     date: 'January 2026',
     readTime: '5 min read',
-    title: 'Optimising AOG Response Through Verified International Supply Corridors',
+    title: 'Optimising AOG response through verified international supply corridors',
     summary:
       'Aircraft On Ground (AOG) events impose severe financial and operational costs on operators. How structured procurement partnerships and verified dispatch protocols significantly mitigate critical replacement delays.',
     image: '/images/aerospace_engine_overhaul.jpg',

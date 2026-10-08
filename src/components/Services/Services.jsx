@@ -20,7 +20,7 @@ export default function Services({ onOpenRFQ }) {
           <Reveal className="lg:col-span-7">
             <span className="eyebrow">CORE CONSULTANCY DISCIPLINES</span>
             <h2 id="services-title" className="h2 mt-4 text-white tracking-tight">
-              Procurement Built Around Operational Requirements
+              Procurement built around operational requirements
             </h2>
           </Reveal>
           <Reveal delay={120} className="lg:col-span-5">

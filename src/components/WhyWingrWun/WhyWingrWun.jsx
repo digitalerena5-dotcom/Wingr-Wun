@@ -10,7 +10,7 @@ export default function WhyWingrWun() {
         <Reveal className="max-w-[52rem]">
           <span className="eyebrow">PHILOSOPHY &amp; PEDIGREE</span>
           <h2 id="why-title" className="h2 mt-4 text-white tracking-tight">
-            Aviation Expertise Applied to Complex Supply Challenges.
+            Aviation expertise applied to complex supply challenges
           </h2>
         </Reveal>
 

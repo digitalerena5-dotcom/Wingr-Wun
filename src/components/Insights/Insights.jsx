@@ -16,7 +16,7 @@ export default function Insights() {
           <Reveal>
             <span className="eyebrow">INTELLIGENCE &amp; ADVISORY</span>
             <h2 id="insights-title" className="h2 mt-4 text-white tracking-tight">
-              Aviation Supply Intelligence &amp; Operational Briefs.
+              Aviation supply intelligence &amp; operational briefs
             </h2>
           </Reveal>
           <Reveal delay={120}>
@@ -126,7 +126,7 @@ export default function Insights() {
 
             <div className="space-y-4 text-sm text-[color:var(--text-muted-dark)] leading-relaxed">
               <p>{selectedArticle.summary}</p>
-              <h3 className="mono text-xs uppercase text-gold font-bold pt-2">Key Operational Standards</h3>
+              <h3 className="mono text-xs uppercase text-gold font-bold pt-2">Key operational standards</h3>
               <ul className="space-y-2">
                 {selectedArticle.keyPoints.map((point, idx) => (
                   <li key={idx} className="flex items-start gap-2 text-xs text-white">

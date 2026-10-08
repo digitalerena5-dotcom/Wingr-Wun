@@ -15,7 +15,7 @@ export default function Capabilities() {
           <Reveal className="lg:col-span-7">
             <span className="eyebrow">PROCUREMENT METHODOLOGY</span>
             <h2 id="cap-title" className="h2 mt-4 text-white tracking-tight">
-              Procurement Module
+              Procurement module
             </h2>
           </Reveal>
           <Reveal delay={120} className="lg:col-span-5">

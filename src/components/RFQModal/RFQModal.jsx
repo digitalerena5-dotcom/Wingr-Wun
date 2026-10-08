@@ -48,7 +48,7 @@ export default function RFQModal({ isOpen, onClose }) {
             <div>
               <p className="mono text-[0.68rem] tracking-wider uppercase text-gold">Official RFQ Intake Desk</p>
               <h2 id="rfq-modal-title" className="font-display text-lg font-semibold tracking-tight text-white">
-                Submit Aviation Requirement
+                Submit aviation requirement
               </h2>
             </div>
           </div>

@@ -35,7 +35,7 @@ export default function ContactPage() {
         </nav>
         <div className="mt-6 grid gap-6 md:mt-8 lg:grid-cols-12 lg:items-end lg:gap-10">
           <h1 id="contact-title" className="h2 intro text-white lg:col-span-7" style={{ '--d': '160ms' }}>
-            Contact Our <span className="text-[color:var(--c-gold-soft)]">Team.</span>
+            Contact our <span className="text-[color:var(--c-gold-soft)]">team</span>
           </h1>
           <p className="lede intro text-[color:var(--text-muted-dark)] lg:col-span-4 lg:col-start-9" style={{ '--d': '300ms' }}>
             Share your requirements and we will address the same for you.
@@ -51,7 +51,7 @@ export default function ContactPage() {
               <div className="flex items-center gap-2.5">
                 <span className="block h-2 w-2 rounded-full bg-gold" aria-hidden="true" />
                 <h2 className="mono text-[0.75rem] font-medium uppercase tracking-wider text-gold">
-                  Aviation RFQ &amp; Sourcing Desk
+                  Aviation RFQ &amp; sourcing desk
                 </h2>
               </div>
             </div>

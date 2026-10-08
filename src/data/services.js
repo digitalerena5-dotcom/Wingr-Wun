@@ -4,7 +4,7 @@ export const services = [
   {
     id: 'global-sourcing',
     number: '01',
-    title: 'Strategic Global Sourcing',
+    title: 'Strategic global sourcing',
     short: 'Global Sourcing',
     icon: Globe2,
     body: 'Identifying and vetting established international OEMs and certified aerospace distributors across global markets to secure high-quality aircraft components and assemblies.',
@@ -14,7 +14,7 @@ export const services = [
   {
     id: 'legacy-procurement',
     number: '02',
-    title: 'Legacy Component Procurement',
+    title: 'Legacy component procurement',
     short: 'Legacy Procurement',
     icon: PackageSearch,
     body: 'Locating scarce aircraft components and obsolete spares to extend the service life and operational readiness of mature aircraft fleets.',
@@ -24,7 +24,7 @@ export const services = [
   {
     id: 'export-compliance',
     number: '03',
-    title: 'Regulatory & Export Compliance',
+    title: 'Regulatory & export compliance',
     short: 'Export Compliance',
     icon: ShieldCheck,
     body: 'Guiding clients through the complexities of international trade regulations, export licensing, and ITAR compliance for international aviation procurement.',
@@ -34,7 +34,7 @@ export const services = [
   {
     id: 'logistics',
     number: '04',
-    title: 'Logistics & Pipeline Facilitation',
+    title: 'Logistics & pipeline facilitation',
     short: 'Logistics Facilitation',
     icon: Waypoints,
     body: 'Advising on secure transit corridors and freight methodologies to minimise operational downtime and delays.',

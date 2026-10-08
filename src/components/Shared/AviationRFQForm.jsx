@@ -63,7 +63,7 @@ export default function AviationRFQForm({ inModal = false, showTechnicalParamete
           <CheckCircle size={36} strokeWidth={1.5} />
         </div>
         <p className="mono text-xs uppercase text-gold">Requirement Logged in Queue</p>
-        <h3 className="h3 mt-2 text-white">RFQ Transmitted Successfully</h3>
+        <h3 className="h3 mt-2 text-white">RFQ transmitted successfully</h3>
         <p className="mx-auto mt-4 max-w-md text-sm text-[color:var(--text-muted-dark)]">
           Our aviation procurement and technical advisory desk will review your specifications against active OEM inventories and certified distributor channels.
         </p>

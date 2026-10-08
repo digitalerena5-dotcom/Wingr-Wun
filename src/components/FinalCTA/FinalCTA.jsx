@@ -2,10 +2,10 @@ import { ArrowRight, Compass, Radio } from 'lucide-react';
 import { Reveal } from '../../hooks/useScrollReveal.jsx';
 
 const enquiryPoints = [
-  { title: 'The Requirement', body: 'Aircraft type, part number (P/N), rotable assembly or legacy structural item.' },
-  { title: 'Operational Context', body: 'AOG emergency, planned depot maintenance, or fleet capability upgrade.' },
-  { title: 'Certification Standard', body: 'FAA 8130-3, EASA Form 1, Factory New C of C, or dual-release trace.' },
-  { title: 'Delivery Timeline', body: 'Target arrival date, destination airport/base code, and bonded transit criteria.' },
+  { title: 'The requirement', body: 'Aircraft type, part number (P/N), rotable assembly or legacy structural item.' },
+  { title: 'Operational context', body: 'AOG emergency, planned depot maintenance, or fleet capability upgrade.' },
+  { title: 'Certification standard', body: 'FAA 8130-3, EASA Form 1, Factory New C of C, or dual-release trace.' },
+  { title: 'Delivery timeline', body: 'Target arrival date, destination airport/base code, and bonded transit criteria.' },
 ];
 
 export default function FinalCTA({ onOpenRFQ }) {
@@ -27,7 +27,7 @@ export default function FinalCTA({ onOpenRFQ }) {
           <Reveal className="max-w-[44rem] min-w-0 lg:col-span-7">
             <span className="eyebrow">ENGAGE THE SOURCING DESK</span>
             <h2 id="cta-title" className="h2 mt-4 text-white tracking-tight">
-              How Can We Help?
+              How can we help?
             </h2>
             <p className="lede mt-6 text-[color:var(--text-muted-dark)]">
               Engage early. Share the aircraft, component, platform or supply chain requirement and our team will assess the available sourcing route.
@@ -99,7 +99,7 @@ export default function FinalCTA({ onOpenRFQ }) {
           className="brackets mt-14 rounded border border-[color:var(--line-dark)] bg-navy-950/70 p-6 sm:p-10 shadow-2xl backdrop-blur-sm lg:mt-20"
         >
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[color:var(--line-dark)] pb-4">
-            <h3 className="mono text-xs font-semibold uppercase text-gold">Preparing a Requirement Enquiry</h3>
+            <h3 className="mono text-xs font-semibold uppercase text-gold">Preparing a requirement enquiry</h3>
             <p className="mono text-[0.7rem] uppercase text-steel-grey">Key parameters for expedited dispatch</p>
           </div>
 

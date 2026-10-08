@@ -4,22 +4,22 @@ import { Compass, CheckSquare, Target, Users } from 'lucide-react';
 const pillars = [
   {
     icon: CheckSquare,
-    title: 'Standard Operating Procedures & Checklists',
+    title: 'Standard operating procedures & checklists',
     body: 'Translating flight deck and defence aviation discipline into procurement pipelines. Eliminating unverified assumptions and single points of failure before commitments are locked.',
   },
   {
     icon: Target,
-    title: 'Aviation Risk Management Frameworks',
+    title: 'Aviation risk management frameworks',
     body: 'Assessing supply chain vulnerabilities with the rigour of flight operations. Identifying supply bottlenecks, regulatory obstacles, and counterfeit component hazards early.',
   },
   {
     icon: Users,
-    title: 'Operational Cross-Functional Coordination',
+    title: 'Operational cross-functional coordination',
     body: 'Applying crew resource management (CRM) principles to complex international transactions — aligning technical engineers, procurement directors, legal teams, and logistics agents.',
   },
   {
     icon: Compass,
-    title: 'Uncompromising Operational Readiness',
+    title: 'Uncompromising operational readiness',
     body: 'Viewing procurement not as administrative overhead, but as mission readiness. Every part, rotable, and document is sourced to ensure aircraft stay in the air.',
   },
 ];
@@ -34,7 +34,7 @@ export default function OperationalMethodology() {
           <Reveal className="lg:col-span-8">
             <span className="eyebrow eyebrow--steel">AVIATION SPECIALISTS &amp; METHODOLOGY</span>
             <h2 id="methodology-title" className="h2 mt-4 text-[#071925] tracking-tight">
-              Operational Consultancy Rooted in Aviation Practice.
+              Operational consultancy rooted in aviation practice
             </h2>
           </Reveal>
           <Reveal delay={120} className="lg:col-span-4">

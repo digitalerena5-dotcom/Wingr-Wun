@@ -31,7 +31,7 @@ export default function SupplyNetwork() {
           <Reveal className="lg:col-span-8">
             <span className="eyebrow">SUPPLIER NETWORK &amp; INTELLIGENCE</span>
             <h2 id="network-title" className="h2 mt-4 text-white tracking-tight">
-              Bridging Requirements
+              Bridging requirements
             </h2>
           </Reveal>
           <Reveal delay={120} className="lg:col-span-4">
