@@ -123,19 +123,28 @@ img, svg, video, canvas { max-width: 100%; }
 
 /* ───────────── Typography ───────────── */
 p {
-  text-align: left;
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: left;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
   text-wrap: pretty;
   word-spacing: normal;
   letter-spacing: normal;
-  hyphens: none;
 }
 
 .h1, h1, .h2, h2, .h3, h3, .h4, h4 {
   font-family: Manrope, Inter, sans-serif;
   text-wrap: balance;
-  text-align: left;
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: left;
   overflow-wrap: break-word;
   word-spacing: normal;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
 }
 
 .h1, h1 {
@@ -159,14 +168,18 @@ p {
 .lede {
   font-size: clamp(1.0625rem, 1.3vw, 1.25rem);
   line-height: 1.6;
-  text-align: left;
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: left;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
   text-wrap: pretty;
   word-spacing: normal;
   letter-spacing: normal;
 }
 
-/* Prevent irrelevant spacing in narrow elements, step lists, badges, and controls */
-ol p,
+/* Prevent irregular spacing in single-word elements, badges, and controls */
 nav p,
 button p,
 .mono,

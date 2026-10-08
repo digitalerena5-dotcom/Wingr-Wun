@@ -43,8 +43,8 @@ export default function About() {
             </span>
             <h2
               id="about-title"
-              className="h2 mt-4 text-[#071925] tracking-tight [text-align:justify] [text-justify:inter-word]"
-              style={{ textAlign: 'justify', textJustify: 'inter-word', textWrap: 'normal' }}
+              className="h2 mt-4 text-[#071925] tracking-tight max-w-[38rem]"
+              style={{ textAlign: 'justify', textJustify: 'inter-word', textAlignLast: 'left', hyphens: 'auto' }}
             >
               A strategic bridge between defence requirements and global aerospace supply
             </h2>
