@@ -7,7 +7,7 @@ export const services = [
     title: 'Strategic global sourcing',
     short: 'Global Sourcing',
     icon: Globe2,
-    body: 'Identifying and vetting established international OEMs and certified aerospace distributors across global markets to secure high-quality aircraft components and assemblies.',
+    body: 'Identifying and vetting established OEMs and certified international aerospace distributors across global markets to secure high-quality aircraft components and assemblies.',
     purpose: 'Provides reliable access to critical rotables, propulsion hardware, and airframe structures through verified supplier networks.',
     actionLabel: 'Discuss Sourcing Requirement',
   },

@@ -51,7 +51,7 @@ export default function Services({ onOpenRFQ }) {
                   {s.title}
                 </h3>
 
-                <p className="mt-2.5 sm:mt-3 text-[0.98rem] leading-relaxed text-[color:var(--text-muted-dark)]">
+                <p className="mt-2.5 sm:mt-3 text-[0.98rem] leading-relaxed text-[color:var(--text-muted-dark)] [text-wrap:pretty]">
                   {s.body}
                 </p>
 
