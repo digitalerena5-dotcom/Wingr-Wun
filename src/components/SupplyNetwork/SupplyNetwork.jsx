@@ -51,7 +51,6 @@ export default function SupplyNetwork() {
                 SYSTEM ARCHITECTURE // VENDOR VETTING &amp; SOURCING PIPELINE
               </span>
             </div>
-            <span className="text-gold">CLICK OR TAP ANY NODE TO INSPECT CORRIDOR</span>
           </div>
 
           {/* Diagram Body */}
