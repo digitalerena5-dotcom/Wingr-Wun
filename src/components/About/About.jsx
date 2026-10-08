@@ -42,7 +42,8 @@ export default function About() {
               COMPANY POSITIONING &amp; MANDATE
             </span>
             <h2 id="about-title" className="h2 mt-4 text-[#071925] tracking-tight">
-              A strategic bridge between defence requirements and global aerospace supply
+              A strategic bridge between defence requirements and global aerospace <br />
+              supply
             </h2>
           </div>
           <div className="lg:col-span-5">
