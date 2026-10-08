@@ -10,7 +10,7 @@ export const capabilities = [
 export const pillars = [
   {
     title: 'Expertise',
-    body: 'Established by Defence Aviation Experts and Specialists, bringing the rigour, discipline, and systematic precision of aviation practice to everyday operational and procurement challenges.',
+    body: 'Established by Defence Aviation Specialists, bringing discipline, technical expertise, and operational experience to complex supply, sourcing, and procurement challenges.',
   },
   {
     title: 'Global supplier perspective',
