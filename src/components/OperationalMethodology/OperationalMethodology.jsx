@@ -34,12 +34,12 @@ export default function OperationalMethodology() {
           <Reveal className="lg:col-span-8">
             <span className="eyebrow eyebrow--steel">AVIATION SPECIALISTS &amp; METHODOLOGY</span>
             <h2 id="methodology-title" className="h2 mt-4 text-[#071925] tracking-tight">
-              Operational consultancy rooted in aviation practice
+              Operational consultancy built for real-world challenges
             </h2>
           </Reveal>
           <Reveal delay={120} className="lg:col-span-4">
             <p className="text-sm leading-relaxed text-[#4A6272]">
-              Established by Defence Aviation Experts and Aviation Professionals to streamline everyday operations, solve routine organisational problems, and offer consultancy based on proven aviation methodologies.
+              Established by defence aviation experts and experienced professionals, we help organisations strengthen operations, address complex challenges, and achieve sustainable improvements through proven methodologies, practical insight, and disciplined execution.
             </p>
           </Reveal>
         </div>
