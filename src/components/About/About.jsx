@@ -98,7 +98,7 @@ export default function About() {
                 DEFENCE AVIATION HERITAGE
               </span>
               <p className="font-display text-base font-semibold leading-relaxed text-[#071925]">
-                Established by Defence Aviation Experts and Aviation Specialists who bring the rigour, discipline, and systematic precision of aviation practice to everyday operational and procurement challenges.
+                Established by Defence Aviation Experts and Specialists, bringing the rigour, discipline, and systematic precision of aviation practice to everyday operational and procurement challenges.
               </p>
             </div>
 
