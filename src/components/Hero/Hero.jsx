@@ -59,8 +59,8 @@ export default function Hero({ onOpenRFQ }) {
               className="intro mt-3 sm:mt-4 text-white font-display font-bold text-[1.65rem] sm:text-[1.95rem] md:text-[2.2rem] lg:text-[2.45rem] xl:text-[2.65rem] leading-[1.18] sm:leading-[1.16] tracking-tight"
               style={{ '--d': '220ms' }}
             >
-              Connecting Critical Requirements With{' '}
-              <span className="text-[color:var(--c-gold-soft)]">Trusted</span> Global Supply Chain
+              Connecting critical requirements with{' '}
+              <span className="text-[color:var(--c-gold-soft)]">trusted</span> global supply chain
             </h1>
 
             {/* Client Authorized Supporting Copy */}
