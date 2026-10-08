@@ -32,7 +32,7 @@ export default function WhyWingrWun() {
                 {p.title}
               </h3>
 
-              <p className="mt-4 text-sm leading-relaxed text-[color:var(--text-muted-dark)] [text-align:justify] [text-justify:inter-word] [text-align-last:left] [text-wrap:pretty]">
+              <p className="mt-4 text-sm leading-relaxed text-[color:var(--text-muted-dark)] [text-wrap:pretty]">
                 {p.body}
               </p>
             </Reveal>

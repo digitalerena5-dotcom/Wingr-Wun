@@ -123,11 +123,11 @@ img, svg, video, canvas { max-width: 100%; }
 
 /* ───────────── Typography ───────────── */
 p {
-  text-align: justify;
-  text-justify: inter-word;
-  text-align-last: left;
-  hyphens: none;
+  text-align: left;
   text-wrap: pretty;
+  word-spacing: normal;
+  letter-spacing: normal;
+  hyphens: none;
 }
 
 .h1, h1, .h2, h2, .h3, h3, .h4, h4 {
@@ -159,11 +159,10 @@ p {
 .lede {
   font-size: clamp(1.0625rem, 1.3vw, 1.25rem);
   line-height: 1.6;
-  text-align: justify;
-  text-justify: inter-word;
-  text-align-last: left;
-  hyphens: none;
+  text-align: left;
   text-wrap: pretty;
+  word-spacing: normal;
+  letter-spacing: normal;
 }
 
 /* Prevent irrelevant spacing in narrow elements, step lists, badges, and controls */
@@ -174,7 +173,7 @@ button p,
 .badge,
 .card-meta {
   text-align: left;
-  text-justify: auto;
+  word-spacing: normal;
 }
 
 .eyebrow {
