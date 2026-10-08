@@ -41,7 +41,11 @@ export default function About() {
             <span className="eyebrow eyebrow--steel text-[0.88rem] sm:text-[0.98rem] font-bold tracking-[0.18em]">
               COMPANY POSITIONING &amp; MANDATE
             </span>
-            <h2 id="about-title" className="h2 mt-4 text-[#071925] tracking-tight">
+            <h2
+              id="about-title"
+              className="h2 mt-4 text-[#071925] tracking-tight [text-align:justify] [text-justify:inter-word]"
+              style={{ textAlign: 'justify', textJustify: 'inter-word', textWrap: 'normal' }}
+            >
               A strategic bridge between defence requirements and global aerospace supply
             </h2>
           </div>
