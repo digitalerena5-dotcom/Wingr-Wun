@@ -14,7 +14,7 @@
 export const contact = {
   formEndpoint: null,
   email: 'contact@wingrwun.co.uk',
-  address: '3 Woodbridge Close, Appleton, WA4 5RD, UK',
+  address: '3 Woodbridge Close\nAppleton, WA4 5RD\nUnited Kingdom',
   phone: null,
   privacyUrl: null,
   termsUrl: null,

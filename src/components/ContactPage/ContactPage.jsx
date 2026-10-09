@@ -97,7 +97,7 @@ export default function ContactPage() {
                   {contact.address && (
                     <li className="flex items-start gap-3 pt-1">
                       <MapPin size={18} strokeWidth={1.5} className="mt-1 text-gold shrink-0" aria-hidden="true" />
-                      <span className="font-medium text-white leading-relaxed">{contact.address}</span>
+                      <span className="font-medium text-white leading-relaxed whitespace-pre-line">{contact.address}</span>
                     </li>
                   )}
                 </ul>
