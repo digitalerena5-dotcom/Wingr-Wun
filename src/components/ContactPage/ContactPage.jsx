@@ -95,9 +95,13 @@ export default function ContactPage() {
                     </li>
                   )}
                   {contact.address && (
-                    <li className="flex items-center gap-3">
-                      <MapPin size={18} strokeWidth={1.5} className="text-gold shrink-0" aria-hidden="true" />
-                      <span className="font-medium text-white leading-relaxed">{contact.address}</span>
+                    <li className="flex items-start gap-3">
+                      <MapPin size={18} strokeWidth={1.5} className="text-gold shrink-0 mt-0.5" aria-hidden="true" />
+                      <div className="font-medium text-white leading-relaxed">
+                        {contact.address.split('\n').map((line, idx) => (
+                          <span key={idx} className="block">{line}</span>
+                        ))}
+                      </div>
                     </li>
                   )}
                 </ul>
