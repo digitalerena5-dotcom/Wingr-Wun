@@ -53,7 +53,7 @@ export default function Footer({ onOpenRFQ, onOpenLegal }) {
           </nav>
 
           {/* COLUMN 3: Sourcing Disciplines */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-2">
             <h2 className={colHead}>Services</h2>
             <ul className="mt-3.5 sm:mt-4 space-y-2.5 sm:space-y-3">
               <li><a href="#services" className={linkClass}>Aircraft Components</a></li>
@@ -66,7 +66,7 @@ export default function Footer({ onOpenRFQ, onOpenLegal }) {
           </div>
 
           {/* COLUMN 4: Contact & Registered Office */}
-          <div className="lg:col-span-3">
+          <div className="sm:col-span-2 lg:col-span-4">
             <h2 className={colHead}>Direct contact</h2>
             <ul className="mt-3.5 sm:mt-4 space-y-3.5 text-sm text-[color:var(--text-muted-dark)]">
               <li className="flex items-start gap-3">
@@ -94,11 +94,11 @@ export default function Footer({ onOpenRFQ, onOpenLegal }) {
                 <MapPin size={18} strokeWidth={1.5} className="mt-0.5 shrink-0 text-gold" aria-hidden="true" />
                 <div>
                   <span className="block text-[0.7rem] uppercase mono text-steel-grey font-semibold tracking-wider">Registered Address</span>
-                  <p className="text-[0.92rem] text-[#9FB1BD] leading-relaxed mt-0.5">
-                    3 Woodbridge Close<br />
-                    Appleton, WA4 5RD<br />
-                    United Kingdom
-                  </p>
+                  <address className="not-italic text-[0.92rem] text-[#9FB1BD] leading-relaxed mt-0.5 text-left">
+                    <span className="block whitespace-nowrap">3 Woodbridge Close</span>
+                    <span className="block whitespace-nowrap">Appleton, WA4 5RD</span>
+                    <span className="block whitespace-nowrap">United Kingdom</span>
+                  </address>
                 </div>
               </li>
             </ul>

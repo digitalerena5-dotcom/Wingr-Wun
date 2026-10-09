@@ -97,11 +97,11 @@ export default function ContactPage() {
                   {contact.address && (
                     <li className="flex items-start gap-3">
                       <MapPin size={18} strokeWidth={1.5} className="text-gold shrink-0 mt-0.5" aria-hidden="true" />
-                      <div className="font-medium text-white leading-relaxed">
+                      <address className="not-italic font-medium text-white leading-relaxed text-left">
                         {contact.address.split('\n').map((line, idx) => (
-                          <span key={idx} className="block">{line}</span>
+                          <span key={idx} className="block whitespace-nowrap">{line}</span>
                         ))}
-                      </div>
+                      </address>
                     </li>
                   )}
                 </ul>

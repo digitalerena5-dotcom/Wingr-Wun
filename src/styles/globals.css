@@ -498,3 +498,15 @@ select.select {
   .reveal, .intro, .intro-fade { opacity: 1; transform: none; }
   .scroll-cue-line { animation: none; }
 }
+
+/* Address and footer alignment safeguards across all platforms */
+address,
+footer address,
+footer p {
+  text-align: left !important;
+  text-align-last: left !important;
+  text-justify: auto !important;
+  word-spacing: normal !important;
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+}
